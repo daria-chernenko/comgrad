@@ -9,6 +9,8 @@
 .comic, .comic-2 {
   background:#fff;
   font-family: 'Bangers', cursive;
+  display: inline-block;
+  margin: 1em;
 }
 .comic {
   font-size: 10px;
@@ -121,6 +123,15 @@
   bottom: -0.15em;
   font-size: 2em;
   transform: scaleX(-1) rotate(15deg);
+}
+.signature {
+  font-weight: 200;
+  font-size: 0.7em;
+  text-align: right;
+  font-family: 'Delius';
+}
+.signature a {
+  color: #666;
 }
 .box {
   background-image: -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -webkit-linear-gradient(top, #555 0%, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -webkit-linear-gradient(left, #555 0px, #555 1px, transparent 1px, transparent 14px, #555 14px, #555 16px, transparent 16px, transparent 29px, #555 29px, #555 30px), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
