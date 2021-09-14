@@ -82,10 +82,10 @@
 	margin-left: -10px;
 	margin-bottom: -20px;
 }
-.left-bubble {
+.bubble-left {
   grid-area: left-bubble;
 }
-.right-bubble {
+.bubble-right {
   grid-area: right-bubble;
 }
 .box1{
@@ -108,13 +108,13 @@
   line-height: 0.8em;
   filter: grayscale(100%) drop-shadow(8px -8px 2px rgba(0, 0, 0, 0.4));
 }
-.character-a {
+.character-left {
   grid-area: left-character;
   align-self: end;
   justify-self: center;
   position: relative;
 }
-.character-b {
+.character-right {
   grid-area: right-character;
   align-self: end;
   justify-self: center;

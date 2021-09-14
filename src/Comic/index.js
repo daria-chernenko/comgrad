@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-const Layout = function(props) {
+const Comic = function(props) {
   return (
     <section className="comic-2">
       <h2 className="issue-title">
@@ -11,4 +11,4 @@ const Layout = function(props) {
     </section>
   );
 }
-export default Layout;
+export default Comic;
