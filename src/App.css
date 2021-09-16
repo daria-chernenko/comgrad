@@ -57,6 +57,11 @@
   box-shadow:3px 3px 0 #222;
   display: inline-block;
 }
+.sound {
+  margin: .5em .5em;
+  font-family: 'Delius';
+  transform: rotate(-10deg);
+}
 .bubble {
   margin: 0 .5em;
   padding: .5em .5em;
