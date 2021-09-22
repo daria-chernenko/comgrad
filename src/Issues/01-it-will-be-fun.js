@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Comic from '../Comic';
 import Panel from '../Comic/Panel';
 import Character from '../Comic/Character';
+import Lollipop from '../Comic/Lollipop';
 class Issue extends Component {
   render(props) {
     return (
@@ -24,7 +25,9 @@ class Issue extends Component {
           <Character 
             type="computer-man" 
             position="left"
-            say="On the other hand I got a free lollipop!"/>
+            say="On the other hand I got a free lollipop!">
+            <Lollipop />
+          </Character>
           <Character type="computer-woman" position="right"/>
         </Panel>
       </Comic>
