@@ -19,7 +19,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Imagine-a-Company'
+      content='Fully accessible comics'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -30,7 +30,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as='h2'
-      content='Do whatever you want when you want to.'
+      content='Yes, it is possible'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -39,7 +39,7 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <Button primary size='huge'>
-      Get Started
+      See below
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -67,13 +67,7 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item as='a' active>Home</Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>Log in</Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-                </Menu.Item>
+                {}
               </Container>
             </Menu>
             <HomepageHeading />
