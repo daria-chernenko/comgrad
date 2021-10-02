@@ -67,7 +67,6 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item as='a' active>Home</Menu.Item>
-                {}
               </Container>
             </Menu>
             <HomepageHeading />
