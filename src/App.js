@@ -39,7 +39,7 @@ class App extends Component {
             </Grid.Row>
           </Grid>
           <footer>
-            <p>Hosted on <a href="https:
+            <p>Source on <a href="https:
             <p>Published on <a href="http:
           </footer>
         </HomepageLayout>
