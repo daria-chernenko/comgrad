@@ -5,7 +5,8 @@ const Character = function(props) {
   let soundClassName = `sound sound-${props.position}`;
   let types = {
     'computer-man': '👨‍💻',
-    'computer-woman': '👩‍💻'
+    'computer-woman': '👩‍💻',
+    'zombie-man': '🧟‍♂️'
   }
   let face = types[props.type];
   return (
