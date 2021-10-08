@@ -10,6 +10,7 @@ import Issue05 from './Issues/05-titles';
 import Issue06 from './Issues/06-tickeeets';
 import Issue07 from './Issues/07-no-code';
 import Issue08 from './Issues/08-treasure';
+import Issue09 from './Issues/09-failing-tests';
 import HomepageLayout from './Layout/Homepage';
 class App extends Component {
   state = { comicSize: 3 }
@@ -43,6 +44,7 @@ class App extends Component {
                   <Issue06 />
                   <Issue07 />
                   <Issue08 />
+                  <Issue09 />
               </Grid.Column>
             </Grid.Row>
           </Grid>
