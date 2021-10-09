@@ -8,31 +8,31 @@ class Issue extends Component {
       <Comic title="Failing tests">
         <Panel>
           <Character 
-            type="computer-man" 
+            type="computer-woman" 
             position="left"
             say="Recently I took philosophy classes." />
           <Character 
-            type="computer-woman" 
+            type="computer-man" 
             position="right"
             say="Oh that is cool." />
         </Panel>
         <Panel>
           <Character 
-            type="computer-man" 
-            position="left" 
-            say="I learned a lot of wisdom." />
-          <Character 
             type="computer-woman" 
+            position="left" 
+            say="There is a lot IT can learn from this discipline." />
+          <Character 
+            type="computer-man" 
             position="right" 
             say="Example?" />
         </Panel>
         <Panel>
           <Character 
-            type="computer-man" 
+            type="computer-woman" 
             position="left" 
             say="If a CI tests fails and there is nobody to take action, did the test really fail?" />
           <Character 
-            type="computer-woman" 
+            type="computer-man" 
             position="right" 
             emotion="🤔" />
         </Panel>
