@@ -10,25 +10,22 @@ class Issue extends Component {
         <Panel title="Random IT office">
           <Character 
             type="computer-man" 
-            position="left" 
             say="Bring your child to work days are special."/>
-          <Character type="computer-woman" position="right" />
+          <Character type="computer-woman"  />
         </Panel>
         <Panel>
           <Character 
             type="computer-man" 
-            position="left"
             say="I was not able to do any work for past three hours ..."/>
-          <Character type="computer-woman" position="right"/>
+          <Character type="computer-woman" />
         </Panel>
         <Panel>
           <Character 
             type="computer-man" 
-            position="left"
             say="On the other hand I got a free lollipop!">
             <Lollipop />
           </Character>
-          <Character type="computer-woman" position="right"/>
+          <Character type="computer-woman" />
         </Panel>
       </Comic>
     );

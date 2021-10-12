@@ -119,6 +119,9 @@ h2.issue-title {
 .bubble-right {
   grid-area: right-bubble;
 }
+.bubble-auto {
+  grid-row-start: 2;
+}
 .box1{
   grid-column: 1;
   border-width: 3px 4px 3px 5px;
@@ -147,6 +150,12 @@ h2.issue-title {
 }
 .character-right {
   grid-area: right-character;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+}
+.character-auto {
+  grid-row-start: 3;
   align-self: end;
   justify-self: center;
   position: relative;

@@ -8,19 +8,17 @@ class Issue extends Component {
     return (
       <Comic title="Addiction">
         <Panel>
-          <Character type="computer-man" position="left" />
-          <Character type="computer-woman" position="right">
+          <Character type="computer-man" />
+          <Character type="computer-woman" >
             <HeadBag />
           </Character>
         </Panel>
         <Panel>
           <Character 
             type="computer-man" 
-            position="left" 
             say="So ... what is the story with the paper thing on your head?" />
           <Character 
             type="computer-woman" 
-            position="right" 
             say="I'm in my happy place ...">
             <HeadBag />
           </Character>
@@ -28,11 +26,9 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-man" 
-            position="left" 
             say="Wait a minute ... is that a ... coffee bean bag?" />
           <Character 
             type="computer-woman" 
-            position="right" 
             sound="Sniffffff!">
             <HeadBag />
           </Character>

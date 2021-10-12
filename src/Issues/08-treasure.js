@@ -9,31 +9,25 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left"
             say="The CEO here is special." />
           <Character 
             type="computer-man" 
-            position="right"
             say="What do you mean?" />
         </Panel>
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left" 
             say="He is a true treasure." />
           <Character 
             type="computer-man" 
-            position="right" 
             say="Oh, that is so sweet from you." />
         </Panel>
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left" 
             say="Just to bury him 2 feet deep..." />
           <Character 
             type="computer-man" 
-            position="right" 
             emotion="😳" />
         </Panel>
       </Comic>

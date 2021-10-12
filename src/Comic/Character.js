@@ -36,7 +36,7 @@ const Character = function(props) {
   );
 }
 Character.defaultProps = {
-  position: 'left',
+  position: 'auto',
   type: 'computer-woman'
 }
 export default Character;

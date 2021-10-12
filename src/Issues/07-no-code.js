@@ -9,31 +9,25 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left"
             say="<delete><delete><delete><delete><delete><delete><delete><delete><delete><delete><delete>" />
           <Character 
             type="computer-man" 
-            position="right"
             say="What are you doing?" />
         </Panel>
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left" 
             say="<delete><delete> Coding according to the best practices. <delete><delete><delete>" />
           <Character 
             type="computer-man" 
-            position="right" 
             say="What practice is this?" />
         </Panel>
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left" 
             say='"The best code is no code."' />
           <Character 
             type="computer-man" 
-            position="right" 
             emotion="😆" />
         </Panel>
       </Comic>

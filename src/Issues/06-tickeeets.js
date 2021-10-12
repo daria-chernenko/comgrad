@@ -10,31 +10,25 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left"
             say="Don't be scared." />
           <Character 
             type="zombie-man" 
-            position="right"
             say="Feels so empty..." />
         </Panel>
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left" 
             say="He doesn't bite." />
           <Character 
             type="zombie-man" 
-            position="right" 
             say="Cannot find anything..." />
         </Panel>
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left" 
             say="He just can't find any reasonable work to do." />
           <Character 
             type="zombie-man" 
-            position="right" 
             say="Tickeeeets..." />
         </Panel>
       </Comic>
@@ -42,30 +36,25 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left"
             say="Don't worry." />
           <Character 
             type="zombie-man" 
-            position="right"
             say="Feels so empty. Cannot find anything..." />
         </Panel>
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left" 
             say="He is not harmful. Just hungry." />
           <Character 
             type="zombie-man" 
-            position="right" />
+             />
         </Panel>
         <Panel>
           <Character 
             type="computer-woman" 
-            position="left" 
             say="For some work to do." />
           <Character 
             type="zombie-man" 
-            position="right" 
             say="Tickeeeets..." />
         </Panel>
       </Comic>
