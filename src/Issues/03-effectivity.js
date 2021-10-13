@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Comic from '../Comic';
 import Panel from '../Comic/Panel';
 import Character from '../Comic/Character';
-import HeadBag from '../Comic/HeadBag';
 class Issue extends Component {
   render(props) {
     return (

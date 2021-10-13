@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Input, Grid } from 'semantic-ui-react'
 import Issue01 from './Issues/01-it-will-be-fun';

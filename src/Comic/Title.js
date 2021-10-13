@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 const Title = function(props) {
   return (
     <div className="strip-title">

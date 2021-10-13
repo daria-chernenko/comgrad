@@ -3,12 +3,9 @@ import React, { Component } from 'react'
 import {
   Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
-  Image,
-  List,
   Menu,
   Responsive,
   Segment,

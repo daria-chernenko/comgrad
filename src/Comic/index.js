@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 const Comic = function(props) {
   return (
-    <section class="comic">
+    <section className="comic">
       <h2 className="issue-title">
         {props.title}
       </h2>

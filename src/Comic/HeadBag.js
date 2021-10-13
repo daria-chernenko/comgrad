@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 const HeadBag = function(props) {
   return (
     <div className="head-bag">

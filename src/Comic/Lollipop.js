@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 const Lollipop = function(props) {
   return (
-    <div className="lollipop">🍭</div>
+    <span className="lollipop" role="img" aria-label="Lollipop">🍭</span>
   );
 }
 export default Lollipop;

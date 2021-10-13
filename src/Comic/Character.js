@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 const Character = function(props) {
   let faceClassName = `character-${props.position}`;
   let bubbleClassName = `bubble bubble-${props.position}`;
