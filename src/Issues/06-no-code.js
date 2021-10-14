@@ -9,7 +9,7 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-woman" 
-            say="<delete><delete><delete><delete><delete><delete><delete><delete><delete><delete><delete>" />
+            say="<delete><delete><delete><delete><delete><delete>" />
           <Character 
             type="computer-man" 
             say="What are you doing?" />
@@ -17,7 +17,7 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-woman" 
-            say="<delete><delete> Coding according to the best practices. <delete><delete><delete>" />
+            say="<delete><delete> Coding according to the best practices. <delete>" />
           <Character 
             type="computer-man" 
             say="What practice is this?" />
