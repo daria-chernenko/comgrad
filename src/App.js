@@ -41,8 +41,8 @@ class App extends Component {
                   <Issue03 />
                   <Issue04 />
                   <Issue05 />
-                <h2>Drafts</h2>
                   <Issue06 />
+                <h2>Drafts</h2>
                   <Issue07 />
                   <Issue08 />
                   <Issue09 />
