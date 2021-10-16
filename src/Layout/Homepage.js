@@ -12,6 +12,13 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
+import Home from '../Pages/Home'
+import Episodes from '../Pages/Episodes'
 const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
@@ -52,6 +59,7 @@ class DesktopContainer extends Component {
     const { children } = this.props
     const { fixed } = this.state
     return (
+      <Router>
       <Responsive {...Responsive.onlyComputer}>
         <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
           <Segment inverted textAlign='center' style={{ minHeight: 700, padding: '1em 0em' }} vertical>
@@ -63,14 +71,18 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>Home</Menu.Item>
+                <Menu.Item as={Link} to="/home">Home</Menu.Item>
+                <Menu.Item as={Link} to="/episodes">Episodes</Menu.Item>
               </Container>
             </Menu>
+            <Route exact path="/home" component={Home}/>
+            <Route path="/episodes" component={Episodes} />
             <HomepageHeading />
           </Segment>
         </Visibility>
         {children}
       </Responsive>
+      </Router>
     )
   }
 }
