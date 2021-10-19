@@ -28,27 +28,37 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
     return (
       <Router>
-      <Responsive {...Responsive.onlyComputer}>
-        <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
-          <Segment inverted textAlign='center' vertical>
-            <Menu
-              fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size='large'
-            >
-              <Container>
-                <Menu.Item as={Link} to="/home">Home</Menu.Item>
-                <Menu.Item as={Link} to="/episodes">Episodes</Menu.Item>
-              </Container>
-            </Menu>
-          </Segment>
-            <Route exact activeClassName="active" path="/home" component={Home}/>
+        <Responsive {...Responsive.onlyComputer}>
+          <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
+            <Segment inverted textAlign='center' vertical>
+              <Menu
+                fixed={fixed ? 'top' : null}
+                inverted={!fixed}
+                pointing={!fixed}
+                secondary={!fixed}
+                size='large'
+              >
+                <Container>
+                  <Menu.Item as={Link} to="/home">Home</Menu.Item>
+                  <Menu.Item as={Link} to="/episodes">Episodes</Menu.Item>
+                </Container>
+              </Menu>
+            </Segment>
+            <Route exact activeClassName="active" path="/home" component={Home} />
             <Route exact activeClassName="active" path="/episodes" component={Episodes} />
-        </Visibility>
-        {children}
-      </Responsive>
+          </Visibility>
+          {children}
+          <Grid textAlign="center" relaxed stackable container divided columns={2}>
+            <Grid.Row>
+              <Grid.Column>
+                Source on <a href="https:
+              </Grid.Column>
+              <Grid.Column>
+                Published on <a href="http:
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Responsive>
       </Router>
     )
   }

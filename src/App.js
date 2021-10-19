@@ -10,10 +10,6 @@ class App extends Component {
     return (
       <div className="App">
         <HomepageLayout>
-          <footer>
-            <p>Source on <a href="https:
-            <p>Published on <a href="http:
-          </footer>
         </HomepageLayout>
       </div>
     );
