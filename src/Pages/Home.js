@@ -16,7 +16,6 @@ import {
     Image
   } from 'semantic-ui-react'
 import Issue01 from '../Issues/01-it-will-be-fun'
-import RandomComics from '../Components/RandomComics'
 class Home extends React.Component {
   render() {
     return (
@@ -40,8 +39,6 @@ class Home extends React.Component {
           <Grid.Row>
             <Grid.Column>
               {}
-              {}
-              <RandomComics />
             </Grid.Column>
           </Grid.Row>
         </Grid>
