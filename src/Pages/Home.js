@@ -1,21 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {
-    Button,
     Container,
     Grid,
     Header,
     Icon,
-    Message,
-    Menu,
-    Responsive,
-    Segment,
-    Sidebar,
-    Card,
-    Visibility,
     Divider,
-    Image
   } from 'semantic-ui-react'
-import Issue01 from '../Issues/01-it-will-be-fun'
 class Home extends React.Component {
   render() {
     return (
@@ -27,7 +17,7 @@ class Home extends React.Component {
                 <Header inverted className="huge" as='h1'>
                   Fully accessible web comics
             </Header>
-                <p class="inverted">
+                <p>
                   Yes, it is possible
             </p>
               </Grid.Column>

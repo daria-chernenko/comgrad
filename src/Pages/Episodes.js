@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Input, Grid, Container } from 'semantic-ui-react'
+import React from 'react'
+import { Grid, Container } from 'semantic-ui-react'
 import Issue01 from '../Issues/01-it-will-be-fun';
 import Issue02 from '../Issues/02-coffee-addict';
 import Issue03 from '../Issues/03-effectivity';

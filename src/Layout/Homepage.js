@@ -4,7 +4,6 @@ import {
   Button,
   Container,
   Grid,
-  Header,
   Icon,
   Menu,
   Responsive,
@@ -39,13 +38,13 @@ class DesktopContainer extends Component {
                 size='large'
               >
                 <Container>
-                  <Menu.Item as={Link} to="/home">Home</Menu.Item>
+                  <Menu.Item as={Link} to="/">Home</Menu.Item>
                   <Menu.Item as={Link} to="/episodes">Episodes</Menu.Item>
                 </Container>
               </Menu>
             </Segment>
-            <Route exact activeClassName="active" path="/home" component={Home} />
-            <Route exact activeClassName="active" path="/episodes" component={Episodes} />
+            <Route exact  path="/" component={Home} />
+            <Route exact  path="/episodes" component={Episodes} />
           </Visibility>
           {children}
           <Grid textAlign="center" relaxed stackable container divided columns={2}>
