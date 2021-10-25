@@ -1,5 +1,5 @@
-import React from 'react'
-import { Grid, Container } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Grid, Container, Button } from 'semantic-ui-react'
 import Issue01 from '../Issues/01-it-will-be-fun';
 import Issue02 from '../Issues/02-coffee-addict';
 import Issue03 from '../Issues/03-effectivity';
@@ -11,12 +11,27 @@ import Issue08 from '../Issues/08-treasure';
 import Issue09 from '../Issues/09-failing-tests';
 import Issue10 from '../Issues/10-optimisation';
 import Issue11 from '../Issues/11-strategy';
-const Episodes = (props) => (
-    <Container>
+import domtoimage from 'dom-to-image';
+class Episodes extends Component {
+  downloadComics() {
+    domtoimage.toJpeg(document.getElementById('foo'), { quality: 0.95 })
+      .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
+      });
+  }
+  render(props) {
+    return (
+      <Container>
         <h1>Gradient company</h1>
           <Grid container>
            <Grid.Row textAlign='center'>
               <Grid.Column>
+                <Button onClick={this.downloadComics}>
+                  Download
+                </Button>
                 <h2>Released issues</h2>
                   <Issue01 />
                   <Issue02 />
@@ -33,6 +48,8 @@ const Episodes = (props) => (
               </Grid.Column>
             </Grid.Row>
           </Grid>
-    </Container>
-  )
+      </Container>
+    )
+  }
+}
   export default Episodes
