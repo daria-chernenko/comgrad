@@ -6,7 +6,7 @@ class Issue extends Component {
   render(props) {
     return (
       <Comic title="Paradox of SCRUM">
-        <Panel>
+        <Panel title="End of sprint">
           <Character 
             type="computer-woman" 
             say="Don't worry." />

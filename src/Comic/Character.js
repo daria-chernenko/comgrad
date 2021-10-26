@@ -6,7 +6,7 @@ const Character = function(props) {
   let types = {
     'computer-man': '👨‍💻',
     'computer-woman': '👩‍💻',
-    'zombie-man': '🧟‍♂️'
+    'zombie-man': '🧟‍'
   }
   let face = types[props.type];
   return (
