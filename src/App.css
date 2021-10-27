@@ -10,6 +10,11 @@ h2.issue-title {
   font-family: 'Bangers', cursive;
   text-align: left;
 }
+.download {
+  position: relative;
+  top: -17em;
+  left: -1em;
+}
 .comic {
   display: inline-block;
 }

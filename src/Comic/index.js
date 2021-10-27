@@ -1,17 +1,38 @@
-import React from 'react';
-const Comic = function(props) {
-  return (
-    <section className="comic">
-      <h2 className="issue-title">
-        {props.title}
-      </h2>
-      <div className="strip">
-        {props.children}
+import React, { Component } from 'react'
+import { Button, Icon } from 'semantic-ui-react'
+import domtoimage from 'dom-to-image';
+class Comic extends Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  downloadComics() {
+    const node = this.myRef.current;
+    domtoimage.toJpeg(node, { quality: 0.95 })
+      .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
+      });
+  }
+  render() {
+    return (
+      <div>
+        <section className="comic" ref={this.myRef}>
+          <h2 className="issue-title">
+            {this.props.title}
+          </h2>
+          <div className="strip">
+            {this.props.children}
+          </div>
+          <div className="signature">
+            <a>Gradient company</a> by <a href="https:
+          </div>
+        </section>
+        <Button color="teal" circular icon="save" className="download" onClick={this.downloadComics} />
       </div>
-      <div className="signature">
-        <a>Gradient company</a> by <a href="https:
-      </div>
-    </section>
-  );
+    );
+  }
 }
 export default Comic;

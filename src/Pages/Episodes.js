@@ -11,27 +11,14 @@ import Issue08 from '../Issues/08-treasure';
 import Issue09 from '../Issues/09-failing-tests';
 import Issue10 from '../Issues/10-optimisation';
 import Issue11 from '../Issues/11-strategy';
-import domtoimage from 'dom-to-image';
 class Episodes extends Component {
-  downloadComics() {
-    domtoimage.toJpeg(document.getElementById('foo'), { quality: 0.95 })
-      .then(function (dataUrl) {
-        var link = document.createElement('a');
-        link.download = 'my-image-name.jpeg';
-        link.href = dataUrl;
-        link.click();
-      });
-  }
-  render(props) {
+  render() {
     return (
       <Container>
         <h1>Gradient company</h1>
           <Grid container>
            <Grid.Row textAlign='center'>
               <Grid.Column>
-                <Button onClick={this.downloadComics}>
-                  Download
-                </Button>
                 <h2>Released issues</h2>
                   <Issue01 />
                   <Issue02 />
