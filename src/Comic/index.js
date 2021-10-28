@@ -5,10 +5,11 @@ class Comic extends Component {
   constructor(props) {
     super(props);
     this.myRef = React.createRef();
+    this.downloadComics = this.downloadComics.bind(this);
   }
   downloadComics() {
     const node = this.myRef.current;
-    domtoimage.toJpeg(node, { quality: 0.95 })
+    domtoimage.toJpeg(node, { quality: 10 })
       .then(function (dataUrl) {
         var link = document.createElement('a');
         link.download = 'my-image-name.jpeg';

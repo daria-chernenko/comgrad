@@ -17,6 +17,7 @@ h2.issue-title {
 }
 .comic {
   display: inline-block;
+  background-color: #fff;
 }
 .comic-1, .comic-2, .comic-3 {
   background:#fff;
