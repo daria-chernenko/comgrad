@@ -6,21 +6,34 @@ class Comic extends Component {
     super(props);
     this.myRef = React.createRef();
     this.downloadComics = this.downloadComics.bind(this);
+    this.state = {
+      wrapperClass: 'comic'
+    };
   }
   downloadComics() {
+    this.setState({
+      wrapperClass: 'comic zoom'
+    });
     const node = this.myRef.current;
-    domtoimage.toJpeg(node, { quality: 10 })
-      .then(function (dataUrl) {
+    const style = { 
+      style: {
+      } 
+    };
+    domtoimage.toJpeg(node, style)
+      .then((dataUrl) => {
         var link = document.createElement('a');
         link.download = 'my-image-name.jpeg';
         link.href = dataUrl;
         link.click();
+        this.setState({
+          wrapperClass: 'comic'
+        });
       });
   }
   render() {
     return (
       <div>
-        <section className="comic" ref={this.myRef}>
+        <section className={this.state.wrapperClass} ref={this.myRef}>
           <h2 className="issue-title">
             {this.props.title}
           </h2>

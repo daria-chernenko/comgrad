@@ -19,6 +19,9 @@ h2.issue-title {
   display: inline-block;
   background-color: #fff;
 }
+.comic.zoom {
+  font-size: 3em;
+}
 .comic-1, .comic-2, .comic-3 {
   background:#fff;
   font-family: 'Bangers', cursive;
