@@ -27,8 +27,8 @@ class Episodes extends Component {
                   <Issue05 />
                   <Issue06 />
                   <Issue07 />
-                <h2>Drafts</h2>
                   <Issue08 />
+                <h2>Drafts</h2>
                   <Issue09 />
                   <Issue10 />
                   <Issue11 />
