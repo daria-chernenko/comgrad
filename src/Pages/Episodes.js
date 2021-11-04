@@ -28,8 +28,8 @@ class Episodes extends Component {
                   <Issue06 />
                   <Issue07 />
                   <Issue08 />
-                <h2>Drafts</h2>
                   <Issue09 />
+                <h2>Drafts</h2>
                   <Issue10 />
                   <Issue11 />
               </Grid.Column>

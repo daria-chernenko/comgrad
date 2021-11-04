@@ -5,7 +5,7 @@ import Character from '../Comic/Character';
 class Issue extends Component {
   render(props) {
     return (
-      <Comic title="Failing tests">
+      <Comic title="Philosophy of IT">
         <Panel>
           <Character 
             type="computer-woman" 
@@ -25,7 +25,7 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-woman" 
-            say="If a CI tests fails and there is nobody to take action, did the test really fail?" />
+            say="If a CI tests fails and there is nobody to take action, did the tests really fail?" />
           <Character 
             type="computer-man" 
             emotion="🤔" />
