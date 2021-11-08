@@ -39,7 +39,7 @@ class DesktopContainer extends Component {
               >
                 <Container>
                   <Menu.Item as={Link} to="/">Home</Menu.Item>
-                  <Menu.Item as={Link} to="/episodes">Episodes</Menu.Item>
+                  <Menu.Item as={Link} to="/episodes">All episodes</Menu.Item>
                 </Container>
               </Menu>
             </Segment>
