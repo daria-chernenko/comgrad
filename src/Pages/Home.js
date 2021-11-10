@@ -6,6 +6,7 @@ import {
     Icon,
     Divider,
   } from 'semantic-ui-react'
+import RandomComics from '../Components/RandomComics'
 class Home extends React.Component {
   render() {
     return (
@@ -28,7 +29,7 @@ class Home extends React.Component {
         <Grid textAlign="center" container relaxed stackable divided columns={1}>
           <Grid.Row>
             <Grid.Column>
-              {}
+              <RandomComics />
             </Grid.Column>
           </Grid.Row>
         </Grid>
