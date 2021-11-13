@@ -137,7 +137,7 @@ h2.issue-title {
   content: '';
 	position: absolute;
 	bottom: 0;
-	left: 25%;
+	left: 2em;
 	width: 0;
 	height: 0;
 	border: 1.5em solid transparent;
@@ -152,6 +152,12 @@ h2.issue-title {
 }
 .bubble-right {
   grid-area: right-bubble;
+}
+.bubble-double {
+  grid-row-start: left-bubble;
+  grid-column-start: left-bubble;
+  grid-row-end: right-bubble;
+  grid-column-end: right-bubble;
 }
 .bubble-auto {
   grid-row-start: 2;

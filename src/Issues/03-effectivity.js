@@ -16,7 +16,7 @@ class Issue extends Component {
           <Character 
             type="computer-man" 
             say="We found a lot of useless things we're doing, so we took action..." />
-          <Character type="computer-woman"  emotion="☺️" />
+          <Character type="computer-woman"  emotion="😊" />
         </Panel>
         <Panel>
           <Character 

@@ -1,7 +1,7 @@
 import React from 'react';
 const Character = function(props) {
   let faceClassName = `character-${props.position}`;
-  let bubbleClassName = `bubble bubble-${props.position}`;
+  let bubbleClassName = `bubble bubble-${props.position} bubble-${props.bubbleSizing}`;
   let soundClassName = `sound sound-${props.position}`;
   let types = {
     'computer-man': '👨‍💻',
@@ -37,6 +37,7 @@ const Character = function(props) {
 }
 Character.defaultProps = {
   position: 'auto',
-  type: 'computer-woman'
+  type: 'computer-woman',
+  bubbleSizing: 'single'
 }
 export default Character;
