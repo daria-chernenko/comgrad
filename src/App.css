@@ -32,6 +32,8 @@ h2.issue-title {
   display: inline-block;
   background-color: #fff;
   padding: 1em;
+  max-width: 50.6em;
+  width: 100%;
 }
 .comic.zoom {
   font-size: 3em;
@@ -39,7 +41,7 @@ h2.issue-title {
 .strip {
   display: grid;
   grid-area: strip;
-  grid-template-columns: 16em 16em 16em;
+  grid-template-columns: repeat(auto-fill, 16em);
   grid-template-rows: 16em;
   grid-gap: 0.3em;
   align-items: start;
