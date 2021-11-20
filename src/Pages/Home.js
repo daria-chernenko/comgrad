@@ -10,19 +10,17 @@ import RandomComics from '../Components/RandomComics'
 class Home extends React.Component {
   render() {
     return (
-      <div>
-        <Grid textAlign="center">
-          <Grid.Row color="purple">
-            <Container>
-              <Grid.Column>
-                <Header inverted className="huge" as='h1'>
-                  Fully accessible web comics
-            </Header>
-                <p>
-                  Yes, it is possible
-            </p>
-              </Grid.Column>
-            </Container>
+      <React.Fragment>
+        <Grid textAlign="center" className="container">
+          <Grid.Row>
+            <Grid.Column>
+              <Header className="huge" as='h1'>
+                Fully accessible web comics
+              </Header>
+              <p>
+                Yes, it is possible
+              </p>
+            </Grid.Column>
           </Grid.Row>
         </Grid>
         <Divider hidden />
@@ -77,7 +75,7 @@ class Home extends React.Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </div>
+      </React.Fragment>
     )
   }
 }
