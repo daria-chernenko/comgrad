@@ -1,23 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import {
-  Button,
-  Container,
-  Grid,
-  Icon,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
-  Visibility,
-} from 'semantic-ui-react'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
+import { Container, Grid, Menu, Responsive, Segment, Visibility, } from 'semantic-ui-react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from '../Pages/Home'
 import Episodes from '../Pages/Episodes'
+import Features from '../Pages/Features'
 class DesktopContainer extends Component {
   state = {}
   hideFixedMenu = () => this.setState({ fixed: false })
@@ -39,11 +26,13 @@ class DesktopContainer extends Component {
               >
                 <Container>
                   <Menu.Item as={Link} to="/">Home</Menu.Item>
+                  <Menu.Item as={Link} to="/features">Features</Menu.Item>
                   <Menu.Item as={Link} to="/episodes">All episodes</Menu.Item>
                 </Container>
               </Menu>
             </Segment>
             <Route exact  path="/" component={Home} />
+            <Route exact  path="/features" component={Features} />
             <Route exact  path="/episodes" component={Episodes} />
           </Visibility>
           {children}

@@ -225,3 +225,6 @@ h2.issue-title {
   background-size: 42.8em 21.4em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em;
   background-repeat: repeat;
 }
+.zoomable {
+  transition: font-size 1s;
+}

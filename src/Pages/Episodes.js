@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Container, Button } from 'semantic-ui-react'
+import { Grid, Container } from 'semantic-ui-react'
 import { released, drafts } from '../Issues';
 class Episodes extends Component {
   render() {

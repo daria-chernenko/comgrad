@@ -11,8 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <Favicon url="/favicon.png" />
-        <HomepageLayout>
-        </HomepageLayout>
+        <HomepageLayout />
       </div>
     );
   }

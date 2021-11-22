@@ -1,17 +1,11 @@
 import React from 'react'
-import {
-    Container,
-    Grid,
-    Header,
-    Icon,
-    Divider,
-  } from 'semantic-ui-react'
+import { Grid, Header, Icon, Divider } from 'semantic-ui-react'
 import RandomComics from '../Components/RandomComics'
 class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Grid textAlign="center" className="container">
+        <Grid textAlign="center" container>
           <Grid.Row>
             <Grid.Column>
               <Header className="huge" as='h1'>
