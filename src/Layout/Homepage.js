@@ -20,38 +20,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import Home from '../Pages/Home'
 import Episodes from '../Pages/Episodes'
 import Features from '../Pages/Features'
-const HomepageHeading = ({ mobile }) => (
-  <Container text>
-    <Header
-      as='h1'
-      content='Imagine-a-Company'
-      inverted
-      style={{
-        fontSize: mobile ? '2em' : '4em',
-        fontWeight: 'normal',
-        marginBottom: 0,
-        marginTop: mobile ? '1.5em' : '3em',
-      }}
-    />
-    <Header
-      as='h2'
-      content='Do whatever you want when you want to.'
-      inverted
-      style={{
-        fontSize: mobile ? '1.5em' : '1.7em',
-        fontWeight: 'normal',
-        marginTop: mobile ? '0.5em' : '1.5em',
-      }}
-    />
-    <Button primary size='huge'>
-      Get Started
-      <Icon name='right arrow' />
-    </Button>
-  </Container>
-)
-HomepageHeading.propTypes = {
-  mobile: PropTypes.bool,
-}
 class DesktopContainer extends Component {
   state = {}
   hideFixedMenu = () => this.setState({ fixed: false })
@@ -62,7 +30,7 @@ class DesktopContainer extends Component {
     return (
       <Responsive {...Responsive.onlyComputer}>
         <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
-          <Segment inverted textAlign='center' style={{ minHeight: 700, padding: '1em 0em' }} vertical>
+          <Segment inverted textAlign='center' vertical>
             <Menu
               fixed={fixed ? 'top' : null}
               inverted={!fixed}
@@ -74,7 +42,6 @@ class DesktopContainer extends Component {
                 <Navigation />
               </Container>
             </Menu>
-            <HomepageHeading />
           </Segment>
         </Visibility>
         {children}
@@ -99,10 +66,10 @@ class MobileContainer extends Component {
       <Responsive {...Responsive.onlyMobile}>
         <Sidebar.Pushable>
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
-            <Navigation />
+            <Navigation  />
           </Sidebar>
           <Sidebar.Pusher dimmed={sidebarOpened} onClick={this.handlePusherClick} style={{ minHeight: '100vh' }}>
-            <Segment inverted textAlign='center' style={{ minHeight: 350, padding: '1em 0em' }} vertical>
+            <Segment inverted textAlign='center' vertical>
               <Container>
                 <Menu inverted pointing secondary size='large'>
                   <Menu.Item onClick={this.handleToggle}>
@@ -110,7 +77,6 @@ class MobileContainer extends Component {
                   </Menu.Item>
                 </Menu>
               </Container>
-              <HomepageHeading mobile />
             </Segment>
             {children}
           </Sidebar.Pusher>
@@ -135,7 +101,7 @@ ResponsiveContainer.propTypes = {
 }
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment style={{ padding: '8em 0em' }} vertical>
+    <Segment vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={16}>

@@ -1,23 +1,69 @@
+import PropTypes from 'prop-types'
 import React from 'react'
-import { Grid, Header, Icon, Divider } from 'semantic-ui-react'
+import { Responsive, Container, Button, Grid, Header, Icon, Divider } from 'semantic-ui-react'
 import RandomComics from '../Components/RandomComics'
+const HomepageHeading = ({ mobile }) => (
+  <Container style={{ minHeight: 700, padding: '1em 0em' }} text>
+    <Responsive {...Responsive.onlyMobile}>
+      <Header
+        as='h1'
+        content='Fully accessible web comics'
+        style={{
+          fontSize: '2em',
+          fontWeight: 'normal',
+          marginBottom: 0,
+          marginTop: '1.5em',
+        }}
+      />
+      <Header
+        as='h2'
+        content='Yes, it is possible'
+        style={{
+          fontSize: '1.5em',
+          fontWeight: 'normal',
+          marginTop: '0.5em',
+        }}
+      />
+      <Button primary size='huge'>
+        Get Started
+        <Icon name='right arrow' />
+      </Button>
+    </Responsive>
+    <Responsive {...Responsive.onlyComputer}>
+      <Header
+        as='h1'
+        content='Fully accessible web comics'
+        style={{
+          fontSize: '4em',
+          fontWeight: 'normal',
+          marginBottom: 0,
+          marginTop: '3em',
+        }}
+      />
+      <Header
+        as='h2'
+        content='Yes, it is possible'
+        style={{
+          fontSize: '1.7em',
+          fontWeight: 'normal',
+          marginTop: '1.5em',
+        }}
+      />
+      <Button primary size='huge'>
+        Get Started!
+        <Icon name='right arrow' />
+      </Button>
+    </Responsive>
+  </Container>
+)
+HomepageHeading.propTypes = {
+  mobile: PropTypes.bool,
+}
 class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Grid textAlign="center" container>
-          <Grid.Row>
-            <Grid.Column>
-              <Header className="huge" as='h1'>
-                Fully accessible web comics
-              </Header>
-              <p>
-                Yes, it is possible
-              </p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-        <Divider hidden />
+        <HomepageHeading />
         <Grid textAlign="center" container relaxed stackable divided columns={1}>
           <Grid.Row>
             <Grid.Column>
