@@ -116,11 +116,17 @@ const HomepageLayout = () => (
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='About' />
-              <List link inverted>
-                <List.Item as='a' href='https:
-                <List.Item as='a' href='http:
+            <Grid.Column width={16}>
+              <List link inverted horizontal divided relaxed>
+                <List.Item>
+                  Source code on <a href='https:
+                </List.Item>
+                <List.Item>
+                  Published on <a href='http:
+                </List.Item>
+                <List.Item>
+                  Built with <a href='https:
+                </List.Item>
               </List>
             </Grid.Column>
           </Grid.Row>
