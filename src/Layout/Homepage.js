@@ -1,25 +1,11 @@
-import PropTypes from 'prop-types'
-import React, { Component } from 'react'
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
-  Visibility,
-} from 'semantic-ui-react'
-import Navigation from './Navigation'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import Home from '../Pages/Home'
-import Episodes from '../Pages/Episodes'
-import Features from '../Pages/Features'
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Container, Grid, Icon, List, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+import Episodes from '../Pages/Episodes';
+import Features from '../Pages/Features';
+import Home from '../Pages/Home';
+import Navigation from './Navigation';
 class DesktopContainer extends Component {
   state = {}
   hideFixedMenu = () => this.setState({ fixed: false })
