@@ -215,6 +215,15 @@ h2.issue-title {
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4), inset 0 0 50 rgba(0, 0, 0, 0.2);
 }
+.painting:after {
+  content: '🖼';
+  font-size: 5em;
+  top: 1em;
+  left: 1em;
+  position: relative;
+  transform: rotate(-5deg);
+  filter: grayscale(100%) drop-shadow(0.07em 0.07em 0.01em rgba(0, 0, 0, 0.3));
+}
 .box {
   background-image: -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -webkit-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -webkit-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
   background-image: -moz-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -moz-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -moz-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
