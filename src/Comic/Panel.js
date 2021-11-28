@@ -18,6 +18,6 @@ class Panel extends Component {
   }
 }
 Panel.defaultProps = {
-  painting: 'true'
+  painting: false
 }
 export default Panel;

@@ -6,7 +6,7 @@ class Issue extends Component {
   render() {
     return (
       <Comic title="Company strategy">
-        <Panel painting="true">
+        <Panel>
           <Character 
             type="computer-man" 
             say="Our company strategy is like putting an ape to cockpit of F1." />
@@ -14,7 +14,7 @@ class Issue extends Component {
             type="computer-woman" 
             emotion="😕" />
         </Panel>
-        <Panel painting="true">
+        <Panel>
           <Character 
             type="computer-man" 
             say="Be surprised that it did not win the grand prize." />
@@ -22,7 +22,7 @@ class Issue extends Component {
             type="computer-woman" 
             emotion="🙁" />
         </Panel>
-        <Panel painting="true">
+        <Panel>
           <Character 
             type="computer-man"
             say="And blame people in pit-stop that they used the wrong tyres." />

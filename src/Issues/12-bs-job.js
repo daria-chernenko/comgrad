@@ -6,7 +6,7 @@ class Issue extends Component {
   render() {
     return (
       <Comic title="To be sure">
-        <Panel painting="true">
+        <Panel>
           <Character 
             type="computer-man" 
             say="According to this article 40% of people think that their job is useless."
@@ -16,7 +16,7 @@ class Issue extends Component {
             say="Good thing that we are IT."
           />
         </Panel>
-        <Panel painting="true">
+        <Panel>
           <Character 
             type="computer-man" 
             say="Yeah, the stats will be different in this field..." 
@@ -26,7 +26,7 @@ class Issue extends Component {
             say="No, that's not what I meant."
           />
         </Panel>
-        <Panel painting="true">
+        <Panel>
           <Character 
             type="computer-man"
             say="So what is it ... ?" 
