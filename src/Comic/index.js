@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react'
-import domtoimage from 'dom-to-image';
+import domtoimage from 'dom-to-image'
+import ReactDOM from 'react-dom'
 class Comic extends Component {
   constructor(props) {
     super(props);
@@ -14,21 +15,24 @@ class Comic extends Component {
     this.setState({
       wrapperClass: 'comic zoom'
     });
-    const node = this.myRef.current;
+    const node = this.props.children[0];
+    console.log(this.refs);
+    let domNode = ReactDOM.findDOMNode(this.refs[0]);
+    console.log(domNode);
     const style = { 
       style: {
       } 
     };
-    domtoimage.toJpeg(node, style)
-      .then((dataUrl) => {
-        var link = document.createElement('a');
-        link.download = 'my-image-name.jpeg';
-        link.href = dataUrl;
-        link.click();
-        this.setState({
-          wrapperClass: 'comic'
-        });
+    console.log(node);
+    domtoimage.toJpeg(domNode, style).then((dataUrl) => {
+      var link = document.createElement('a');
+      link.download = 'my-image-name.jpeg';
+      link.href = dataUrl;
+      link.click();
+      this.setState({
+        wrapperClass: 'comic'
       });
+    });
   }
   render() {
     return (
@@ -38,7 +42,10 @@ class Comic extends Component {
             {this.props.title}
           </h2>
           <div className="strip">
-            {this.props.children}
+            {React.Children.map(this.props.children, (element, idx) => {
+              return React.cloneElement(element, { ref: idx });
+            })}
+            {}
           </div>
           <div className="signature">
             <a>Gradient company</a> by <a href="https:
