@@ -19,13 +19,21 @@ class Comic extends Component {
       style: {
       } 
     };
+    let downloads = [];
     Object.keys(this.refs).forEach(key => {
       let panel = ReactDOM.findDOMNode(this.refs[key]);
-      domtoimage.toJpeg(panel, style).then((dataUrl) => {
+      let promise = domtoimage.toJpeg(panel, style);
+      downloads.push(promise);
+      promise.then((dataUrl) => {
         var link = document.createElement('a');
         link.download = 'my-image-name.jpeg';
         link.href = dataUrl;
         link.click();
+      });
+    });
+    Promise.all(downloads).then(() => {
+      this.setState({
+        wrapperClass: 'comic'
       });
     });
   }
