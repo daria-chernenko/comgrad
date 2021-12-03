@@ -22,6 +22,7 @@ h2.issue-title {
   font-family: 'Bangers', cursive;
   text-align: left;
   font-size: 2em;
+  background-color: #fff;
 }
 .download {
   position: relative;
@@ -184,6 +185,7 @@ h2.issue-title {
   transform: scaleX(-1) rotate(15deg);
 }
 .signature {
+  background-color: #fff;
   grid-area: signature;
   font-weight: 200;
   font-size: 0.7em;

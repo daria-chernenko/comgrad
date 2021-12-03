@@ -5,7 +5,8 @@ import ReactDOM from 'react-dom'
 class Comic extends Component {
   constructor(props) {
     super(props);
-    this.myRef = React.createRef();
+    this.titleRef = React.createRef();
+    this.signatureRef = React.createRef();
     this.downloadComics = this.downloadComics.bind(this);
     this.state = {
       wrapperClass: 'comic'
@@ -19,14 +20,20 @@ class Comic extends Component {
       style: {
       } 
     };
-    let downloads = [];
+    let components = [];
+    components.push(this.titleRef.current);
     Object.keys(this.refs).forEach(key => {
       let panel = ReactDOM.findDOMNode(this.refs[key]);
-      let promise = domtoimage.toJpeg(panel, style);
+      components.push(panel);
+    });
+    components.push(this.signatureRef.current);
+    let downloads = [];
+    components.map((component, index) => {
+      let promise = domtoimage.toJpeg(component, style);
       downloads.push(promise);
       promise.then((dataUrl) => {
         var link = document.createElement('a');
-        link.download = `${this.props.title}-${key}.jpeg`;
+        link.download = `${this.props.title}-${index}.jpeg`;
         link.href = dataUrl;
         link.click();
       });
@@ -40,8 +47,8 @@ class Comic extends Component {
   render() {
     return (
       <div>
-        <section className={this.state.wrapperClass} ref={this.myRef}>
-          <h2 className="issue-title">
+        <section className={this.state.wrapperClass}>
+          <h2 className="issue-title" ref={this.titleRef}>
             {this.props.title}
           </h2>
           <div className="strip">
@@ -49,7 +56,7 @@ class Comic extends Component {
               return React.cloneElement(element, { ref: idx });
             })}
           </div>
-          <div className="signature">
+          <div className="signature" ref={this.signatureRef}>
             <a>Gradient company</a> by <a href="https:
           </div>
         </section>
