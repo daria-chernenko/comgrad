@@ -49,7 +49,7 @@ h2.issue-title {
 }
 .box{
   overflow: hidden;
-  background:#fff; 
+  background-color: #fff; 
   border: solid black;
   border-color: black;
   align-self: stretch;
@@ -62,6 +62,7 @@ h2.issue-title {
     "left-character right-character";
   align-items: stretch;
   align-content: end;
+  min-height: 16em;
 }
 .strip .box:nth-of-type(1) { 
   border-width: .3em .4em .3em .5em;

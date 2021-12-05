@@ -9,7 +9,7 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-man" 
-            say="Our company strategy is like putting an ape to cockpit of F1." />
+            say="Our company strategy is like putting an ape to cockpit of F1..." />
           <Character 
             type="computer-woman" 
             emotion="😕" />
@@ -17,7 +17,7 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-man" 
-            say="Be surprised that it did not win the grand prize." />
+            say="Be surprised that it did not win the grand prize..." />
           <Character 
             type="computer-woman" 
             emotion="🙁" />
