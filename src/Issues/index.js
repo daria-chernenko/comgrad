@@ -24,6 +24,5 @@ export const released = [
   Issue11
 ];
 export const drafts = [
-  Issue11,
   Issue12
 ];

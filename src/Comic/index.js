@@ -33,7 +33,7 @@ class Comic extends Component {
       downloads.push(promise);
       promise.then((dataUrl) => {
         var link = document.createElement('a');
-        link.download = `${this.props.title}-${index}.jpeg`;
+        link.download = `${this.props.title}-${index}.jpg`;
         link.href = dataUrl;
         link.click();
       });
