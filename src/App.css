@@ -39,6 +39,9 @@ h2.issue-title {
 .comic.zoom {
   font-size: 3em;
 }
+.comic.zoom .issue-title, .comic.zoom .signature {
+  max-width: 800px;
+}
 .strip {
   display: grid;
   grid-area: strip;
