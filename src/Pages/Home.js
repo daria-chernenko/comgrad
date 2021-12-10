@@ -106,7 +106,7 @@ class Home extends React.Component {
               <p>This is a simple example of React in action - a learning project. Very nice showcase of latest & greatest CSS features.</p>
               <p>This was not obvious from the start, but I'm creating first ever fully accessible comics. It is possible to do virtually infinite zoom without losing quality. Text readers works very well. And there is possibility to enable high contrast mode as well. Did you know that it's quite a pain to translate comics? Well, over here it's quite easy.</p>
               <p>It is quite challenging to create story with the limited set of tools - CSS &amp; some emoji. There are emojis expressing feelings via emojis. How deep can we go?</p>
-              <p>I wanted to create first ever comics that accepts pull requests. See a spelling error? Want to address discriminative language? Have idea for new episode? Comics is broken on your browser? Raise a PR!</p>
+              <p>I wanted to create first ever comics that accepts pull requests. See a spelling error? Want to address discriminative language? Have idea for new episode? Comics is broken on your browser? Raisconsoe a PR!</p>
               <h3>Disclaimer</h3>
               <p>
                 I tried my best to anonymize the sources of my stories. Some of them are even made up as a result of a "pub talk". If you still feel like you can recognize the source, please tell me.

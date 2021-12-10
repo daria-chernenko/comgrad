@@ -5,36 +5,34 @@ import Panel from '../Comic/Panel';
 class Issue extends Component {
   render() {
     return (
-      <Comic title="To be sure">
+      <Comic title="Conversions">
         <Panel>
           <Character 
             type="computer-man" 
-            say="According to this article 40% of people think that their job is useless."
+            say="According to this analytics, from thousand people on our website..."
           />
           <Character 
             type="computer-woman" 
-            say="Good thing that we are IT."
           />
         </Panel>
         <Panel>
           <Character 
             type="computer-man" 
-            say="Yeah, the stats will be different in this field..." 
+            say="There are only 5 customers ..." 
           />
           <Character 
             type="computer-woman" 
-            say="No, that's not what I meant."
+            say="So what?"
           />
         </Panel>
         <Panel>
           <Character 
             type="computer-man"
-            say="So ... ?" 
-            emotion="😕" 
+            say="That's not too much."
           />
           <Character 
             type="computer-woman" 
-            say="Well we *know* that our jobs are useless..."
+            say='Even "enlarge your penis" campaigns have better conversion ratio.'
           />
         </Panel>
       </Comic>
