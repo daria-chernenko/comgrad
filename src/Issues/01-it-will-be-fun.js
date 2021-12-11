@@ -8,7 +8,7 @@ class Issue extends Component {
     return (
       <div id="foo">
       <Comic title="It will be fun they said...">
-        <Panel title="Random IT office">
+        <Panel>
           <Character 
             type="computer-man" 
             say="Bring your child to work days are special."/>
