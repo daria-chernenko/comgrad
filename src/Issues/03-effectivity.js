@@ -8,7 +8,7 @@ class Issue extends Component {
       <Comic title="Effectivity">
         <Panel>
           <Character type="computer-man"  
-            say="Performance meetings helps us figure out what's holding our company back." />
+            say="Performance meetings helps us figure out what's holding us back." />
           <Character type="computer-woman" >
           </Character>
         </Panel>
