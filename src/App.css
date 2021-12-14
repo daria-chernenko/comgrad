@@ -52,6 +52,8 @@ h2.issue-title {
 }
 .box{
   overflow: hidden;
+  width: 16em;
+  height: 16em;
   background-color: #fff; 
   border: solid black;
   border-color: black;
