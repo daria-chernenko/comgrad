@@ -8,12 +8,12 @@ class Panel extends Component {
       painting: this.props.painting
     });
     return (
-      <div className={className}>
+      <section className={className} aria-label={`Panel ${this.props.index}`}>
         {this.props.title && 
           <Title>{this.props.title}</Title>
         }
         {this.props.children}
-      </div>
+      </section>
     );
   }
 }

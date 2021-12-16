@@ -48,12 +48,12 @@ class Comic extends Component {
     return (
       <div>
         <section className={this.state.wrapperClass}>
-          <h2 className="issue-title" ref={this.titleRef}>
+          <h3 className="issue-title" ref={this.titleRef}>
             {this.props.title}
-          </h2>
+          </h3>
           <div className="strip">
             {React.Children.map(this.props.children, (element, idx) => {
-              return React.cloneElement(element, { ref: idx });
+              return React.cloneElement(element, { ref: idx, index: idx });
             })}
           </div>
           <div className="signature" ref={this.signatureRef}>

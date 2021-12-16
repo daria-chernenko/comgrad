@@ -11,11 +11,6 @@ const Character = function(props) {
   let face = types[props.type];
   return (
     <React.Fragment>
-      {props.say &&
-        <p className={bubbleClassName}>
-          {props.say}
-        </p>
-      }
       <div className={faceClassName}>
         {props.sound &&
           <p className={soundClassName}>
@@ -32,6 +27,11 @@ const Character = function(props) {
           </span>
         </span>
       </div>
+      {props.say &&
+        <p className={bubbleClassName}>
+          {props.say}
+        </p>
+      }
     </React.Fragment>
   );
 }
