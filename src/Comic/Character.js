@@ -19,12 +19,12 @@ const Character = function(props) {
         }
         <span className="character">
           {props.children}
-          {props.emotion &&
-            <span className="emotion">{props.emotion}</span>
-          }
           <span className="face">
             {face}
           </span>
+          {props.emotion &&
+            <span className="emotion">{props.emotion}</span>
+          }
         </span>
       </div>
       {props.say &&
