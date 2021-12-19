@@ -1,0 +1,16 @@
+@type    : 'global';
+@element : 'reset';
+@import (multiple) '../../theme.config';
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+}
+.loadUIOverrides();
