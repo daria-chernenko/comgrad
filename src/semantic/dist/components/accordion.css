@@ -12,9 +12,9 @@
 }
 .ui.accordion .title:not(.ui) {
   padding: 0.5em 0em;
-  font-family: 'Arial', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 1em;
-  color: rgba(0, 0, 0, 0.87);
+  color: #2c3e50;
 }
 .ui.accordion .title ~ .content,
 .ui.accordion .accordion .title ~ .content {
@@ -74,7 +74,7 @@
 }
 .ui.styled.accordion,
 .ui.styled.accordion .accordion {
-  border-radius: 0.30769231rem;
+  border-radius: 0.26666667rem;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0px 0px 0px 1px rgba(34, 36, 38, 0.15);
           box-shadow: 0px 1px 2px 0 rgba(34, 36, 38, 0.15), 0px 0px 0px 1px rgba(34, 36, 38, 0.15);
@@ -107,20 +107,20 @@
 .ui.styled.accordion .accordion .title:hover,
 .ui.styled.accordion .accordion .active.title {
   background: transparent;
-  color: rgba(0, 0, 0, 0.87);
+  color: #2c3e50;
 }
 .ui.styled.accordion .accordion .title:hover,
 .ui.styled.accordion .accordion .active.title {
   background: transparent;
-  color: rgba(0, 0, 0, 0.87);
+  color: #2c3e50;
 }
 .ui.styled.accordion .active.title {
   background: transparent;
-  color: rgba(0, 0, 0, 0.95);
+  color: #000;
 }
 .ui.styled.accordion .accordion .active.title {
   background: transparent;
-  color: rgba(0, 0, 0, 0.95);
+  color: #000;
 }
 .ui.accordion .active.content,
 .ui.accordion .accordion .active.content {
@@ -152,4 +152,15 @@
 .ui.accordion .title .dropdown.icon:before,
 .ui.accordion .accordion .title .dropdown.icon:before {
   content: '\f0da' ;
+}
+.ui.vertical.accordion.menu:not(.following) * {
+  color: #e6e6e6;
+}
+.ui.vertical.accordion.menu:not(.following) *:hover {
+  color: #cccccc;
+}
+.ui.vertical.accordion.menu:not(.following) *:active,
+.ui.vertical.accordion.menu:not(.following) *.checked,
+.ui.vertical.accordion.menu:not(.following) *.active {
+  color: #FFFFFF;
 }

@@ -16,7 +16,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  padding: 0.23076923rem 0em;
+  padding: 0.2rem 0em;
   margin: 0em;
   background: none;
   border-top: none;
@@ -55,7 +55,7 @@
   border-radius: 500rem;
 }
 .ui.feed > .event > .label + .content {
-  margin: 0.5em 0em 0.38461538em 1.15384615em;
+  margin: 0.5em 0em 0.33333333em 1.13333333em;
 }
 .ui.feed > .event > .content {
   display: block;
@@ -85,7 +85,7 @@
   margin: 0em;
   font-size: 1em;
   font-weight: bold;
-  color: rgba(0, 0, 0, 0.87);
+  color: #2c3e50;
 }
 .ui.feed > .event > .content .summary img {
   display: inline-block;
@@ -111,7 +111,7 @@
   display: inline-block;
   float: none;
   font-weight: normal;
-  font-size: 0.84615385em;
+  font-size: 0.86666667em;
   font-style: normal;
   margin: 0em 0em 0em 0.5em;
   padding: 0em;
@@ -121,7 +121,7 @@
   margin: 0.5em 0em 0em;
   background: none;
   padding: 0em;
-  color: rgba(0, 0, 0, 0.87);
+  color: #2c3e50;
 }
 .ui.feed > .event > .content .extra.images img {
   display: inline-block;
@@ -137,7 +137,7 @@
 }
 .ui.feed > .event > .content .meta {
   display: inline-block;
-  font-size: 0.84615385em;
+  font-size: 0.86666667em;
   margin: 0.5em 0em 0em;
   background: none;
   border: none;
@@ -188,14 +188,14 @@
 .ui.feed > .event > .content .meta a:hover,
 .ui.feed > .event > .content .meta a:hover .icon,
 .ui.feed > .event > .content .meta > .icon:hover {
-  color: rgba(0, 0, 0, 0.95);
+  color: #000;
 }
 .ui.small.feed {
-  font-size: 0.92307692rem;
+  font-size: 0.93333333rem;
 }
 .ui.feed {
   font-size: 1rem;
 }
 .ui.large.feed {
-  font-size: 1.15384615rem;
+  font-size: 1.13333333rem;
 }

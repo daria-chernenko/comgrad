@@ -34,7 +34,7 @@
 .ui.rating .icon.selected,
 .ui.rating .icon.selected.active {
   background: transparent;
-  color: rgba(0, 0, 0, 0.87);
+  color: #2c3e50;
 }
 .ui.star.rating .icon {
   width: 1.25em;
@@ -83,22 +83,22 @@
   opacity: 1;
 }
 .ui.mini.rating {
-  font-size: 0.76923077rem;
+  font-size: 0.8rem;
 }
 .ui.tiny.rating {
-  font-size: 0.84615385rem;
+  font-size: 0.86666667rem;
 }
 .ui.small.rating {
-  font-size: 0.92307692rem;
+  font-size: 0.93333333rem;
 }
 .ui.rating {
   font-size: 1rem;
 }
 .ui.large.rating {
-  font-size: 1.15384615rem;
+  font-size: 1.13333333rem;
 }
 .ui.huge.rating {
-  font-size: 1.46153846rem;
+  font-size: 1.4rem;
 }
 .ui.massive.rating {
   font-size: 2rem;
