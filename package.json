@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "classnames": "^2.2.5",
+    "classnames": "^2.2.6",
     "dom-to-image": "^2.6.0",
     "gulp": "^3.9.1",
     "react": "^16.3.1",

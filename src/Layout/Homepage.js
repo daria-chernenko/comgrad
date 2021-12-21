@@ -8,28 +8,21 @@ import Home from '../Pages/Home';
 import Navigation from './Navigation';
 class DesktopContainer extends Component {
   state = {}
-  hideFixedMenu = () => this.setState({ fixed: false })
-  showFixedMenu = () => this.setState({ fixed: true })
   render() {
     const { children } = this.props
     const { fixed } = this.state
     return (
       <Responsive {...Responsive.onlyComputer}>
-        <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
-          <Segment inverted textAlign='center' vertical>
-            <Menu
-              fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size='large'
-            >
-              <Container>
-                <Navigation />
-              </Container>
-            </Menu>
-          </Segment>
-        </Visibility>
+        <Segment inverted textAlign='center' vertical>
+          <Menu
+            fixed='top'
+            size='large'
+          >
+            <Container>
+              <Navigation />
+            </Container>
+          </Menu>
+        </Segment>
         {children}
       </Responsive>
     )
@@ -87,7 +80,7 @@ ResponsiveContainer.propTypes = {
 }
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment vertical>
+    <Segment vertical className='content'>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={16}>
@@ -98,12 +91,12 @@ const HomepageLayout = () => (
         </Grid.Row>
       </Grid>
     </Segment>
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
+    <Segment vertical style={{ padding: '1em 0em' }}>
       <Container>
-        <Grid divided inverted stackable>
+        <Grid divided stackable>
           <Grid.Row>
             <Grid.Column width={16}>
-              <List link inverted horizontal divided relaxed>
+              <List link horizontal divided relaxed>
                 <List.Item>
                   Source code on <a href='https:
                 </List.Item>
