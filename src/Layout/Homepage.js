@@ -81,14 +81,10 @@ ResponsiveContainer.propTypes = {
 const HomepageLayout = () => (
   <ResponsiveContainer>
     <Segment vertical className='content'>
-      <Grid container stackable verticalAlign='middle'>
-        <Grid.Row>
-          <Grid.Column width={16}>
-            <Route exact  path="/" component={Home} />
-            <Route exact  path="/features" component={Features} />
-            <Route exact  path="/episodes" component={Episodes} />
-          </Grid.Column>
-        </Grid.Row>
+      <Grid>
+        <Route exact  path="/" component={Home} />
+        <Route exact  path="/features" component={Features} />
+        <Route exact  path="/episodes" component={Episodes} />
       </Grid>
     </Segment>
     <Segment vertical style={{ padding: '1em 0em' }}>
@@ -102,6 +98,9 @@ const HomepageLayout = () => (
                 </List.Item>
                 <List.Item>
                   Published on <a href='http:
+                </List.Item>
+                <List.Item>
+                  Also on <a href='https:
                 </List.Item>
                 <List.Item>
                   Built with <a href='https:

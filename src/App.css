@@ -19,7 +19,13 @@
 }
 .App > div > div > .content {
   flex: 1;
-  padding-top: 3em;
+  padding-top: 2em;
+}
+.title-no1 {
+  background-image: url('/images/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body {
   color: #000;
@@ -198,6 +204,9 @@ body {
   bottom: -0.2em;
   font-size: 2em;
   transform: scaleX(-1) rotate(15deg);
+}
+.small-comics {
+  font-size: 11px;
 }
 .signature {
   background-color: #fff;

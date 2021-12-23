@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Responsive, Container, Button, Grid, Header, Icon, Divider } from 'semantic-ui-react'
+import { Card, List, Responsive, Container, Button, Grid, Header, Icon, Divider } from 'semantic-ui-react'
 import RandomComics from '../Components/RandomComics'
 const HomepageHeading = ({ mobile }) => (
+  <Grid.Row className='title-no1'>
+    <Grid.Column>
   <Container style={{ padding: '3em 0em' }} text>
     <Responsive {...Responsive.onlyMobile}>
       <Header
@@ -28,8 +30,9 @@ const HomepageHeading = ({ mobile }) => (
     </Responsive>
     <Responsive {...Responsive.onlyComputer}>
       <Header
+        inverted
         as='h1'
-        content='Fully accessible web comics'
+        content='Fully accessible comics?'
         style={{
           fontSize: '4em',
           fontWeight: 'normal',
@@ -38,8 +41,9 @@ const HomepageHeading = ({ mobile }) => (
         }}
       />
       <Header
+        inverted
         as='h2'
-        content='Yes, it is possible'
+        content='Yes, it is possible...'
         style={{
           fontSize: '1.7em',
           fontWeight: 'normal',
@@ -49,6 +53,8 @@ const HomepageHeading = ({ mobile }) => (
       {}
     </Responsive>
   </Container>
+  </Grid.Column>
+  </Grid.Row>
 )
 HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
@@ -58,46 +64,62 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <HomepageHeading />
-        <Divider />
-        <Grid textAlign="center" container relaxed stackable divided columns={1}>
-          <Grid.Row>
-            <Grid.Column>
-              <RandomComics />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-        <Divider />
-        <Grid textAlign="center" container relaxed stackable divided columns={3}>
-          <Grid.Row>
-            <Grid.Column>
-              <Header icon as="h3">
-                <Icon bordered circular name='blind' />Screen reader friendly
-            </Header>
-              <p>
-                Try using screen reader on any of the episodes.
-            </p>
-            </Grid.Column>
-            <Grid.Column>
-              <Header icon as="h3">
-                <Icon bordered circular name='code' />Enhanceable
-            </Header>
-              <p>
-                See a spelling error? Want to address discriminative language? Have idea for new episode? Comics is broken on your browser? Raise a MR!
-            </p>
-            </Grid.Column>
-            <Grid.Column>
-              <Header icon as="h3">
-                <Icon bordered circular name='talk' />Translatable
-                </Header>
-              <p>
-                Did you know that it's quite a pain to translate comics? Well, over here it's quite easy.
-            </p>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-        <Divider />
-        <Grid container columns={1}>
-          <Grid.Row>
+        <Grid.Row>
+          <Grid container relaxed stackable>
+              <Grid.Column width={6}>
+                <Header size='huge' as='h2'>Imagine a comics where...</Header>
+                <List bulleted>
+                  <List.Item>Nobody is excluded from consuming the content just because of their vision (or any other) impairment.</List.Item>
+                  <List.Item>Authors are not forced to do expensive additional work upon publishing.</List.Item>
+                  <List.Item>Public can actively contribute to make the comics better.</List.Item>
+                </List>
+              </Grid.Column>
+              <Grid.Column width={10} className='small-comics' textAlign='right'>
+                <RandomComics />
+              </Grid.Column>
+          </Grid>
+        </Grid.Row>
+        <Grid.Row>
+          <Container> 
+            <Card.Group itemsPerRow={3}>
+              <Card color='red'>
+                <Card.Content>
+                  <Card.Header>
+                    <Icon bordered circular name='blind' />
+                    Screen reader friendly
+                  </Card.Header>
+                  <Card.Description>
+                    Try using screen reader on any of the episodes.
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+              <Card color='red'>
+                <Card.Content>
+                  <Card.Header>
+                    <Icon bordered circular name='code' />
+                    Enhanceable
+                  </Card.Header>
+                  <Card.Description>
+                    See a spelling error? Want to address discriminative language? Have idea for new episode? Comics is broken on your browser? Raise a merge request!
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+              <Card color='red'>
+                <Card.Content>
+                  <Card.Header>
+                    <Icon bordered circular name='talk' />
+                    Translatable
+                  </Card.Header>
+                  <Card.Description>
+                    Did you know that it's quite a pain to translate comics? Well, over here it's quite easy.
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+            </Card.Group>
+          </Container>
+        </Grid.Row>
+        <Grid.Row>
+          <Container>
             <Grid.Column>
               <h3>Motivation</h3>
               <p>
@@ -113,8 +135,8 @@ class Home extends React.Component {
                 There is no intent to offend anybody. Just for the laughs.
               </p>
             </Grid.Column>
-          </Grid.Row>
-        </Grid>
+          </Container>
+        </Grid.Row>
       </React.Fragment>
     )
   }
