@@ -3,7 +3,7 @@ import React from 'react'
 import { Card, List, Responsive, Container, Button, Grid, Header, Icon, Divider } from 'semantic-ui-react'
 import RandomComics from '../Components/RandomComics'
 const HomepageHeading = ({ mobile }) => (
-  <Grid.Row className='title-no1'>
+  <Grid.Row className='title-home-1'>
     <Grid.Column>
   <Container style={{ padding: '3em 0em' }} text>
     <Responsive {...Responsive.onlyMobile}>

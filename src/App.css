@@ -21,8 +21,14 @@
   flex: 1;
   padding-top: 2em;
 }
-.title-no1 {
-  background-image: url('/images/bg.jpg');
+.title-home-1 {
+  background-image: url('/images/bg_home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title-features {
+  background-image: url('/images/bg_features.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
