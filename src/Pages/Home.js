@@ -70,7 +70,7 @@ class Home extends React.Component {
                 <Header size='huge' as='h2'>Imagine a comics where...</Header>
                 <List bulleted>
                   <List.Item>Nobody is excluded from consuming the content just because of their vision (or any other) impairment.</List.Item>
-                  <List.Item>Authors are not forced to do expensive additional work upon publishing.</List.Item>
+                  <List.Item>Authors are not forced to do expensive additional work upon publishing to make it accessible.</List.Item>
                   <List.Item>Public can actively contribute to make the comics better.</List.Item>
                 </List>
               </Grid.Column>
