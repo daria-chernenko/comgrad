@@ -30,8 +30,8 @@ class Features extends React.Component {
           </Container>
         </Grid.Row>
         <Grid.Row>
-          <Grid container columns={3}>
-            <Grid.Column>
+          <Grid container>
+            <Grid.Column width={6}>
               <div ref={this.handleContextRef}>
               <Segment>
                 <h2>Zoomable</h2>
@@ -105,7 +105,10 @@ class Features extends React.Component {
                   There is quite a lot that can be achieved with this technology. I'm constantly discovering new ones. If you have an idea, please <a href='mailto:michal.bryxi@gmail.com'>tell me</a>.
                 </p>
               </Segment>
-              <Rail position='right'>
+              </div>
+            </Grid.Column>
+            <Grid.Column width={10}>
+              {}
                 <Sticky context={contextRef}>
                   <Grid.Column width={12} textAlign='right'>
                     <div className="zoomable" style={{fontSize: this.state.size}}>
@@ -113,8 +116,7 @@ class Features extends React.Component {
                     </div>
                   </Grid.Column>
                 </Sticky>
-              </Rail>
-              </div>
+              {}
             </Grid.Column>
           </Grid>
         </Grid.Row>

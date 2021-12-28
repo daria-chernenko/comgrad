@@ -19,19 +19,21 @@
 }
 .App > div > div > .content {
   flex: 1;
-  padding-top: 2em;
+  margin-top: -1em !important;
 }
 .title-home-1 {
   background-image: url('/images/bg_home.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 25em;
 }
 .title-features {
   background-image: url('/images/bg_features.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 25em;
 }
 body {
   color: #000;

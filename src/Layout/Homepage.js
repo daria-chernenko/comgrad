@@ -13,16 +13,15 @@ class DesktopContainer extends Component {
     const { fixed } = this.state
     return (
       <Responsive {...Responsive.onlyComputer}>
-        <Segment inverted textAlign='center' vertical>
+        {}
           <Menu
-            fixed='top'
             size='large'
           >
             <Container>
               <Navigation />
             </Container>
           </Menu>
-        </Segment>
+        {}
         {children}
       </Responsive>
     )
