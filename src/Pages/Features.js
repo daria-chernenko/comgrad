@@ -6,11 +6,14 @@ class Features extends React.Component {
   handleContextRef = contextRef => this.setState({ contextRef })
   constructor(props) {
     super(props);
-    this.state = {size: '10px'};
-    this.changeSize = this.changeSize.bind(this);
+    this.state = {size: '10px', viewMode: 'web'};
   }
-  changeSize(event, { value }) {
+  changeSize = (event, { value }) => {
     this.setState({ size: value });
+  }
+  changeViewMode = (event, { value }) => {
+    console.log('moo');
+    this.setState({ viewMode: value });
   }
   render () {
     const { contextRef } = this.state
@@ -55,8 +58,18 @@ class Features extends React.Component {
               <Segment>
                 <h2>Exportable</h2>
                 <p>
-                  HTML + CSS is nice and good, but what if you want the comics as individual stories? Well, you can simply export it. Just click on that tiny save icon in the corner.
+                  HTML + CSS is nice and good, but what if you want the comics as individual stories? Well, you can simply export it. Just click on that tiny save icon in the corner. The form below allows you to preview the different version for export:
                 </p>
+                <Form>
+                  <Form.Group inline>
+                    <Form.Field>
+                      <Radio label='Web' name='viewMode' value='web' checked={this.state.viewMode === 'web'} onChange={this.changeViewMode} />
+                    </Form.Field>
+                    <Form.Field>
+                      <Radio label='Instagram' name='viewMode' value='download-instagram' checked={this.state.viewMode === 'download-instagram'} onChange={this.changeViewMode} />
+                    </Form.Field>
+                  </Form.Group>
+                </Form>
               </Segment>
               <Segment>
                 <h2>Mobile friendly</h2>
@@ -111,7 +124,7 @@ class Features extends React.Component {
               {}
                 <Sticky context={contextRef}>
                   <Grid.Column width={12} textAlign='right'>
-                    <div className="zoomable" style={{fontSize: this.state.size}}>
+                    <div className={this.state.viewMode} style={{fontSize: this.state.size}}>
                       <Issue01 />
                     </div>
                   </Grid.Column>

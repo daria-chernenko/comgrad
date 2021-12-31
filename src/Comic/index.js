@@ -45,10 +45,14 @@ class Comic extends Component {
     });
   }
   render() {
+    let wrapperClass = `${this.state.wrapperClass} ${this.props.viewMode}`;
     return (
-      <div>
-        <section className={this.state.wrapperClass}>
+      <div className="zoomable">
+        <section className={wrapperClass}>
           <h3 className="issue-title" ref={this.titleRef}>
+            {this.props.icon &&
+              <span>{this.props.icon}</span>
+            }
             {this.props.title}
           </h3>
           <div className="strip">
@@ -60,7 +64,7 @@ class Comic extends Component {
             <a>Gradient company</a> by <a href="https:
           </div>
         </section>
-        <Button color="teal" circular icon="save" className="download" onClick={this.downloadComics} />
+        <Button color="teal" circular icon="save" className="download-button" onClick={this.downloadComics} />
       </div>
     );
   }

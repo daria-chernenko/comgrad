@@ -6,8 +6,7 @@ import Lollipop from '../Comic/Lollipop';
 class Issue extends Component {
   render() {
     return (
-      <div id="foo">
-      <Comic title="It will be fun they said...">
+      <Comic title="It will be fun they said..." icon="🍭">
         <Panel>
           <Character 
             type="computer-man" 
@@ -29,7 +28,6 @@ class Issue extends Component {
           <Character type="computer-woman" />
         </Panel>
       </Comic>
-      </div>
     );
   }
 }
