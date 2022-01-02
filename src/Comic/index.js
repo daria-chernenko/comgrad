@@ -45,20 +45,21 @@ class Comic extends Component {
     });
   }
   render() {
+    let comicClass = `${this.state.wrapperClass} strip`;
     return (
       <div className="zoomable">
-        <section className={this.state.wrapperClass}>
-          <h3 className="issue-title" ref={this.titleRef}>
-            {this.props.icon &&
-              <span>{this.props.icon}</span>
-            }
-            {this.props.title}
-          </h3>
-          <div className="strip">
-            {React.Children.map(this.props.children, (element, idx) => {
-              return React.cloneElement(element, { ref: idx, index: idx });
-            })}
+        <section className={comicClass}>
+          <div className="issue-title" ref={this.titleRef}>
+            <h3>
+              {this.props.icon &&
+                <span class="title-icon">{this.props.icon}</span>
+              }
+              {this.props.title}
+            </h3>
           </div>
+          {React.Children.map(this.props.children, (element, idx) => {
+            return React.cloneElement(element, { ref: idx, index: idx });
+          })}
           <div className="signature" ref={this.signatureRef}>
             <a>Gradient company</a> by <a href="https:
           </div>
