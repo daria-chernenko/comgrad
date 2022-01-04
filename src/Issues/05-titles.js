@@ -5,7 +5,7 @@ import Character from '../Comic/Character';
 class Issue extends Component {
   render(props) {
     return (
-      <Comic title="Titles">
+      <Comic title="Titles" icon="🎩">
         <Panel>
           <Character 
             type="computer-man" 
@@ -26,7 +26,7 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-man" 
-            say="Just the guy next door. He has been here for a while and went through few promotions." />
+            say="Nope, but he has been here for a while and went through few promotions." />
           <Character type="computer-woman"  emotion="😄" />
         </Panel>
       </Comic>

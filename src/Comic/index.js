@@ -14,7 +14,7 @@ class Comic extends Component {
   }
   downloadComics() {
     this.setState({
-      wrapperClass: 'comic zoom'
+      wrapperClass: 'comic download-instagram zoom'
     });
     const style = { 
       style: {
