@@ -85,14 +85,6 @@ body {
 .comic.zoom .issue-title, .comic.zoom .signature {
   max-width: 800px;
 }
-.strip {
-  display: grid;
-  grid-area: strip;
-  grid-template-columns: repeat(auto-fill, 16em);
-  grid-template-rows: 16em;
-  grid-gap: 0.3em;
-  align-items: start;
-}
 .box{
   overflow: hidden;
   width: 16em;
@@ -298,18 +290,36 @@ body {
 .title-icon {
   margin-right: .5em;
 }
-.download-instagram.strip {
+.web .strip {
+  display: grid;
+  grid-gap: 0.3em;
+  grid-template-columns: 16em;
+  grid-template-rows: 3em 16em 1em;
+}
+.web .strip > .issue-title {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+}
+.web .strip > .box {
+  grid-row: 2;
+}
+.web .strip > .signature {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+}
+.download-instagram .strip {
   grid-auto-flow: row;
   grid-template-rows: repeat(auto-fill, 16em);
   grid-template-columns: 16em;
 }
-.download-instagram.strip > div {
+.download-instagram .strip > div {
   grid-area: initial;
   height: 16em;
 }
-.download-instagram.strip .issue-title {
+.download-instagram .strip .issue-title {
   padding: 1em;
-  height: 100%; 
+  height: 16em;
+  width: 16em; 
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -45,10 +45,10 @@ class Comic extends Component {
     });
   }
   render() {
-    let comicClass = `${this.state.wrapperClass} strip`;
+    let comicClass = `${this.state.wrapperClass} zoomable`;
     return (
-      <div className="zoomable">
-        <section className={comicClass}>
+      <div className={comicClass}>
+        <section className="strip">
           <div className="issue-title" ref={this.titleRef}>
             <h3>
               {this.props.icon &&
