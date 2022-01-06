@@ -76,14 +76,11 @@ body {
   display: inline-block;
   background-color: #fff;
   padding: 1em;
-  max-width: 50.6em;
-  width: 100%;
 }
-.comic.zoom {
-  font-size: 2.5em;
+.zoom {
+  font-ize: 2.5em;
 }
 .comic.zoom .issue-title, .comic.zoom .signature {
-  max-width: 800px;
 }
 .box{
   overflow: hidden;

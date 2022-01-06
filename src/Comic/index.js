@@ -9,12 +9,14 @@ class Comic extends Component {
     this.signatureRef = React.createRef();
     this.downloadComics = this.downloadComics.bind(this);
     this.state = {
-      wrapperClass: 'comic'
+      zoomClass: '',
+      wrapperClass: 'comic web'
     };
   }
   downloadComics() {
     this.setState({
-      wrapperClass: 'comic download-instagram zoom'
+      zoomClass: 'zoom',
+      wrapperClass: 'comic download-instagram'
     });
     const style = { 
       style: {
@@ -40,15 +42,17 @@ class Comic extends Component {
     });
     Promise.all(downloads).then(() => {
       this.setState({
-        wrapperClass: 'comic'
+        zoomClass: '',
+        wrapperClass: 'comic web'
       });
     });
   }
   render() {
     let comicClass = `${this.state.wrapperClass} zoomable`;
+    let zoomClass = `${this.state.zoomClass} strip`;
     return (
       <div className={comicClass}>
-        <section className="strip">
+        <section className={zoomClass}>
           <div className="issue-title" ref={this.titleRef}>
             <h3>
               {this.props.icon &&
