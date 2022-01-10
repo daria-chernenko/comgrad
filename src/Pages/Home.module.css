@@ -1,0 +1,8 @@
+.banner {
+  background-image: url('/images/bg_home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 25em;
+  margin-top: -1em !important;
+}
