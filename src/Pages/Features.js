@@ -1,6 +1,7 @@
 import React from 'react'
 import { Label, Select, Segment, Rail, Sticky, Button, Header, Container, Grid, Form, Radio } from 'semantic-ui-react'
 import Issue01 from '../Issues/01-it-will-be-fun'
+import styles from './Features.module.css';
 class Features extends React.Component {
   state = {}
   handleContextRef = contextRef => this.setState({ contextRef })
@@ -24,7 +25,7 @@ class Features extends React.Component {
     ];
     return (
       <React.Fragment>
-        <Grid.Row className='title-features'>
+        <Grid.Row className={styles.banner}>
           <Container style={{ padding: '3em 0em' }} text>
             <Grid.Column>
               <Header inverted as='h1'    style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: 0, }}>Features</Header>

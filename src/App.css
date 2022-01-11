@@ -1,13 +1,4 @@
 @import './styles/fonts.css';
-.App > div > div > .content {
-}
-.title-features {
-  background-image: url('/images/bg_features.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 25em;
-}
 body {
   color: #000;
 }
