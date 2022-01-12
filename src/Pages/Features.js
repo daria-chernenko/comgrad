@@ -1,5 +1,5 @@
 import React from 'react'
-import { Label, Select, Segment, Rail, Sticky, Button, Header, Container, Grid, Form, Radio } from 'semantic-ui-react'
+import { Label, Select, Segment, Sticky, Header, Container, Grid, Form, Radio } from 'semantic-ui-react'
 import Issue01 from '../Issues/01-it-will-be-fun'
 import styles from './Features.module.css';
 class Features extends React.Component {
@@ -19,9 +19,9 @@ class Features extends React.Component {
   render () {
     const { contextRef } = this.state
     let languages = [
-      {text: 'English'},
-      {text: 'Spanish'},
-      {text: 'Czech'}
+      {key: 'en', text: 'English'},
+      {key: 'sp', text: 'Spanish'},
+      {key: 'cz', text: 'Czech'}
     ];
     return (
       <React.Fragment>

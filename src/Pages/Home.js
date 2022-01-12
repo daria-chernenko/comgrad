@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Card, List, Responsive, Container, Button, Grid, Header, Icon, Divider } from 'semantic-ui-react'
+import { Card, List, Responsive, Container, Grid, Header, Icon } from 'semantic-ui-react'
 import RandomComics from '../Components/RandomComics'
 import styles from './Home.module.css';
 const HomepageHeading = ({ mobile }) => (

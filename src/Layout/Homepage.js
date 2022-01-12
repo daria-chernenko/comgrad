@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Container, Grid, Icon, List, Menu, Responsive, Segment, Sidebar, Visibility } from 'semantic-ui-react';
+import { Container, Grid, Icon, List, Menu, Responsive, Segment, Sidebar } from 'semantic-ui-react';
 import Episodes from '../Pages/Episodes';
 import Features from '../Pages/Features';
 import Home from '../Pages/Home';
@@ -10,7 +10,6 @@ class DesktopContainer extends Component {
   state = {}
   render() {
     const { children } = this.props
-    const { fixed } = this.state
     return (
       <Responsive {...Responsive.onlyComputer}>
         {}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react'
 import domtoimage from 'dom-to-image'
 import ReactDOM from 'react-dom'
+import styles from './index.module.css';
 class Comic extends Component {
   constructor(props) {
     super(props);
@@ -9,12 +10,14 @@ class Comic extends Component {
     this.signatureRef = React.createRef();
     this.downloadComics = this.downloadComics.bind(this);
     this.state = {
+      displayType: 'web',
       zoomClass: '',
       wrapperClass: 'comic web'
     };
   }
   downloadComics() {
     this.setState({
+      displayType: 'instagram',
       zoomClass: 'zoom',
       wrapperClass: 'comic download-instagram'
     });
@@ -42,6 +45,7 @@ class Comic extends Component {
     });
     Promise.all(downloads).then(() => {
       this.setState({
+        displayType: 'web',
         zoomClass: '',
         wrapperClass: 'comic web'
       });
@@ -50,13 +54,15 @@ class Comic extends Component {
   render() {
     let comicClass = `${this.state.wrapperClass} zoomable`;
     let zoomClass = `${this.state.zoomClass} strip`;
+    let displayType = styles[this.state.displayType];
     return (
       <div className={comicClass}>
-        <section className={zoomClass}>
-          <div className="issue-title" ref={this.titleRef}>
-            <h3>
+        <section className={styles.strip}>
+        {}
+          <div className={`${styles.title} ${styles.boxes}`} ref={this.titleRef}>
+            <h3 className={styles.header}>
               {this.props.icon &&
-                <span class="title-icon">{this.props.icon}</span>
+                <span className={styles.favicon}>{this.props.icon}</span>
               }
               {this.props.title}
             </h3>
@@ -64,7 +70,7 @@ class Comic extends Component {
           {React.Children.map(this.props.children, (element, idx) => {
             return React.cloneElement(element, { ref: idx, index: idx });
           })}
-          <div className="signature" ref={this.signatureRef}>
+          <div className={`${styles.signature} ${styles.boxes}`} ref={this.signatureRef}>
             <a>Gradient company</a> by <a href="https:
           </div>
         </section>

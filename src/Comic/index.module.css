@@ -1,172 +1,44 @@
-@import './styles/fonts.css';
-.download-button {
-  position: relative;
-  top: -17em;
-  left: -1em;
+.favicon {
+  margin-right: .5em;
 }
-.comic {
-  display: inline-block;
-  background-color: #fff;
-  padding: 1em;
+.header {
+  margin-bottom: 0;
+  grid-area: title;
+  font-weight: 400;
+  font-family: 'VT323', cursive;
+  text-align: left;
+  font-size: 3em;
 }
-.zoom {
-  font-ize: 2.5em;
+.strip {
+  grid-auto-flow: row;
+  grid-template-rows: repeat(auto-fill, 16em);
+  grid-template-columns: 16em;
 }
-.comic.zoom .issue-title, .comic.zoom .signature {
-}
-.box{
-  overflow: hidden;
-  width: 16em;
+.boxes {
+  grid-area: initial;
   height: 16em;
-  background-color: #fff; 
-  border: solid black;
-  border-color: black;
-  align-self: stretch;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 15% 45% 40%;
-  grid-template-areas: 
-    "title title"
-    "left-bubble right-bubble"
-    "left-character right-character";
-  align-items: stretch;
-  align-content: end;
-  min-height: 16em;
 }
-.evenboxinner{
-  transform: rotate(-2deg);
-  padding: 0 .5em;
-  margin: 0 .5em;
-  background:#ddd;
-  border:0.1em solid #222;
-  box-shadow:3px 3px 0 #222;
-  display: inline-block;
-}
-.sound {
-  z-index: 30;
-  left: 0;
-  top: 1em;
-  padding: .1em .5em;
-  font-family: 'Delius';
-  transform: rotate(-10deg);
-  background-color: rgba(255, 255, 255, 0.7);
-  display: inline-block;
-  position: absolute;
-}
-.emotion {
-  font-size: 1.5em;
-  position: absolute;
-  bottom: 3em;
-  left: 2.5em;
-  z-index: 15;
-  filter: drop-shadow(0.4em -0.4em 0.2em rgba(0,0,0,0.4)) drop-shadow(-0.1em 0.1em 0.1em rgba(0,0,0,0.7));
-}
-.bubble {
-  margin: 0 .5em;
-  padding: .5em .5em;
-  font-family: 'Delius';
-  font-size: 0.80em;
-  line-height: 1.2;
-  background-color: rgba(255,255,255,0.9);
-  position: relative;
-  border-width: .3em .4em .3em .5em;
-  border-radius: 95% 4% 92% 5%/4% 95% 0% 95%;
-  border-style: solid;
-  z-index: 20;
-}
-.bubble:after {
-  content: '';
-	position: absolute;
-	bottom: 0;
-	left: 2em;
-	width: 0;
-	height: 0;
-	border: 1.5em solid transparent;
-	border-top-color: #000;
-	border-bottom: 0;
-	border-right: 0;
-	margin-left: -1.5em;
-	margin-bottom: -1.5em;
-}
-.bubble-left {
-  grid-area: left-bubble;
-}
-.bubble-right {
-  grid-area: right-bubble;
-}
-.bubble-double {
-  grid-row-start: left-bubble;
-  grid-column-start: left-bubble;
-  grid-row-end: right-bubble;
-  grid-column-end: right-bubble;
-}
-.bubble-auto {
-  grid-row-start: 2;
-}
-.face {
-  font-size: 6em;
-  line-height: 0.8em;
-  filter: grayscale(100%) drop-shadow(0.07em -0.07em 0.03em rgba(0, 0, 0, 0.4));
-}
-.character-left {
-  grid-area: left-character;
-  align-self: end;
-  justify-self: center;
-  position: relative;
-  z-index: 10;
-}
-.character-right {
-  grid-area: right-character;
-  align-self: end;
-  justify-self: center;
-  position: relative;
-  z-index: 10;
-}
-.character-auto {
-  grid-row-start: 3;
-  align-self: end;
-  justify-self: center;
-  position: relative;
-  z-index: 10;
-}
-.small-comics {
-  font-size: 11px;
-}
-.head-bag {
-  width: 4.7em;
-  height: 3em;
-  border: solid 3px #000;
-  top: 1.8em;
-  left: 0.8em;
-  position: relative;
-  z-index: 10;
-  background-color: rgba(218, 185, 148, 1);
-  border-color: rgba(155, 131, 101, 1);
-  transform: rotate(190deg);
-  border-width: 3px 4px 3px 5px;
-  border-radius: 95% 10% 92% 5%/4% 95% 0% 95%;
-  border-style: solid;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4), inset 0 0 50 rgba(0, 0, 0, 0.2);
-}
-.head-bag .sticker {
-  font-family: 'Delius';
-  font-size: 0.2em;
-  margin: 3em 3em;
-  padding: .5em 1em;
+.signature {
   background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4), inset 0 0 50 rgba(0, 0, 0, 0.2);
+  grid-area: signature;
+  font-weight: 200;
+  font-size: 0.7em;
+  text-align: right;
+  font-family: 'Delius';
+  line-height: 1.5em;
 }
-.painting:after {
-  content: '🖼';
-  z-index: 1;
-  font-size: 5em;
-  top: 1em;
-  left: 1em;
-  position: relative;
-  transform: rotate(-5deg);
-  filter: grayscale(100%) drop-shadow(0.07em 0.07em 0.01em rgba(0, 0, 0, 0.3));
+.signature a {
+  color: #666;
 }
-.box {
+.title {
+  padding: 1em;
+  height: 16em;
+  width: 16em; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
   background-image: -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -webkit-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -webkit-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
   background-image: -moz-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -moz-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -moz-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
   background-image: -ms-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -ms-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -ms-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
@@ -175,7 +47,4 @@
   background-position: 0 0, 0 0, 0.93em 0, 2em 1.07em, 0 0, 0 0, 1.07em 1.07em;
   background-size: 42.8em 21.4em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em;
   background-repeat: repeat;
-}
-.zoomable {
-  transition: font-size 1s;
 }
