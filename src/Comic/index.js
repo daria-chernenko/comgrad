@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Button } from 'semantic-ui-react'
 import domtoimage from 'dom-to-image'
+import Download from './Download';
 import ReactDOM from 'react-dom'
 import styles from './index.module.css';
 class Comic extends Component {
@@ -74,7 +74,7 @@ class Comic extends Component {
             <a>Gradient company</a> by <a href="https:
           </div>
         </section>
-        <Button color="teal" circular icon="save" className="download-button" onClick={this.downloadComics} />
+        <Download downloadComics={this.downloadComics} />
       </div>
     );
   }

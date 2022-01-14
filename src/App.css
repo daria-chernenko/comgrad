@@ -1,9 +1,4 @@
 @import './styles/fonts.css';
-.download-button {
-  position: relative;
-  top: -17em;
-  left: -1em;
-}
 .comic {
   display: inline-block;
   background-color: #fff;
