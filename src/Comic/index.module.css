@@ -1,3 +1,11 @@
+.comic {
+  display: inline-block;
+  background-color: #fff;
+  padding: 1em;
+}
+.zoomable {
+  transition: font-size 1s;
+}
 .favicon {
   margin-right: .5em;
 }

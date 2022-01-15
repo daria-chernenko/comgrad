@@ -52,7 +52,7 @@ class Comic extends Component {
     });
   }
   render() {
-    let comicClass = `${this.state.wrapperClass} zoomable`;
+    let comicClass = `${styles.comic} ${styles.zoomable}`;
     let zoomClass = `${this.state.zoomClass} strip`;
     let displayType = styles[this.state.displayType];
     return (

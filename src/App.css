@@ -1,13 +1,6 @@
 @import './styles/fonts.css';
-.comic {
-  display: inline-block;
-  background-color: #fff;
-  padding: 1em;
-}
 .zoom {
   font-ize: 2.5em;
-}
-.comic.zoom .issue-title, .comic.zoom .signature {
 }
 .box{
   overflow: hidden;
@@ -170,7 +163,4 @@
   background-position: 0 0, 0 0, 0.93em 0, 2em 1.07em, 0 0, 0 0, 1.07em 1.07em;
   background-size: 42.8em 21.4em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em;
   background-repeat: repeat;
-}
-.zoomable {
-  transition: font-size 1s;
 }
