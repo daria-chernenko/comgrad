@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import Title from './Title';
+import styles from './Panel.module.css';
 var classNames = require('classnames');
 class Panel extends Component {
   render() {
-    var className = classNames({
-      box: true,
+    var className = classNames(
+      styles.box,
+    {
       painting: this.props.painting
     });
     return (

@@ -1,26 +1,4 @@
 @import './styles/fonts.css';
-.zoom {
-  font-ize: 2.5em;
-}
-.box{
-  overflow: hidden;
-  width: 16em;
-  height: 16em;
-  background-color: #fff; 
-  border: solid black;
-  border-color: black;
-  align-self: stretch;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 15% 45% 40%;
-  grid-template-areas: 
-    "title title"
-    "left-bubble right-bubble"
-    "left-character right-character";
-  align-items: stretch;
-  align-content: end;
-  min-height: 16em;
-}
 .evenboxinner{
   transform: rotate(-2deg);
   padding: 0 .5em;
@@ -153,14 +131,4 @@
   position: relative;
   transform: rotate(-5deg);
   filter: grayscale(100%) drop-shadow(0.07em 0.07em 0.01em rgba(0, 0, 0, 0.3));
-}
-.box {
-  background-image: -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -webkit-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -webkit-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -moz-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -moz-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -moz-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -ms-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -ms-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -ms-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -o-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -o-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -o-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-position: 0 0, 0 0, 0.93em 0, 2em 1.07em, 0 0, 0 0, 1.07em 1.07em;
-  background-size: 42.8em 21.4em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em;
-  background-repeat: repeat;
 }
