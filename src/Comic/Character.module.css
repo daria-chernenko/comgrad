@@ -1,0 +1,61 @@
+.sound {
+  z-index: 30;
+  left: 0;
+  top: 1em;
+  padding: .1em .5em;
+  font-family: 'Delius';
+  transform: rotate(-10deg);
+  background-color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  position: absolute;
+}
+.emotion {
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 3em;
+  left: 2.5em;
+  z-index: 15;
+  filter: drop-shadow(0.4em -0.4em 0.2em rgba(0,0,0,0.4)) drop-shadow(-0.1em 0.1em 0.1em rgba(0,0,0,0.7));
+}
+.bubble {
+  margin: 0 .5em;
+  padding: .5em .5em;
+  font-family: 'Delius';
+  font-size: 0.80em;
+  line-height: 1.2;
+  background-color: rgba(255,255,255,0.9);
+  position: relative;
+  border-width: .3em .4em .3em .5em;
+  border-radius: 95% 4% 92% 5%/4% 95% 0% 95%;
+  border-style: solid;
+  z-index: 20;
+}
+.bubble:after {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 2em;
+	width: 0;
+	height: 0;
+	border: 1.5em solid transparent;
+	border-top-color: #000;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -1.5em;
+	margin-bottom: -1.5em;
+}
+.leftBubble {
+  grid-area: left-bubble;
+}
+.rightBubble {
+  grid-area: right-bubble;
+}
+.doubleBubble {
+  grid-row-start: left-bubble;
+  grid-column-start: left-bubble;
+  grid-row-end: right-bubble;
+  grid-column-end: right-bubble;
+}
+.autoBubble {
+  grid-row-start: 2;
+}

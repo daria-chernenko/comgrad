@@ -1,8 +1,13 @@
 import React from 'react';
+import styles from './Character.module.css';
+var classNames = require('classnames');
 const Character = function(props) {
   let faceClassName = `character-${props.position}`;
-  let bubbleClassName = `bubble bubble-${props.position} bubble-${props.bubbleSizing}`;
-  let soundClassName = `sound sound-${props.position}`;
+  let bubbleClassName = classNames(
+    styles.bubble,
+    styles[`${props.position}Bubble`],
+    styles[`${props.bubbleSizing}Bubble`]
+  );
   let types = {
     'computer-man': '👨‍💻',
     'computer-woman': '👩‍💻',
@@ -13,7 +18,7 @@ const Character = function(props) {
     <React.Fragment>
       <div className={faceClassName}>
         {props.sound &&
-          <p className={soundClassName}>
+          <p className={styles.sound}>
             {props.sound}
           </p>
         }
@@ -23,7 +28,7 @@ const Character = function(props) {
             {face}
           </span>
           {props.emotion &&
-            <span className="emotion">{props.emotion}</span>
+            <span className={styles.emotion}>{props.emotion}</span>
           }
         </span>
       </div>

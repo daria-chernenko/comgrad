@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Title.module.css';
 const Title = function(props) {
   return (
-    <div className="strip-title">
-      <p className="evenboxinner">
+    <div>
+      <p className={styles.evenboxinner}>
         {props.children}
       </p>
     </div>
