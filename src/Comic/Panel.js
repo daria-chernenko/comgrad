@@ -5,10 +5,8 @@ var classNames = require('classnames');
 class Panel extends Component {
   render() {
     var className = classNames(
-      styles.box,
-    {
-      painting: this.props.painting
-    });
+      styles.box
+    );
     return (
       <section className={className} aria-label={`Panel ${this.props.index + 1}`}>
         {this.props.title && 
@@ -18,8 +16,5 @@ class Panel extends Component {
       </section>
     );
   }
-}
-Panel.defaultProps = {
-  painting: false
 }
 export default Panel;

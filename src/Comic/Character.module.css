@@ -59,3 +59,29 @@
 .autoBubble {
   grid-row-start: 2;
 }
+.face {
+  font-size: 6em;
+  line-height: 0.8em;
+  filter: grayscale(100%) drop-shadow(0.07em -0.07em 0.03em rgba(0, 0, 0, 0.4));
+}
+.leftCharacter {
+  grid-area: left-character;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  z-index: 10;
+}
+.rightCharacter {
+  grid-area: right-character;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  z-index: 10;
+}
+.autoCharacter {
+  grid-row-start: 3;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  z-index: 10;
+}

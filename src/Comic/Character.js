@@ -2,7 +2,9 @@ import React from 'react';
 import styles from './Character.module.css';
 var classNames = require('classnames');
 const Character = function(props) {
-  let faceClassName = `character-${props.position}`;
+  let faceClassName = classNames(
+    styles[`${props.position}Character`]
+  );
   let bubbleClassName = classNames(
     styles.bubble,
     styles[`${props.position}Bubble`],
@@ -24,7 +26,7 @@ const Character = function(props) {
         }
         <span className="character">
           {props.children}
-          <span className="face">
+          <span className={styles.face}>
             {face}
           </span>
           {props.emotion &&
