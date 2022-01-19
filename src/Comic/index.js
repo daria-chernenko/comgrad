@@ -18,7 +18,7 @@ class Comic extends Component {
   downloadComics() {
     this.setState({
       displayType: 'instagram',
-      zoomClass: 'zoom',
+      zoomClass: styles.zoomed,
       wrapperClass: 'comic download-instagram'
     });
     const style = { 
@@ -55,9 +55,11 @@ class Comic extends Component {
     let comicClass = `${styles.comic} ${styles.zoomable}`;
     let zoomClass = `${this.state.zoomClass} strip`;
     let displayType = styles[this.state.displayType];
+    let sectionClass = `${styles.strip} ${this.state.zoomClass}`;
+    console.log(this.state.zoomClass);
     return (
       <div className={comicClass}>
-        <section className={styles.strip}>
+        <section className={sectionClass}>
         {}
           <div className={`${styles.title} ${styles.boxes}`} ref={this.titleRef}>
             <h3 className={styles.header}>
