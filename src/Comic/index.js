@@ -60,7 +60,6 @@ class Comic extends Component {
     return (
       <div className={comicClass}>
         <section className={sectionClass}>
-        {}
           <div className={`${styles.title} ${styles.boxes}`} ref={this.titleRef}>
             <h3 className={styles.header}>
               {this.props.icon &&
