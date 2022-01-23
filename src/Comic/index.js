@@ -3,23 +3,23 @@ import domtoimage from 'dom-to-image'
 import Download from './Download';
 import ReactDOM from 'react-dom'
 import styles from './index.module.css';
+import { ThemeContext } from '../Contexts/ThemeContext';
 class Comic extends Component {
   constructor(props) {
     super(props);
     this.titleRef = React.createRef();
     this.signatureRef = React.createRef();
     this.downloadComics = this.downloadComics.bind(this);
+    this.strips = [React.createRef(), React.createRef(), React.createRef()];
     this.state = {
       displayType: 'web',
-      zoomClass: '',
-      wrapperClass: 'comic web'
+      zoomClass: ''
     };
   }
   downloadComics() {
     this.setState({
       displayType: 'instagram',
       zoomClass: styles.zoomed,
-      wrapperClass: 'comic download-instagram'
     });
     const style = { 
       style: {
@@ -27,8 +27,8 @@ class Comic extends Component {
     };
     let components = [];
     components.push(this.titleRef.current);
-    Object.keys(this.refs).forEach(key => {
-      let panel = ReactDOM.findDOMNode(this.refs[key]);
+    Object.keys(this.strips).forEach(key => {
+      let panel = ReactDOM.findDOMNode(this.strips[key].current);
       components.push(panel);
     });
     components.push(this.signatureRef.current);
@@ -46,37 +46,41 @@ class Comic extends Component {
     Promise.all(downloads).then(() => {
       this.setState({
         displayType: 'web',
-        zoomClass: '',
-        wrapperClass: 'comic web'
+        zoomClass: ''
       });
     });
   }
   render() {
-    let comicClass = `${styles.comic} ${styles.zoomable}`;
+    let comicClass = `${styles.comic} ${styles.zoomable} ${this.state.displayType}`;
     let zoomClass = `${this.state.zoomClass} strip`;
     let displayType = styles[this.state.displayType];
     let sectionClass = `${styles.strip} ${this.state.zoomClass}`;
     console.log(this.state.zoomClass);
     return (
-      <div className={comicClass}>
-        <section className={sectionClass}>
-          <div className={`${styles.title} ${styles.boxes}`} ref={this.titleRef}>
-            <h3 className={styles.header}>
-              {this.props.icon &&
-                <span className={styles.favicon}>{this.props.icon}</span>
-              }
-              {this.props.title}
-            </h3>
+      <ThemeContext.Consumer>
+        {({theme}) => (
+          <div className={comicClass}>
+            --{theme}--
+            <section className={sectionClass}>
+              <div className={`${styles.title} ${styles.boxes}`} ref={this.titleRef}>
+                <h3 className={styles.header}>
+                  {this.props.icon &&
+                    <span className={styles.favicon}>{this.props.icon}</span>
+                  }
+                  {this.props.title}
+                </h3>
+              </div>
+              {React.Children.map(this.props.children, (element, idx) => {
+                return React.cloneElement(element, { ref: this.strips[idx], index: idx });
+              })}
+              <div className={`${styles.signature} ${styles.boxes}`} ref={this.signatureRef}>
+                <a>Gradient company</a> by <a href="https:
+              </div>
+            </section>
+            <Download downloadComics={this.downloadComics} />
           </div>
-          {React.Children.map(this.props.children, (element, idx) => {
-            return React.cloneElement(element, { ref: idx, index: idx });
-          })}
-          <div className={`${styles.signature} ${styles.boxes}`} ref={this.signatureRef}>
-            <a>Gradient company</a> by <a href="https:
-          </div>
-        </section>
-        <Download downloadComics={this.downloadComics} />
-      </div>
+        )}
+      </ThemeContext.Consumer>
     );
   }
 }
