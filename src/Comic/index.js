@@ -4,6 +4,7 @@ import Download from './Download';
 import ReactDOM from 'react-dom'
 import styles from './index.module.css';
 import { ThemeContext } from '../Contexts/ThemeContext';
+import classNames from 'classnames';
 class Comic extends Component {
   constructor(props) {
     super(props);
@@ -12,13 +13,11 @@ class Comic extends Component {
     this.downloadComics = this.downloadComics.bind(this);
     this.strips = [React.createRef(), React.createRef(), React.createRef()];
     this.state = {
-      displayType: 'web',
       zoomClass: ''
     };
   }
   downloadComics() {
     this.setState({
-      displayType: 'instagram',
       zoomClass: styles.zoomed,
     });
     const style = { 
@@ -45,25 +44,20 @@ class Comic extends Component {
     });
     Promise.all(downloads).then(() => {
       this.setState({
-        displayType: 'web',
         zoomClass: ''
       });
     });
   }
   render() {
-    let comicClass = `${styles.comic} ${styles.zoomable} ${this.state.displayType}`;
-    let zoomClass = `${this.state.zoomClass} strip`;
-    let displayType = styles[this.state.displayType];
+    let comicClass = `${styles.comic} ${styles.zoomable}`;
     let sectionClass = `${styles.strip} ${this.state.zoomClass}`;
-    console.log(this.state.zoomClass);
     return (
       <ThemeContext.Consumer>
         {({theme}) => (
           <div className={comicClass}>
-            --{theme}--
-            <section className={sectionClass}>
-              <div className={`${styles.title} ${styles.boxes}`} ref={this.titleRef}>
-                <h3 className={styles.header}>
+            <section className={classNames(sectionClass, styles[theme])}>
+              <div className={styles.header} ref={this.titleRef}>
+                <h3 className={styles.title}>
                   {this.props.icon &&
                     <span className={styles.favicon}>{this.props.icon}</span>
                   }

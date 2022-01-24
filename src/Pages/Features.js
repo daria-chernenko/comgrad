@@ -2,6 +2,7 @@ import React from 'react'
 import { Label, Select, Segment, Sticky, Header, Container, Grid, Form, Radio } from 'semantic-ui-react'
 import Issue01 from '../Issues/01-it-will-be-fun'
 import styles from './Features.module.css';
+import { ThemeContext } from '../Contexts/ThemeContext';
 class Features extends React.Component {
   state = {}
   handleContextRef = contextRef => this.setState({ contextRef })
@@ -61,16 +62,20 @@ class Features extends React.Component {
                 <p>
                   HTML + CSS is nice and good, but what if you want the comics as individual stories? Well, you can simply export it. Just click on that tiny save icon in the corner. The form below allows you to preview the different version for export:
                 </p>
-                <Form>
-                  <Form.Group inline>
-                    <Form.Field>
-                      <Radio label='Web' name='viewMode' value='web' checked={this.state.viewMode === 'web'} onChange={this.changeViewMode} />
-                    </Form.Field>
-                    <Form.Field>
-                      <Radio label='Instagram' name='viewMode' value='download-instagram' checked={this.state.viewMode === 'download-instagram'} onChange={this.changeViewMode} />
-                    </Form.Field>
-                  </Form.Group>
-                </Form>
+                <ThemeContext.Consumer>
+                  {({ theme, changeTheme }) => (
+                    <Form>
+                      <Form.Group inline>
+                        <Form.Field>
+                          <Radio label='Web' name='theme' value='web' checked={theme === 'web'} onChange={() => changeTheme('web')} />
+                        </Form.Field>
+                        <Form.Field>
+                          <Radio label='Instagram' name='theme' value='instagram' checked={theme === 'instagram'} onChange={() => changeTheme('instagram')} />
+                        </Form.Field>
+                      </Form.Group>
+                    </Form>
+                  )}
+                </ThemeContext.Consumer>
               </Segment>
               <Segment>
                 <h2>Mobile friendly</h2>

@@ -13,17 +13,33 @@
   margin-right: .5em;
 }
 .header {
-  margin-bottom: 0;
-  grid-area: title;
   font-weight: 400;
   font-family: 'VT323', cursive;
   text-align: left;
   font-size: 3em;
+  grid-area: header;
 }
-.strip {
+.web .header {
+  margin-bottom: 0;
+  color: green;
+}
+.instagram .header {
+  color: red;
+}
+.instagram {
   grid-auto-flow: row;
   grid-template-rows: repeat(auto-fill, 16em);
   grid-template-columns: 16em;
+}
+.web {
+  display: grid;
+  grid-gap: 0.3em;
+  grid-template-columns: 16em 16em 16em;
+  grid-template-rows: 3em 16em 1em;
+  grid-template-areas: 
+    "header header header"
+    "strip strip strip"
+    "footer footer footer"
 }
 .boxes {
   grid-area: initial;
@@ -37,11 +53,12 @@
   text-align: right;
   font-family: 'Delius';
   line-height: 1.5em;
+  grid-area: signature;
 }
 .signature a {
   color: #666;
 }
-.title {
+.instagram .header {
   padding: 1em;
   height: 16em;
   width: 16em; 

@@ -7,12 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.changeTheme = (val) => {
-      this.setState(state => ({
-        theme:
-          state.theme === 'web'
-            ? 'web'
-            : 'instagram',
-      }));
+      this.setState({theme: val});
     }
     this.state = {
       theme: 'web',
