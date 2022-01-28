@@ -55,7 +55,7 @@ class Comic extends Component {
       <ThemeContext.Consumer>
         {({theme}) => (
           <div className={comicClass}>
-            <section className={classNames(sectionClass, styles[theme])}>
+            <section className={classNames(comicClass, sectionClass, styles[theme])}>
               <div className={styles.header} ref={this.titleRef}>
                 <h3 className={styles.title}>
                   {this.props.icon &&
@@ -67,8 +67,8 @@ class Comic extends Component {
               {React.Children.map(this.props.children, (element, idx) => {
                 return React.cloneElement(element, { ref: this.strips[idx], index: idx });
               })}
-              <div className={`${styles.signature} ${styles.boxes}`} ref={this.signatureRef}>
-                <a>Gradient company</a> by <a href="https:
+              <div className={styles.signature} ref={this.signatureRef}>
+                <a href="https:
               </div>
             </section>
             <Download downloadComics={this.downloadComics} />
