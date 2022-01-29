@@ -67,10 +67,22 @@ class Features extends React.Component {
                     <Form>
                       <Form.Group inline>
                         <Form.Field>
-                          <Radio label='Web' name='theme' value='web' checked={theme === 'web'} onChange={() => changeTheme('web')} />
+                          <Radio 
+                            label='Web' 
+                            name='theme' 
+                            value='web' 
+                            checked={theme === 'web'}
+                            onChange={() => changeTheme('web')} 
+                          />
                         </Form.Field>
                         <Form.Field>
-                          <Radio label='Instagram' name='theme' value='instagram' checked={theme === 'instagram'} onChange={() => changeTheme('instagram')} />
+                          <Radio 
+                            label='Instagram' 
+                            name='theme' 
+                            value='instagram' 
+                            checked={theme === 'instagram'} 
+                            onChange={() => changeTheme('instagram')} 
+                          />
                         </Form.Field>
                       </Form.Group>
                     </Form>

@@ -49,30 +49,26 @@ class Comic extends Component {
     });
   }
   render() {
-    let comicClass = `${styles.comic} ${styles.zoomable}`;
-    let sectionClass = `${styles.strip} ${this.state.zoomClass}`;
     return (
       <ThemeContext.Consumer>
         {({theme}) => (
-          <div className={comicClass}>
-            <section className={classNames(comicClass, sectionClass, styles[theme])}>
-              <div className={styles.header} ref={this.titleRef}>
-                <h3 className={styles.title}>
-                  {this.props.icon &&
-                    <span className={styles.favicon}>{this.props.icon}</span>
-                  }
-                  {this.props.title}
-                </h3>
-              </div>
-              {React.Children.map(this.props.children, (element, idx) => {
-                return React.cloneElement(element, { ref: this.strips[idx], index: idx });
-              })}
-              <div className={styles.signature} ref={this.signatureRef}>
-                <a href="https:
-              </div>
-            </section>
+          <section className={classNames(styles.comic, styles.zoomable, this.state.zoomClass, styles[theme])}>
+            <div className={styles.header} ref={this.titleRef}>
+              <h3 className={styles.title}>
+                {this.props.icon &&
+                  <span className={styles.favicon}>{this.props.icon}</span>
+                }
+                {this.props.title}
+              </h3>
+            </div>
+            {React.Children.map(this.props.children, (element, idx) => {
+              return React.cloneElement(element, { ref: this.strips[idx], index: idx });
+            })}
+            <div className={styles.signature} ref={this.signatureRef}>
+              <a href="https:
+            </div>
             <Download downloadComics={this.downloadComics} />
-          </div>
+          </section>
         )}
       </ThemeContext.Consumer>
     );

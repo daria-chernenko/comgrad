@@ -4,7 +4,6 @@
   margin: 1em;
 }
 .zoomable {
-  transition: font-size 1s;
 }
 .zoomed {
   font-size: 2.5em;
