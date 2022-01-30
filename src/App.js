@@ -9,9 +9,14 @@ class App extends Component {
     this.changeTheme = (val) => {
       this.setState({theme: val});
     }
+    this.changeZoom = (val) => {
+      this.setState({zoom: val});
+    }
     this.state = {
       theme: 'web',
-      changeTheme: this.changeTheme
+      zoom: '10px',
+      changeTheme: this.changeTheme,
+      changeZoom: this.changeZoom
     };
   }
   render() {

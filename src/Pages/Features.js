@@ -43,19 +43,41 @@ class Features extends React.Component {
                 <p>
                   Hard time reading the text on this comics? Try to change the base font size with the form below:
                 </p>
-                <Form>
-                  <Form.Group inline>
-                    <Form.Field>
-                      <Radio label='5px' name='sizeGroup' value='5px' checked={this.state.size === '5px'} onChange={this.changeSize} />
-                    </Form.Field>
-                    <Form.Field>
-                      <Radio label='10px' name='sizeGroup' value='10px' checked={this.state.size === '10px'} onChange={this.changeSize} />
-                    </Form.Field>
-                    <Form.Field>
-                      <Radio label='21px' name='sizeGroup' value='21px' checked={this.state.size === '21px'} onChange={this.changeSize} />
-                    </Form.Field>
-                  </Form.Group>
-                </Form>
+                <ThemeContext.Consumer>
+                  {({ zoom, changeZoom }) => (
+                    <Form>
+                      <Form.Group inline>
+                        <Form.Field>
+                          <Radio 
+                            label='5px' 
+                            name='sizeGroup' 
+                            value='5px' 
+                            checked={zoom === '5px'} 
+                            onChange={() => changeZoom('5px')}  
+                          />
+                        </Form.Field>
+                        <Form.Field>
+                          <Radio 
+                            label='10px' 
+                            name='sizeGroup' 
+                            value='10px' 
+                            checked={zoom === '10px'} 
+                            onChange={() => changeZoom('10px')}  
+                          />
+                        </Form.Field>
+                        <Form.Field>
+                          <Radio 
+                            label='21px' 
+                            name='sizeGroup' 
+                            value='21px' 
+                            checked={zoom === '21px'} 
+                            onChange={() => changeZoom('21px')}  
+                          />
+                        </Form.Field>
+                      </Form.Group>
+                    </Form>
+                  )}
+                </ThemeContext.Consumer>
               </Segment>
               <Segment>
                 <h2>Exportable</h2>
