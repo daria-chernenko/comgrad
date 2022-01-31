@@ -16,25 +16,26 @@
   align-items: stretch;
   align-content: end;
   min-height: 16em;
+  color: red;
   background-image: radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0, 0, 0, 0.8) 100%),
-                    linear-gradient(top, #555 0%, #555 .1em, transparent .1em, transparent 1.4em, #555 1.4em, #555 1.6em, transparent 1.6em, transparent 2.9em, #555 2.9em, #555 3.0em),
+                    linear-gradient(top, #555 0%, #555 0.05em, transparent 0.05em, transparent 0.7em, #555 0.7em, #555 0.8em, transparent 0.8em, transparent 1.45em, #555 1.45em, #555 1.5em),
                     linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
                     linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
-                    linear-gradient(left, #555 .0em, #555 .1em, transparent .1em, transparent 1.4em, #555 1.4em, #555 1.6em, transparent 1.6em, transparent 2.9em, #555 2.9em, #555 3.0em),
+                    linear-gradient(left, #555 .0em, #555 0.05em, transparent 0.05em, transparent 0.7em, #555 0.7em, #555 0.8em, transparent 0.8em, transparent 1.45em, #555 1.45em, #555 1.5em),
                     linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
                     linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
   background-position: 0 0,
                        0 0,
-                       1.3em 0,
-                       2.8em 1.5em,
+                       0.65em 0,
+                       1.4em 0.75em,
                        0 0,
                        0 0,
-                       1.5em 1.5em;
-  background-size: 60.0em 30.0em,
-                   3.0em 3.0em,
-                   3.0em 3.0em,
-                   3.0em 3.0em,
-                   3.0em 3.0em,
-                   3.0em 3.0em,
-                   3.0em 3.0em;
+                       0.75em 0.75em;
+  background-size: 30.0em 15.0em,
+                   1.5em 1.5em,
+                   1.5em 1.5em,
+                   1.5em 1.5em,
+                   1.5em 1.5em,
+                   1.5em 1.5em,
+                   1.5em 1.5em;
 }
