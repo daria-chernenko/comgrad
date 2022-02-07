@@ -5,7 +5,7 @@ import Character from '../Comic/Character';
 class Issue extends Component {
   render(props) {
     return (
-      <Comic title="Effectivity">
+      <Comic title="Effectivity" icon="🏢">
         <Panel>
           <Character type="computer-man"  
             say="Performance meetings helps us figure out what's holding us back." />

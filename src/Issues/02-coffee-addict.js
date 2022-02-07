@@ -6,7 +6,7 @@ import HeadBag from '../Comic/HeadBag';
 class Issue extends Component {
   render(props) {
     return (
-      <Comic title="Addiction">
+      <Comic title="Addiction" icon="☕️">
         <Panel>
           <Character type="computer-man" />
           <Character type="computer-woman" >

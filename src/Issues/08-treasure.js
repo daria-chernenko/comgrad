@@ -5,7 +5,7 @@ import Character from '../Comic/Character';
 class Issue extends Component {
   render(props) {
     return (
-      <Comic title="Special relationship">
+      <Comic title="Special relationship" icon="⚰️">
         <Panel>
           <Character 
             type="computer-woman" 

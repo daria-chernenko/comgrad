@@ -5,7 +5,7 @@ import Panel from '../Comic/Panel';
 class Issue extends Component {
   render() {
     return (
-      <Comic title="Conversions">
+      <Comic title="Conversions" icon="📉">
         <Panel>
           <Character 
             type="computer-man" 
