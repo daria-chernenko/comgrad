@@ -6,4 +6,6 @@
   border:0.1em solid #222;
   box-shadow:3px 3px 0 #222;
   display: inline-block;
+  font-size: 0.8em;
+  white-space: nowrap;
 }
