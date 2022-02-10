@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Card, List, Responsive, Container, Grid, Header, Icon } from 'semantic-ui-react'
+import { Button, Message, Card, List, Responsive, Container, Grid, Header, Icon } from 'semantic-ui-react'
 import RandomComics from '../Components/RandomComics'
 import styles from './Home.module.css';
+import { NavLink } from 'react-router-dom'
 const HomepageHeading = ({ mobile }) => (
   <Grid.Row className={styles.banner}>
     <Grid.Column>
@@ -83,7 +84,7 @@ class Home extends React.Component {
         <Grid.Row>
           <Container> 
             <Card.Group itemsPerRow={3}>
-              <Card color='red'>
+              <Card color='pink'>
                 <Card.Content>
                   <Card.Header>
                     <Icon bordered circular name='blind' />
@@ -94,7 +95,7 @@ class Home extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card color='red'>
+              <Card color='violet'>
                 <Card.Content>
                   <Card.Header>
                     <Icon bordered circular name='code' />
@@ -105,7 +106,7 @@ class Home extends React.Component {
                   </Card.Description>
                 </Card.Content>
               </Card>
-              <Card color='red'>
+              <Card color='olive'>
                 <Card.Content>
                   <Card.Header>
                     <Icon bordered circular name='talk' />
@@ -120,23 +121,26 @@ class Home extends React.Component {
           </Container>
         </Grid.Row>
         <Grid.Row>
-          <Container>
-            <Grid.Column>
-              <h3>Motivation</h3>
-              <p>
-                Over time I collected a lot of stories from my IT friends. Jokes from the environment of big corporates and/or startups. I thought that it would be neat to collect them as a comic. Unfortunately I haven't found easy way to create and download for publishing my ideas (for free). So why not create your own?
-              </p>
-              <p>This is a simple example of React in action - a learning project. Very nice showcase of latest & greatest CSS features.</p>
-              <p>This was not obvious from the start, but I'm creating first ever fully accessible comics. It is possible to do virtually infinite zoom without losing quality. Text readers works very well. And there is possibility to enable high contrast mode as well. Did you know that it's quite a pain to translate comics? Well, over here it's quite easy.</p>
-              <p>It is quite challenging to create story with the limited set of tools - CSS &amp; some emoji. There are emojis expressing feelings via emojis. How deep can we go?</p>
-              <p>I wanted to create first ever comics that accepts pull requests. See a spelling error? Want to address discriminative language? Have idea for new episode? Comics is broken on your browser? Raisconsoe a PR!</p>
-              <h3>Disclaimer</h3>
-              <p>
-                I tried my best to anonymize the sources of my stories. Some of them are even made up as a result of a "pub talk". If you still feel like you can recognize the source, please tell me.
-                There is no intent to offend anybody. Just for the laughs.
-              </p>
-            </Grid.Column>
-          </Container>
+          <Grid container>
+            <Grid.Row>
+              <Grid.Column>
+                <h2>Motivation</h2>
+                <p>
+                  Over time I collected a lot of stories from my IT friends. Jokes from the environment of big corporates and/or startups. I thought that it would be neat to collect them as a comic. Unfortunately I haven't found easy way to create and download for publishing my ideas (for free). So why not create your own?
+                </p>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row centered columns={3}>
+              <Grid.Column>
+                <Message color='teal'>
+                  <Message.Header>Want to hear more?</Message.Header>
+                  <p>
+                    Take a look at the <NavLink to="/features" primary>features</NavLink>!
+                  </p>
+                </Message>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </Grid.Row>
       </React.Fragment>
     )

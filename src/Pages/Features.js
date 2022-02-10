@@ -120,13 +120,13 @@ class Features extends React.Component {
               <Segment>
                 <h2>Readable</h2>
                 <p>
-                  Do you have screen reader? Try to jump through the comics itself to <strong>hear</strong> the story.
+                  Do you have screen reader? Try to navigate through the comics itself to <strong>hear</strong> the story.
                 </p>
               </Segment>
               <Segment>
                 <h2>Enhanceable</h2>
                 <p>
-                  This is a living project. So if you want spot an error or something that can be improved, just jump in and <a href='https:
+                  This is a living project. So if you spot an error or something that can be improved, just jump in and <a href='https:
                 </p>
               </Segment>
               <Segment color='red'>
@@ -149,7 +149,7 @@ class Features extends React.Component {
                   </Label>
                 </h2>
                 <p>
-                  Want to write your own episode via simple langage?
+                  Want to write your own episode via Markdown-like langage?
                 </p>
               </Segment>
               <Segment>

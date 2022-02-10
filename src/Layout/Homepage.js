@@ -5,6 +5,7 @@ import { Container, Grid, Icon, List, Menu, Responsive, Segment, Sidebar } from 
 import Episodes from '../Pages/Episodes';
 import Features from '../Pages/Features';
 import Home from '../Pages/Home';
+import About from '../Pages/About';
 import Navigation from './Navigation';
 class DesktopContainer extends Component {
   state = {}
@@ -78,11 +79,12 @@ ResponsiveContainer.propTypes = {
 }
 const HomepageLayout = () => (
   <ResponsiveContainer>
-    <Segment vertical className='content'>
+    <Segment vertical className='content main-area'>
       <Grid>
         <Route exact  path="/" component={Home} />
         <Route exact  path="/features" component={Features} />
         <Route exact  path="/episodes" component={Episodes} />
+        <Route exact  path="/about" component={About} />
       </Grid>
     </Segment>
     <Segment vertical style={{ padding: '1em 0em' }}>
