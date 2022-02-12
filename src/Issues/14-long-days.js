@@ -5,11 +5,12 @@ import Panel from '../Comic/Panel';
 class Issue extends Component {
   render() {
     return (
-      <Comic title="Conversions" icon="📉">
+      <Comic title="Long days" icon="📅">
         <Panel>
           <Character 
             type="computer-man" 
-            say="According to the analytics, from the thousands of people on our website..."
+            bubbleSizing="double"
+            say="The CEO was very angry because last month, there were 10% fewer trial sign-ups compared to our three month average."
           />
           <Character 
             type="computer-woman" 
@@ -18,21 +19,21 @@ class Issue extends Component {
         <Panel>
           <Character 
             type="computer-man" 
-            say="There are only 5 customers ..." 
+            say="So we were thinking, doing analysis, comparing data..." 
           />
           <Character 
             type="computer-woman" 
-            say="So what?"
+            say="Did you find anything?"
           />
         </Panel>
         <Panel>
           <Character 
             type="computer-man"
-            say="That's not too much."
+            say="Turns out that there are 3 days fewer in February than in previous two months..."
           />
           <Character 
             type="computer-woman" 
-            say='Even "enlarge your penis" campaigns have better conversion ratio.'
+            emotion="🤦‍"
           />
         </Panel>
       </Comic>
