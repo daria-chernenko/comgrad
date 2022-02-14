@@ -28,23 +28,21 @@
   margin-bottom: 0;
   color: #000;
 }
-.instagram .header {
-  padding: 1em;
+.header_instagram {
+  composes: box from "./Box.module.css";
   color: #fff;
+  overflow: hidden;
   height: 16em;
   width: 16em; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border: solid 0.2em black;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 8em 8em;
+  grid-template-columns: 8em 8em;
+  grid-template-areas: 
+    "title title"
+    "character-left character-right";
   text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
-  background-image: -webkit-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -webkit-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -webkit-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -webkit-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -webkit-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -moz-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -moz-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -moz-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -moz-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -moz-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -ms-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -ms-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -ms-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -ms-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -ms-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: -o-radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), -o-linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), -o-linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), -o-linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), -o-linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-image: radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0,0,0,0.8) 100%), linear-gradient(top, #555 0%, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%), linear-gradient(left, #555 0, #555 0.1em, transparent 0.1em, transparent 0.93em, #555 0.93em, #555 1.1em, transparent 1.1em, transparent 2em, #555 2em, #555 2.14em), linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%), linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-  background-position: 0 0, 0 0, 0.93em 0, 2em 1.07em, 0 0, 0 0, 1.07em 1.07em;
-  background-size: 42.8em 21.4em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em, 2.14em 2.14em;
-  background-repeat: repeat;
 }
 .instagram {
   display: grid;
@@ -58,6 +56,31 @@
     "strip"
     "strip"
     "footer"
+}
+.instagram .header .title {
+  grid-area: title / span 2;
+  font-size: 2em;
+  padding: 0.5em;
+  justify-self: center;
+  align-self: center;
+}
+.instagram .header:after {
+  content: '👨‍💻';
+  grid-area: character-left;
+  justify-self: center;
+  align-self: end;
+  font-size: 5em;
+  line-height: 0.8em;
+  filter: grayscale(100%) drop-shadow(0.07em -0.07em 0.03em rgba(0, 0, 0, 0.4));
+}
+.instagram .header:before {
+  content: '👩‍💻';
+  grid-area: character-right;
+  justify-self: center;
+  align-self: end;
+  font-size: 5em;
+  line-height: 0.8em;
+  filter: grayscale(100%) drop-shadow(0.07em -0.07em 0.03em rgba(0, 0, 0, 0.4));
 }
 .web {
   display: grid;

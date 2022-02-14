@@ -54,7 +54,7 @@ class Comic extends Component {
         {({theme, zoom}) => (
           <div className={styles.wrapper}>
             <section style={{fontSize: zoom}} className={classNames(styles.comic, styles.zoomable, this.state.zoomClass, styles[theme])}>
-              <div className={styles.header} ref={this.titleRef}>
+              <div className={styles[`header_${theme}`]} ref={this.titleRef}>
                 <h3 className={styles.title}>
                   {this.props.icon &&
                     <span className={styles.favicon}>{this.props.icon}</span>
