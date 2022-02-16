@@ -15,19 +15,6 @@
 .favicon {
   margin-right: .5em;
 }
-.header {
-  grid-area: header;
-}
-.header .title {
-  font-weight: 400;
-  font-family: 'VT323', cursive;
-  text-align: left;
-  font-size: 3em;
-}
-.web .header {
-  margin-bottom: 0;
-  color: #000;
-}
 .header_instagram {
   composes: box from "./Box.module.css";
   color: #fff;
@@ -57,14 +44,14 @@
     "strip"
     "footer"
 }
-.instagram .header .title {
+.header_instagram .title {
   grid-area: title / span 2;
   font-size: 2em;
   padding: 0.5em;
   justify-self: center;
   align-self: center;
 }
-.instagram .header:after {
+.header_instagram:after {
   content: '👨‍💻';
   grid-area: character-left;
   justify-self: center;
@@ -73,7 +60,7 @@
   line-height: 0.8em;
   filter: grayscale(100%) drop-shadow(0.07em -0.07em 0.03em rgba(0, 0, 0, 0.4));
 }
-.instagram .header:before {
+.header_instagram:before {
   content: '👩‍💻';
   grid-area: character-right;
   justify-self: center;

@@ -1,0 +1,13 @@
+.header {
+  grid-area: header;
+}
+.header .title {
+  font-weight: 400;
+  font-family: 'VT323', cursive;
+  text-align: left;
+  font-size: 3em;
+}
+.web .header {
+  margin-bottom: 0;
+  color: #000;
+}
