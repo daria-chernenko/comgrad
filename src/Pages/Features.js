@@ -3,6 +3,8 @@ import { Label, Select, Segment, Sticky, Header, Container, Grid, Form, Radio } 
 import Issue01 from '../Issues/01-it-will-be-fun'
 import styles from './Features.module.css';
 import { ThemeContext } from '../Contexts/ThemeContext';
+import web from '../Themes/Web.module.css';
+import instagram from '../Themes/Instagram.module.css';
 class Features extends React.Component {
   state = {}
   handleContextRef = contextRef => this.setState({ contextRef })
@@ -94,7 +96,7 @@ class Features extends React.Component {
                             name='theme' 
                             value='web' 
                             checked={theme === 'web'}
-                            onChange={() => changeTheme('web')} 
+                            onChange={() => changeTheme(web)} 
                           />
                         </Form.Field>
                         <Form.Field>
@@ -103,7 +105,7 @@ class Features extends React.Component {
                             name='theme' 
                             value='instagram' 
                             checked={theme === 'instagram'} 
-                            onChange={() => changeTheme('instagram')} 
+                            onChange={() => changeTheme(instagram)} 
                           />
                         </Form.Field>
                       </Form.Group>

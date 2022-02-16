@@ -1,5 +1,5 @@
 .box{
-  composes: box from "./Box.module.css";
+  composes: box from "../Themes/Box.module.css";
   overflow: hidden;
   width: 16em;
   height: 16em;
