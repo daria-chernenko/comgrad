@@ -1,3 +1,16 @@
+.layout {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(auto-fill, 16em);
+  grid-template-columns: 16em;
+  grid-gap: 0.3em;
+  grid-template-areas: 
+    "header"
+    "strip"
+    "strip"
+    "strip"
+    "footer"
+}
 .header {
   composes: box from "./Box.module.css";
   color: #fff;
@@ -13,4 +26,29 @@
     "title title"
     "character-left character-right";
   text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+}
+.header .title {
+  grid-area: title / span 2;
+  font-size: 2em;
+  padding: 0.5em;
+  justify-self: center;
+  align-self: center;
+}
+.header:after {
+  content: '👨‍💻';
+  grid-area: character-left;
+  justify-self: center;
+  align-self: end;
+  font-size: 5em;
+  line-height: 0.8em;
+  filter: grayscale(100%) drop-shadow(0.07em -0.07em 0.03em rgba(0, 0, 0, 0.4));
+}
+.header:before {
+  content: '👩‍💻';
+  grid-area: character-right;
+  justify-self: center;
+  align-self: end;
+  font-size: 5em;
+  line-height: 0.8em;
+  filter: grayscale(100%) drop-shadow(0.07em -0.07em 0.03em rgba(0, 0, 0, 0.4));
 }

@@ -3,6 +3,7 @@ import './App.css';
 import Favicon from 'react-favicon';
 import HomepageLayout from './Layout/Homepage';
 import { ThemeContext } from './Contexts/ThemeContext';
+import web from './Themes/Web.module.css';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,7 @@ class App extends Component {
       this.setState({zoom: val});
     }
     this.state = {
-      theme: 'web',
+      theme: web,
       zoom: '10px',
       changeTheme: this.changeTheme,
       changeZoom: this.changeZoom

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import domtoimage from 'dom-to-image'
 import Download from './Download';
 import ReactDOM from 'react-dom'
-import styles from './index.module.css';
+import styles from './Themed.module.css';
 import { ThemeContext } from '../Contexts/ThemeContext';
 import classNames from 'classnames';
 class Themed extends Component {
@@ -12,14 +12,8 @@ class Themed extends Component {
     this.signatureRef = React.createRef();
     this.downloadComics = this.downloadComics.bind(this);
     this.strips = [React.createRef(), React.createRef(), React.createRef()];
-    this.state = {
-      zoomClass: ''
-    };
   }
   downloadComics() {
-    this.setState({
-      zoomClass: styles.zoomed,
-    });
     const style = { 
       style: {
       } 
@@ -42,19 +36,14 @@ class Themed extends Component {
         link.click();
       });
     });
-    Promise.all(downloads).then(() => {
-      this.setState({
-        zoomClass: ''
-      });
-    });
   }
   render() {
     console.log('foo');
     return (
       <div className={styles.wrapper}>
-        <section style={{fontSize: this.props.zoom}} className={classNames(styles.comic, styles.zoomable, this.state.zoomClass)}>
+        <section style={{fontSize: this.props.zoom}} className={classNames(styles.comic, this.props.theme.layout)}>
           <div className={this.props.theme.header} ref={this.titleRef}>
-            <h3 className={styles.title}>
+            <h3 className={this.props.theme.title}>
               {this.props.icon &&
                 <span className={styles.favicon}>{this.props.icon}</span>
               }
@@ -64,7 +53,7 @@ class Themed extends Component {
           {React.Children.map(this.props.children, (element, idx) => {
             return React.cloneElement(element, { ref: this.strips[idx], index: idx });
           })}
-          <div className={styles.signature} ref={this.signatureRef}>
+          <div className={this.props.theme.signature} ref={this.signatureRef}>
             <a href="https:
           </div>
         </section>

@@ -16,7 +16,6 @@ class Features extends React.Component {
     this.setState({ size: value });
   }
   changeViewMode = (event, { value }) => {
-    console.log('moo');
     this.setState({ viewMode: value });
   }
   render () {
@@ -94,8 +93,7 @@ class Features extends React.Component {
                           <Radio 
                             label='Web' 
                             name='theme' 
-                            value='web' 
-                            checked={theme === 'web'}
+                            checked={theme === web}
                             onChange={() => changeTheme(web)} 
                           />
                         </Form.Field>
@@ -103,8 +101,7 @@ class Features extends React.Component {
                           <Radio 
                             label='Instagram' 
                             name='theme' 
-                            value='instagram' 
-                            checked={theme === 'instagram'} 
+                            checked={theme === instagram} 
                             onChange={() => changeTheme(instagram)} 
                           />
                         </Form.Field>

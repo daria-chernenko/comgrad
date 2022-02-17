@@ -1,0 +1,12 @@
+.wrapper {
+  display: inline-block;
+  position: relative;
+}
+.comic {
+  background-color: #fff;
+  padding: 1em;
+  margin: 1em;
+}
+.favicon {
+  margin-right: .5em;
+}
