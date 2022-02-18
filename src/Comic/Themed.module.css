@@ -6,6 +6,7 @@
   background-color: #fff;
   padding: 1em;
   margin: 1em;
+  transition: font-size 0.5s;
 }
 .favicon {
   margin-right: .5em;
