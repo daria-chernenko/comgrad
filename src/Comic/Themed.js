@@ -5,21 +5,22 @@ import ReactDOM from 'react-dom'
 import styles from './Themed.module.css';
 import { ThemeContext } from '../Contexts/ThemeContext';
 import classNames from 'classnames';
+import instagram from '../Themes/Instagram.module.css';
 class Themed extends Component {
   constructor(props) {
     super(props);
     this.titleRef = React.createRef();
+    this.iconRef = React.createRef();
     this.signatureRef = React.createRef();
     this.downloadComics = this.downloadComics.bind(this);
     this.strips = [React.createRef(), React.createRef(), React.createRef()];
   }
   downloadComics() {
-    const style = { 
-      style: {
-      } 
-    };
+    this.props.changeZoom('21px');
+    this.props.changeTheme(instagram);
     let components = [];
     components.push(this.titleRef.current);
+    components.push(this.iconRef.current);
     Object.keys(this.strips).forEach(key => {
       let panel = ReactDOM.findDOMNode(this.strips[key].current);
       components.push(panel);
@@ -27,7 +28,7 @@ class Themed extends Component {
     components.push(this.signatureRef.current);
     let downloads = [];
     components.map((component, index) => {
-      let promise = domtoimage.toJpeg(component, style);
+      let promise = domtoimage.toJpeg(component);
       downloads.push(promise);
       promise.then((dataUrl) => {
         var link = document.createElement('a');
@@ -45,7 +46,7 @@ class Themed extends Component {
           <div className={this.props.theme.header} ref={this.titleRef}>
             <h3 className={this.props.theme.title}>
               {this.props.icon &&
-                <span className={styles.favicon}>{this.props.icon}</span>
+                <span className={styles.favicon} ref={this.iconRef}>{this.props.icon}</span>
               }
               {this.props.title}
             </h3>
