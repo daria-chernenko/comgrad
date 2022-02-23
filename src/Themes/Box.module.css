@@ -6,18 +6,23 @@
   linear-gradient(left, #555 0.05em, #555 0.05em, transparent 0.05em, transparent 0.7em, #555 0.7em, #555 0.8em, transparent 0.8em, transparent 1.45em, #555 1.45em, #555 1.5em),
   linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
   linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
-background-position: 0 0,
-     0 0,
-     0.65em 0,
-     1.4em 0.75em,
-     0 0,
-     0 0,
-     0.75em 0.75em;
-background-size: 30.0em 15.0em,
- 1.5em 1.5em,
- 1.5em 1.5em,
- 1.5em 1.5em,
- 1.5em 1.5em,
- 1.5em 1.5em,
- 1.5em 1.5em;
+  background-position: 0 0,
+                       0 0,
+                       0.65em 0,
+                       1.4em 0.75em,
+                       0 0,
+                       0 0,
+                       0.75em 0.75em;
+  background-size: 30.0em 15.0em,
+                   1.5em 1.5em,
+                   1.5em 1.5em,
+                   1.5em 1.5em,
+                   1.5em 1.5em,
+                   1.5em 1.5em,
+                   1.5em 1.5em;
+  overflow: hidden;
+  width: 16em;
+  height: 16em;
+  background-color: #fff; 
+  border: solid 5px black;
 }
