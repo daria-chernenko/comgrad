@@ -39,7 +39,6 @@ class Themed extends Component {
     });
   }
   render() {
-    console.log('foo');
     return (
       <div className={styles.wrapper}>
         <section style={{fontSize: this.props.zoom}} className={classNames(styles.comic, this.props.theme.layout)}>
