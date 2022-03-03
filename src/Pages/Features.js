@@ -167,13 +167,9 @@ class Features extends React.Component {
               <div style={{position: 'sticky', top: 0}}>
                 <Issue01/>
                 <JsxParser
-                    components={{ Lollipop }}
-                    jsx={`
-                      <p>hello</p>
-                      <Lollipop/>
-                      <p>world</p>
-                    `}
-                  />
+                  components={{ Lollipop }}
+                  jsx={this.state.comicString}
+                />
               </div>
             </Grid.Column>
           </Grid>
