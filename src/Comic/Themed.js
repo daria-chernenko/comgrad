@@ -16,7 +16,7 @@ class Themed extends Component {
     this.strips = [React.createRef(), React.createRef(), React.createRef()];
   }
   downloadComics() {
-    this.props.changeZoom('40px');
+    this.props.changeZoom('38px');
     this.props.changeTheme(instagram);
     let components = [];
     components.push(this.titleRef.current);

@@ -70,11 +70,11 @@ class Features extends React.Component {
                           </Form.Field>
                           <Form.Field>
                             <Radio 
-                              label='40px' 
+                              label='38px' 
                               name='sizeGroup' 
-                              value='40px' 
-                              checked={zoom === '40px'} 
-                              onChange={() => changeZoom('40px')}  
+                              value='38px' 
+                              checked={zoom === '38px'} 
+                              onChange={() => changeZoom('38px')}  
                             />
                           </Form.Field>
                         </Form.Group>
