@@ -1,14 +1,22 @@
 import React, { Component } from 'react'
 import domtoimage from 'dom-to-image'
 import Download from './Download';
+import Edit from './Edit';
 import ReactDOM from 'react-dom'
 import styles from './Themed.module.css';
 import { ThemeContext } from '../Contexts/ThemeContext';
 import classNames from 'classnames';
+import { Segment, Form, Radio } from 'semantic-ui-react'
+import Zoom from '../Controls/Zoom';
 import instagram from '../Themes/Instagram.module.css';
 class Themed extends Component {
+  state = {}
   constructor(props) {
     super(props);
+    this.state = {
+      isEditting: false,
+      zoom: '10px'
+    };
     this.titleRef = React.createRef();
     this.iconRef = React.createRef();
     this.signatureRef = React.createRef();
@@ -38,10 +46,22 @@ class Themed extends Component {
       });
     });
   }
+  toggleEdit = () => {
+    this.setState({isEditting: !this.state.isEditting})
+  }
+  changeZoom = (val) => {
+    this.setState({zoom: val});
+  }
   render() {
-    return (
-      <div className={styles.wrapper}>
-        <section style={{fontSize: this.props.zoom}} className={classNames(styles.comic, this.props.theme.layout)}>
+    let content;
+    if(this.state.isEditting) {
+      content = <Segment>
+        <Form>
+          <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom}/>
+        </Form>
+      </Segment>
+    } else {
+      content = <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.props.theme.layout)}>
           <div className={this.props.theme.header} ref={this.titleRef}>
             <h3 className={this.props.theme.title}>
               {this.props.icon &&
@@ -57,7 +77,11 @@ class Themed extends Component {
             <a href="https:
           </div>
         </section>
-        <Download downloadComics={this.downloadComics} />
+    }
+    return (
+      <div className={styles.wrapper}>
+        {content}
+        <Edit clicked={this.toggleEdit}/>
       </div>
     );
   }
