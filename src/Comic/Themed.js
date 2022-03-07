@@ -6,14 +6,16 @@ import ReactDOM from 'react-dom'
 import styles from './Themed.module.css';
 import { ThemeContext } from '../Contexts/ThemeContext';
 import classNames from 'classnames';
+import { Web } from '../Themes';
 import { Segment, Form, Radio } from 'semantic-ui-react'
-import Zoom from '../Controls/Zoom';
+import { Zoom, Theme } from '../Controls';
 import instagram from '../Themes/Instagram.module.css';
 class Themed extends Component {
   state = {}
   constructor(props) {
     super(props);
     this.state = {
+      theme: Web,
       isEditting: false,
       zoom: '10px'
     };
@@ -52,18 +54,22 @@ class Themed extends Component {
   changeZoom = (val) => {
     this.setState({zoom: val});
   }
+  changeTheme = (val) => {
+    this.setState({theme: val});
+  }
   render() {
     let content;
     if(this.state.isEditting) {
       content = <Segment>
         <Form>
-          <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom}/>
+          <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom} />
+          <Theme changeTheme={this.changeTheme} theme={this.state.theme} />
         </Form>
       </Segment>
     } else {
-      content = <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.props.theme.layout)}>
-          <div className={this.props.theme.header} ref={this.titleRef}>
-            <h3 className={this.props.theme.title}>
+      content = <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
+          <div className={this.state.theme.header} ref={this.titleRef}>
+            <h3 className={this.state.theme.title}>
               {this.props.icon &&
                 <span className={styles.favicon} ref={this.iconRef}>{this.props.icon}</span>
               }
@@ -73,7 +79,7 @@ class Themed extends Component {
           {React.Children.map(this.props.children, (element, idx) => {
             return React.cloneElement(element, { ref: this.strips[idx], index: idx });
           })}
-          <div className={this.props.theme.signature} ref={this.signatureRef}>
+          <div className={this.state.theme.signature} ref={this.signatureRef}>
             <a href="https:
           </div>
         </section>

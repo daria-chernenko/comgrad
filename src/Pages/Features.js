@@ -3,8 +3,6 @@ import { Message, Button, Label, Select, Segment, Header, Container, Grid, Form,
 import Issue01 from '../Issues/01-it-will-be-fun'
 import styles from './Features.module.css';
 import { ThemeContext } from '../Contexts/ThemeContext';
-import web from '../Themes/Web.module.css';
-import instagram from '../Themes/Instagram.module.css';
 import Lollipop from '../Comic/Character';
 import JsxParser from 'react-jsx-parser'
 class Features extends React.Component {
@@ -12,7 +10,6 @@ class Features extends React.Component {
     super(props);
     this.state = {
       size: '10px', 
-      viewMode: 'web',
       comicString: '<Lollipop />'
     };
   }
