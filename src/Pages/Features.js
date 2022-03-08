@@ -2,7 +2,6 @@ import React from 'react'
 import { Message, Button, Label, Select, Segment, Header, Container, Grid, Form, Radio, TextArea } from 'semantic-ui-react'
 import Issue01 from '../Issues/01-it-will-be-fun'
 import styles from './Features.module.css';
-import { ThemeContext } from '../Contexts/ThemeContext';
 import Lollipop from '../Comic/Character';
 import JsxParser from 'react-jsx-parser'
 class Features extends React.Component {

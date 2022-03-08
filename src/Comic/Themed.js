@@ -4,7 +4,6 @@ import Download from './Download';
 import Edit from './Edit';
 import ReactDOM from 'react-dom'
 import styles from './Themed.module.css';
-import { ThemeContext } from '../Contexts/ThemeContext';
 import classNames from 'classnames';
 import { Web } from '../Themes';
 import { Segment, Form, Radio } from 'semantic-ui-react'
