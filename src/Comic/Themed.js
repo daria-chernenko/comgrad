@@ -21,12 +21,9 @@ class Themed extends Component {
     this.titleRef = React.createRef();
     this.iconRef = React.createRef();
     this.signatureRef = React.createRef();
-    this.downloadComics = this.downloadComics.bind(this);
     this.strips = [React.createRef(), React.createRef(), React.createRef()];
   }
-  downloadComics() {
-    this.props.changeZoom('38px');
-    this.props.changeTheme(instagram);
+  downloadComics = () => {
     let components = [];
     components.push(this.titleRef.current);
     components.push(this.iconRef.current);
@@ -57,16 +54,20 @@ class Themed extends Component {
     this.setState({theme: val});
   }
   render() {
-    let content;
+    let editForm = '';
     if(this.state.isEditting) {
-      content = <Segment>
+      editForm = <Segment>
         <Form>
           <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom} />
           <Theme changeTheme={this.changeTheme} theme={this.state.theme} />
+          <Download downloadComics={this.downloadComics} />
         </Form>
       </Segment>
-    } else {
-      content = <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
+    };
+    return (
+      <div className={styles.wrapper}>
+        {editForm}
+        <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
           <div className={this.state.theme.header} ref={this.titleRef}>
             <h3 className={this.state.theme.title}>
               {this.props.icon &&
@@ -82,10 +83,6 @@ class Themed extends Component {
             <a href="https:
           </div>
         </section>
-    }
-    return (
-      <div className={styles.wrapper}>
-        {content}
         <Edit clicked={this.toggleEdit}/>
       </div>
     );
