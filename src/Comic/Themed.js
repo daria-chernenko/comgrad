@@ -1,13 +1,11 @@
 import React, { Component } from 'react'
-import domtoimage from 'dom-to-image'
-import Download from './Download';
 import Edit from './Edit';
 import ReactDOM from 'react-dom'
 import styles from './Themed.module.css';
 import classNames from 'classnames';
 import { Web } from '../Themes';
 import { Segment, Form, Radio } from 'semantic-ui-react'
-import { Zoom, Theme } from '../Controls';
+import { Download, Zoom, Theme } from '../Controls';
 import instagram from '../Themes/Instagram.module.css';
 class Themed extends Component {
   state = {}
@@ -23,27 +21,6 @@ class Themed extends Component {
     this.signatureRef = React.createRef();
     this.strips = [React.createRef(), React.createRef(), React.createRef()];
   }
-  downloadComics = () => {
-    let components = [];
-    components.push(this.titleRef.current);
-    components.push(this.iconRef.current);
-    Object.keys(this.strips).forEach(key => {
-      let panel = ReactDOM.findDOMNode(this.strips[key].current);
-      components.push(panel);
-    });
-    components.push(this.signatureRef.current);
-    let downloads = [];
-    components.map((component, index) => {
-      let promise = domtoimage.toJpeg(component);
-      downloads.push(promise);
-      promise.then((dataUrl) => {
-        var link = document.createElement('a');
-        link.download = `${this.props.title}-${index}.jpg`;
-        link.href = dataUrl;
-        link.click();
-      });
-    });
-  }
   toggleEdit = () => {
     this.setState({isEditting: !this.state.isEditting})
   }
@@ -53,6 +30,17 @@ class Themed extends Component {
   changeTheme = (val) => {
     this.setState({theme: val});
   }
+  componentDidMount() {
+    let components = [];
+    components.push(this.titleRef.current);
+    components.push(this.iconRef.current);
+    Object.keys(this.strips).forEach(key => {
+      let panel = ReactDOM.findDOMNode(this.strips[key].current);
+      components.push(panel);
+    });
+    components.push(this.signatureRef.current);
+    this.setState({components: components});
+  }
   render() {
     let editForm = '';
     if(this.state.isEditting) {
@@ -60,7 +48,7 @@ class Themed extends Component {
         <Form>
           <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom} />
           <Theme changeTheme={this.changeTheme} theme={this.state.theme} />
-          <Download downloadComics={this.downloadComics} />
+          <Download title={this.props.title} components={this.state.components} />
         </Form>
       </Segment>
     };
