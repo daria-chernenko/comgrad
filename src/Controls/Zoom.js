@@ -3,6 +3,7 @@ import { Form, Radio } from 'semantic-ui-react';
 const Zoom = function(props) {
   return (
     <Form.Group inline>
+      <label>Zoom:</label>
       <Form.Field>
         <Radio
           label='5px'

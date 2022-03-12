@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Edit from './Edit';
 import ReactDOM from 'react-dom'
 import styles from './Themed.module.css';
 import classNames from 'classnames';
 import { Web } from '../Themes';
-import { Segment, Form, Radio } from 'semantic-ui-react'
-import { Download, Zoom, Theme } from '../Controls';
-import instagram from '../Themes/Instagram.module.css';
+import { Segment, Form, Radio } from 'semantic-ui-react';
+import { Download, Zoom, Theme, Story } from '../Controls';
+import JsxParser from 'react-jsx-parser';
+import Lollipop from './Lollipop';
 class Themed extends Component {
   state = {}
   constructor(props) {
@@ -14,7 +15,8 @@ class Themed extends Component {
     this.state = {
       theme: Web,
       isEditting: false,
-      zoom: '10px'
+      zoom: '10px',
+      story: ''
     };
     this.titleRef = React.createRef();
     this.iconRef = React.createRef();
@@ -29,6 +31,9 @@ class Themed extends Component {
   }
   changeTheme = (val) => {
     this.setState({theme: val});
+  }
+  updateStory = (val) => {
+    this.setState({story: val});
   }
   componentDidMount() {
     let components = [];
@@ -48,6 +53,7 @@ class Themed extends Component {
         <Form>
           <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom} />
           <Theme changeTheme={this.changeTheme} theme={this.state.theme} />
+          <Story story={this.props.story} updateStory={this.updateStory} />
           <Download title={this.props.title} components={this.state.components} />
         </Form>
       </Segment>
@@ -71,6 +77,10 @@ class Themed extends Component {
             <a href="https:
           </div>
         </section>
+              <JsxParser
+                  components={{ Lollipop }}
+                  jsx={this.state.story}
+                />
         <Edit clicked={this.toggleEdit}/>
       </div>
     );

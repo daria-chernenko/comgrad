@@ -3,7 +3,6 @@ import { Message, Button, Label, Select, Segment, Header, Container, Grid, Form,
 import Issue01 from '../Issues/01-it-will-be-fun'
 import styles from './Features.module.css';
 import Lollipop from '../Comic/Character';
-import JsxParser from 'react-jsx-parser'
 class Features extends React.Component {
   constructor(props) {
     super(props);
@@ -85,9 +84,6 @@ class Features extends React.Component {
                 <p>
                   Want to write your own episode?
                 </p>
-                <Form>
-                  <TextArea rows={2} value={this.state.comicString} onChange={(e, { value }) => this.setState({comicString: value})} />
-                </Form>
               </Segment>
               <Segment color='red'>
                 <h2>
@@ -121,10 +117,6 @@ class Features extends React.Component {
             <Grid.Column width={10}>
               <div style={{position: 'sticky', top: 0}}>
                 <Issue01/>
-                <JsxParser
-                  components={{ Lollipop }}
-                  jsx={this.state.comicString}
-                />
               </div>
             </Grid.Column>
           </Grid>

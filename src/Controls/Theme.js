@@ -4,6 +4,7 @@ import { Instagram, Web } from '../Themes';
 export default function(props) {
   return (
     <Form.Group inline>
+      <label>Theme:</label>
       <Form.Field>
         <Radio
           label='Web'
