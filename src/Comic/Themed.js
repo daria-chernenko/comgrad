@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import Edit from './Edit';
 import ReactDOM from 'react-dom'
 import styles from './Themed.module.css';
-import classNames from 'classnames';
 import { Web } from '../Themes';
 import { Segment, Form, Radio } from 'semantic-ui-react';
 import { Download, Zoom, Theme, Story } from '../Controls';
 import JsxParser from 'react-jsx-parser';
 import Lollipop from './Lollipop';
+import { Components } from './';
 class Themed extends Component {
   state = {}
   constructor(props) {
@@ -16,7 +16,7 @@ class Themed extends Component {
       theme: Web,
       isEditting: false,
       zoom: '10px',
-      story: ''
+      story: props.story
     };
     this.titleRef = React.createRef();
     this.iconRef = React.createRef();
@@ -53,34 +53,26 @@ class Themed extends Component {
         <Form>
           <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom} />
           <Theme changeTheme={this.changeTheme} theme={this.state.theme} />
-          <Story story={this.props.story} updateStory={this.updateStory} />
+          <Story story={this.state.story} updateStory={this.updateStory} />
           <Download title={this.props.title} components={this.state.components} />
         </Form>
       </Segment>
     };
+    let foo = <JsxParser
+          components={Components}
+          jsx={this.state.story}
+        />;
+    let bar = React.Children.map(foo, (element, idx) => {
+      console.log('before: ', element);
+      let ret =  React.cloneElement(element, {theme: this.state.theme, zoom: this.state.zoom});
+      console.log('after: ', ret);
+      return ret;
+    })[0];
+    console.log(bar);
     return (
       <div className={styles.wrapper}>
         {editForm}
-        <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
-          <div className={this.state.theme.header} ref={this.titleRef}>
-            <h3 className={this.state.theme.title}>
-              {this.props.icon &&
-                <span className={styles.favicon} ref={this.iconRef}>{this.props.icon}</span>
-              }
-              {this.props.title}
-            </h3>
-          </div>
-          {React.Children.map(this.props.children, (element, idx) => {
-            return React.cloneElement(element, { ref: this.strips[idx], index: idx });
-          })}
-          <div className={this.state.theme.signature} ref={this.signatureRef}>
-            <a href="https:
-          </div>
-        </section>
-              <JsxParser
-                  components={{ Lollipop }}
-                  jsx={this.state.story}
-                />
+        {bar}
         <Edit clicked={this.toggleEdit}/>
       </div>
     );
