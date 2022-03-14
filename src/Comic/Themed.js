@@ -35,44 +35,25 @@ class Themed extends Component {
   updateStory = (val) => {
     this.setState({story: val});
   }
-  componentDidMount() {
-    let components = [];
-    components.push(this.titleRef.current);
-    components.push(this.iconRef.current);
-    Object.keys(this.strips).forEach(key => {
-      let panel = ReactDOM.findDOMNode(this.strips[key].current);
-      components.push(panel);
-    });
-    components.push(this.signatureRef.current);
-    this.setState({components: components});
-  }
   render() {
     let editForm = '';
     if(this.state.isEditting) {
       editForm = <Segment>
         <Form>
-          <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom} />
-          <Theme changeTheme={this.changeTheme} theme={this.state.theme} />
+          {}
+          {}
           <Story story={this.state.story} updateStory={this.updateStory} />
-          <Download title={this.props.title} components={this.state.components} />
+          {}
         </Form>
       </Segment>
     };
-    let foo = <JsxParser
-          components={Components}
-          jsx={this.state.story}
-        />;
-    let bar = React.Children.map(foo, (element, idx) => {
-      console.log('before: ', element);
-      let ret =  React.cloneElement(element, {theme: this.state.theme, zoom: this.state.zoom});
-      console.log('after: ', ret);
-      return ret;
-    })[0];
-    console.log(bar);
     return (
       <div className={styles.wrapper}>
         {editForm}
-        {bar}
+        <JsxParser
+          components={Components}
+          jsx={this.state.story}
+        />;
         <Edit clicked={this.toggleEdit}/>
       </div>
     );
