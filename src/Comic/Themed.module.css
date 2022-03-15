@@ -13,3 +13,9 @@
   height: 1.2em;
   display: inline-block;
 }
+.toggleEdit {
+  position: absolute;
+  bottom: -1.3em;
+  left: calc(50% - 1em);
+  z-index: 10;
+}

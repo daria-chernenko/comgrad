@@ -1,13 +1,19 @@
 import React from 'react';
-import { Form, TextArea } from 'semantic-ui-react';
+import { Segment, Form, TextArea, Transition } from 'semantic-ui-react';
 export default function(props) {
   return (
-    <Form.Field
-      label="Source code:"
-      control={TextArea}
-      rows={2} 
-      value={props.story} 
-      onChange={(e, { value }) => props.updateStory(value)} 
-    />
+    <Transition visible={props.isVisible} animation='swing down' duration={500}>
+      <Segment>
+        <Form>
+          <Form.Field
+            label="Source code:"
+            control={TextArea}
+            rows={10}
+            value={props.story}
+            onChange={(e, { value }) => props.updateStory(value)}
+          />
+        </Form>
+      </Segment>
+    </Transition>
   );
 }
