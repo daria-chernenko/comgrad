@@ -6,7 +6,7 @@ import Lollipop from './Lollipop';
 import Wrapper from './Wrapper';
 import styles from './Themed.module.css';
 import { Web } from '../Themes';
-import { Button, Segment, Form, Transition } from 'semantic-ui-react';
+import { Button, Segment } from 'semantic-ui-react';
 import { Story } from '../Controls';
 import JsxParser from 'react-jsx-parser';
 export default class Comic extends Component {
@@ -44,9 +44,9 @@ export default class Comic extends Component {
             components={Components}
             jsx={this.state.story}
           />
-          <Button circular icon="edit" className={styles.toggleEdit} onClick={this.toggleEdit}/>
+          <Button circular icon="edit" className={styles.toggleEdit} onClick={this.toggleEdit} />
         </Segment>
-              <Story isVisible={this.state.isEditting} story={this.state.story} updateStory={this.updateStory} />
+        <Story isVisible={this.state.isEditting} story={this.state.story} updateStory={this.updateStory} />
       </Segment.Group>
     );
   }
