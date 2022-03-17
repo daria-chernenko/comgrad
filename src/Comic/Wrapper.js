@@ -1,11 +1,12 @@
 import styles from './Themed.module.css';
 import classNames from 'classnames';
-import { Segment, Form, Radio } from 'semantic-ui-react';
+import { Button, Segment, Form, Radio } from 'semantic-ui-react';
 import { Download, Zoom, Theme, Story } from '../Controls';
 import React, { Component } from 'react';
 import Edit from './Edit';
 import { Web } from '../Themes';
 import ReactDOM from 'react-dom'
+import { Knobs } from '../Controls';
 class Wrapper extends Component {
   state = {}
   constructor(props) {
@@ -14,7 +15,6 @@ class Wrapper extends Component {
       theme: Web,
       isEditting: false,
       zoom: '10px',
-      story: props.story
     };
     this.titleRef = React.createRef();
     this.iconRef = React.createRef();
@@ -30,9 +30,6 @@ class Wrapper extends Component {
   changeTheme = (val) => {
     this.setState({theme: val});
   }
-  updateStory = (val) => {
-    this.setState({story: val});
-  }
   componentDidMount() {
     let components = [];
     components.push(this.titleRef.current);
@@ -45,21 +42,10 @@ class Wrapper extends Component {
     this.setState({components: components});
   }
   render() {
-    let editForm = '';
-    if(this.state.isEditting) {
-      editForm = <Segment>
-        <Form>
-          <Zoom changeZoom={this.changeZoom} zoom={this.state.zoom} />
-          <Theme changeTheme={this.changeTheme} theme={this.state.theme} />
-          <Story story={this.state.story} updateStory={this.updateStory} />
-          <Download title={this.props.title} components={this.state.components} />
-        </Form>
-      </Segment>
-    };
     return (
-      <div>
-        <Edit clicked={this.toggleEdit}/>
-        {editForm}
+      <React.Fragment>
+        <Knobs isVisible={this.state.isEditting} />
+        <Button circular icon="bars" className={styles.button} onClick={this.toggleEdit}/>
         <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
           <div className={this.state.theme.header} ref={this.titleRef}>
             <h3 className={this.state.theme.title}>
@@ -76,12 +62,7 @@ class Wrapper extends Component {
             <a href="https:
           </div>
         </section>
-      <div>
-        <p className={styles.evenboxinner}>
-          {}
-        </p>
-      </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
