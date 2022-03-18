@@ -1,9 +1,8 @@
-import styles from './Themed.module.css';
+import styles from './Wrapper.module.css';
 import classNames from 'classnames';
 import { Button, Segment, Form, Radio } from 'semantic-ui-react';
 import { Download, Zoom, Theme, Story } from '../Controls';
 import React, { Component } from 'react';
-import Edit from './Edit';
 import { Web } from '../Themes';
 import ReactDOM from 'react-dom'
 import { Knobs } from '../Controls';
@@ -44,8 +43,7 @@ class Wrapper extends Component {
   render() {
     return (
       <React.Fragment>
-        <Knobs isVisible={this.state.isEditting} />
-        <Button circular icon="bars" className={styles.button} onClick={this.toggleEdit}/>
+        <Button circular size="mini" icon="wrench" color="teal" className={styles.toggleEdit} onClick={this.toggleEdit}/>
         <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
           <div className={this.state.theme.header} ref={this.titleRef}>
             <h3 className={this.state.theme.title}>
@@ -62,6 +60,7 @@ class Wrapper extends Component {
             <a href="https:
           </div>
         </section>
+        <Knobs isVisible={this.state.isEditting} changeZoom={this.changeZoom} changeTheme={this.changeTheme} zoom={this.state.zoom} theme={this.state.theme} title={this.props.title} components={this.state.components} />
       </React.Fragment>
     );
   }

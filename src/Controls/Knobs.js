@@ -3,7 +3,7 @@ import { Segment, Form, TextArea, Transition } from 'semantic-ui-react';
 import { Download, Zoom, Theme, Story } from '../Controls';
 export default function(props) {
   return (
-    <Transition visible={props.isVisible} animation='swing up' duration={500}>
+    <Transition visible={props.isVisible} animation='fade up' duration={500}>
       <Segment>
         <Form>
           <Zoom changeZoom={props.changeZoom} zoom={props.zoom} />

@@ -29,7 +29,7 @@ export default class Comic extends Component {
           components={Components}
           jsx={this.state.story}
         />
-        <Button circular icon="edit" className={styles.toggleEdit} onClick={this.toggleEdit} />
+        <Button circular size="mini" color="pink" icon="edit" className={styles.toggleEdit} onClick={this.toggleEdit} />
         <Story isVisible={this.state.isEditting} story={this.state.story} updateStory={this.updateStory} />
       </Segment.Group>
     );
