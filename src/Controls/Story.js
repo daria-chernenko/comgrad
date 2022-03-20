@@ -3,7 +3,7 @@ import { Segment, Form, TextArea, Transition } from 'semantic-ui-react';
 export default function(props) {
   return (
     <Transition visible={props.isVisible} animation='swing down' duration={500}>
-      <Segment>
+      <Segment color="pink">
         <Form>
           <Form.Field
             label="Source code:"

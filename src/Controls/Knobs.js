@@ -4,7 +4,7 @@ import { Download, Zoom, Theme, Story } from '../Controls';
 export default function(props) {
   return (
     <Transition visible={props.isVisible} animation='fade up' duration={500}>
-      <Segment>
+      <Segment color="teal">
         <Form>
           <Zoom changeZoom={props.changeZoom} zoom={props.zoom} />
           <Theme changeTheme={props.changeTheme} theme={props.theme} />

@@ -43,8 +43,9 @@ class Wrapper extends Component {
   render() {
     return (
       <React.Fragment>
+        <Knobs isVisible={this.state.isEditting} changeZoom={this.changeZoom} changeTheme={this.changeTheme} zoom={this.state.zoom} theme={this.state.theme} title={this.props.title} components={this.state.components} />
         <Button circular size="mini" icon="wrench" color="teal" className={styles.toggleEdit} onClick={this.toggleEdit}/>
-        <section style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
+        <Segment style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
           <div className={this.state.theme.header} ref={this.titleRef}>
             <h3 className={this.state.theme.title}>
               {this.props.icon &&
@@ -59,8 +60,7 @@ class Wrapper extends Component {
           <div className={this.state.theme.signature} ref={this.signatureRef}>
             <a href="https:
           </div>
-        </section>
-        <Knobs isVisible={this.state.isEditting} changeZoom={this.changeZoom} changeTheme={this.changeTheme} zoom={this.state.zoom} theme={this.state.theme} title={this.props.title} components={this.state.components} />
+        </Segment>
       </React.Fragment>
     );
   }

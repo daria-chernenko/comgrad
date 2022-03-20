@@ -24,14 +24,14 @@ export default class Comic extends Component {
   }
   render() {
     return (
-      <Segment.Group className={styles.wrapper}>
+      <React.Fragment>
         <JsxParser
           components={Components}
           jsx={this.state.story}
         />
-        <Button circular size="mini" color="pink" icon="edit" className={styles.toggleEdit} onClick={this.toggleEdit} />
         <Story isVisible={this.state.isEditting} story={this.state.story} updateStory={this.updateStory} />
-      </Segment.Group>
+        <Button circular size="mini" color="pink" icon="edit" className={styles.toggleEdit} onClick={this.toggleEdit} />
+      </React.Fragment>
     );
   }
 }
