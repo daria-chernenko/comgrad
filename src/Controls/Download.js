@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button } from 'semantic-ui-react';
+import { Button, Icon } from 'semantic-ui-react';
 import styles from './Download.module.css';
 import domtoimage from 'dom-to-image'
 class Download extends Component {
@@ -18,7 +18,8 @@ class Download extends Component {
   }
   render() {
     return (
-      <Button className={styles.download} onClick={this.downloadComics}>
+      <Button icon size="mini" labelPosition='left' className={styles.download} onClick={this.downloadComics}>
+        <Icon name='download' />
         Download
       </Button>
     );
