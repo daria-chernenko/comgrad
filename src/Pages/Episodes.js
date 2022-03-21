@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Grid, Container } from 'semantic-ui-react'
 import { released, drafts } from '../Issues';
+import Comic from '../Comic';
 class Episodes extends Component {
   render() {
     return (
@@ -10,20 +11,20 @@ class Episodes extends Component {
           <Grid.Column textAlign='center'>
             <h2>Released issues</h2>
           </Grid.Column>
-          {released.map(function (Issue, index) {
+          {released.map(function (story, index) {
             return (
               <Grid.Column textAlign='center'>
-                <Issue key={index} />
+                <Comic story={story} />
               </Grid.Column>
             )
           })}
           <Grid.Column>
             <h2>Drafts</h2>
           </Grid.Column>
-          {drafts.map(function (Issue, index) {
+          {drafts.map(function (story, index) {
             return (
               <Grid.Column textAlign='center'>
-                <Issue key={index} />
+                <Comic story={story} />
               </Grid.Column>
             )
           })}

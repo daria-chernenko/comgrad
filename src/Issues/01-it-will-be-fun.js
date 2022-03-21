@@ -1,5 +1,4 @@
-export default `
-  <Wrapper title="It will be fun they said..." icon="🍭">
+  export default `<Wrapper title="It will be fun they said..." icon="🍭">
         <Panel>
           <Character 
             type="computer-man" 

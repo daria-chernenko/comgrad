@@ -1,11 +1,4 @@
-import React, { Component } from 'react';
-import Comic from '../Comic';
-import Character from '../Comic/Character';
-import Panel from '../Comic/Panel';
-class Issue extends Component {
-  render() {
-    return (
-      <Comic title="Conversions" icon="📉">
+      export default `<Wrapper title="Conversions" icon="📉">
         <Panel>
           <Character 
             type="computer-man" 
@@ -35,8 +28,4 @@ class Issue extends Component {
             say='Even "enlarge your penis" campaigns have better conversion ratio.'
           />
         </Panel>
-      </Comic>
-    );
-  }
-}
-export default Issue;
+      </Wrapper>`;

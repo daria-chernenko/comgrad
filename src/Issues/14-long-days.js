@@ -1,11 +1,4 @@
-import React, { Component } from 'react';
-import Comic from '../Comic';
-import Character from '../Comic/Character';
-import Panel from '../Comic/Panel';
-class Issue extends Component {
-  render() {
-    return (
-      <Comic title="Long days" icon="📅">
+      export default `<Wrapper title="Long days" icon="📅">
         <Panel>
           <Character 
             type="computer-man" 
@@ -36,8 +29,4 @@ class Issue extends Component {
             emotion="🤦‍"
           />
         </Panel>
-      </Comic>
-    );
-  }
-}
-export default Issue;
+      </Wrapper>`;

@@ -2,7 +2,7 @@ import React from 'react'
 import { Message, Button, Label, Select, Segment, Header, Container, Grid, Form, Radio, TextArea } from 'semantic-ui-react'
 import styles from './Features.module.css';
 import Comic from '../Comic';
-import Episode from '../Issues/01-it-will-be-fun';
+import Issue01 from '../Issues/01-it-will-be-fun';
 class Features extends React.Component {
   constructor(props) {
     super(props);
@@ -116,7 +116,7 @@ class Features extends React.Component {
             </Grid.Column>
             <Grid.Column width={10}>
               <div style={{position: 'sticky', top: 0}}>
-                <Comic story={Episode} />
+                <Comic story={Issue01} />
               </div>
             </Grid.Column>
           </Grid>

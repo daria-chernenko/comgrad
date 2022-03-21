@@ -1,11 +1,4 @@
-import React, { Component } from 'react';
-import Comic from '../Comic';
-import Panel from '../Comic/Panel';
-import Character from '../Comic/Character';
-class Issue extends Component {
-  render(props) {
-    return (
-      <Comic title="Paradox of SCRUM" icon="🧟‍♂️">
+      export default `<Wrapper title="Paradox of SCRUM" icon="🧟‍♂️">
         <Panel title="End of sprint">
           <Character 
             type="computer-woman" 
@@ -30,8 +23,4 @@ class Issue extends Component {
             type="zombie-man" 
             say="Tickeeeets..." />
         </Panel>
-      </Comic>
-    );
-  }
-}
-export default Issue;
+      </Wrapper>`;

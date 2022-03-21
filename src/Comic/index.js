@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Character from './Character';
 import Panel from './Panel';
 import Lollipop from './Lollipop';
+import HeadBag from './HeadBag';
 import Wrapper from './Wrapper';
 import styles from './index.module.css';
 import { Button, Segment } from 'semantic-ui-react';
@@ -39,5 +40,6 @@ export const Components = {
   Character,
   Panel,
   Lollipop,
-  Wrapper
+  Wrapper,
+  HeadBag
 }
