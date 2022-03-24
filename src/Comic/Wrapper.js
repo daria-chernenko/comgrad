@@ -41,6 +41,7 @@ class Wrapper extends Component {
     this.setState({components: components});
   }
   render() {
+    let i = 0;
     return (
       <React.Fragment>
         <Knobs isVisible={this.state.isEditting} changeZoom={this.changeZoom} changeTheme={this.changeTheme} zoom={this.state.zoom} theme={this.state.theme} title={this.props.title} components={this.state.components} />
@@ -55,7 +56,11 @@ class Wrapper extends Component {
             </h3>
           </div>
           {React.Children.map(this.props.children, (element, idx) => {
-            return React.cloneElement(element, { ref: this.strips[idx], index: idx });
+            if (typeof element.props.children != 'string') {
+              let ret = React.cloneElement(element, { ref: this.strips[i], index: i });
+              i++;
+              return ret;
+            }
           })}
           <div className={this.state.theme.signature} ref={this.signatureRef}>
             <a href="https:
