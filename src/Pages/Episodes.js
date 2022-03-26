@@ -13,7 +13,7 @@ class Episodes extends Component {
           </Grid.Column>
           {released.map(function (story, index) {
             return (
-              <Grid.Column textAlign='center'>
+              <Grid.Column textAlign='center' key={index}>
                 <Comic story={story} />
               </Grid.Column>
             )
@@ -23,7 +23,7 @@ class Episodes extends Component {
           </Grid.Column>
           {drafts.map(function (story, index) {
             return (
-              <Grid.Column textAlign='center'>
+              <Grid.Column textAlign='center' key={index}>
                 <Comic story={story} />
               </Grid.Column>
             )

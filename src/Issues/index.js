@@ -14,6 +14,7 @@ import Issue13 from '../Issues/13-conversions';
 import Issue14 from '../Issues/14-long-days';
 import Issue15 from '../Issues/15-l10n-is-hard';
 import Issue16 from '../Issues/16-survival-strategy';
+import Issue17 from '../Issues/17-predictable-sales';
 export const released = [
   Issue01,
   Issue02,
@@ -30,7 +31,8 @@ export const released = [
   Issue13,
   Issue14,
   Issue15,
-  Issue16
+  Issue16,
+  Issue17
 ];
 export const drafts = [
 ];
