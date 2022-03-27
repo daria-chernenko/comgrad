@@ -9,3 +9,9 @@
   padding: 3em 2em !important;
   margin: 0 !important;
 }
+.favicon {
+  margin-right: .5em;
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+}

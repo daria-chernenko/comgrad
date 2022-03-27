@@ -49,7 +49,9 @@ class Wrapper extends Component {
         <Segment style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
           <div className={this.state.theme.header} ref={this.titleRef}>
             <h3 className={this.state.theme.title}>
-              <span className={styles.favicon} ref={this.iconRef}>{this.props.icon}</span>
+              {this.props.icon &&
+                <span className={styles.favicon} ref={this.iconRef}>{this.props.icon}</span>
+              }
               {this.props.title}
             </h3>
           </div>
