@@ -6,7 +6,7 @@ class Download extends Component {
   downloadComics = () => {
     let downloads = [];
     this.props.components.map((component, index) => {
-      let promise = domtoimage.toJpeg(component);
+      let promise = domtoimage.toJpeg(component, {bgcolor: '#fff'});
       downloads.push(promise);
       promise.then((dataUrl) => {
         var link = document.createElement('a');

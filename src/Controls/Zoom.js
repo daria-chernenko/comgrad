@@ -24,11 +24,11 @@ const Zoom = function(props) {
       </Form.Field>
       <Form.Field>
         <Radio
-          label='38px'
+          label='20px'
           name='sizeGroup'
-          value='38px'
-          checked={props.zoom === '38px'}
-          onChange={() => props.changeZoom('38px')}
+          value='20px'
+          checked={props.zoom === '20px'}
+          onChange={() => props.changeZoom('20px')}
         />
       </Form.Field>
     </Form.Group>
