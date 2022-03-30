@@ -80,7 +80,7 @@ ResponsiveContainer.propTypes = {
 const HomepageLayout = () => (
   <ResponsiveContainer>
     <Segment vertical className='content main-area'>
-      <Grid>
+      <Grid stackable>
         <Route exact  path="/" component={Home} />
         <Route exact  path="/features" component={Features} />
         <Route exact  path="/episodes" component={Episodes} />

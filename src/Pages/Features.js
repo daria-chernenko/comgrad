@@ -34,16 +34,8 @@ class Features extends React.Component {
           </Container>
         </Grid.Row>
         <Grid.Row>
-          <Grid container>
+          <Grid stackable container>
             <Grid.Column width={6}>
-              <Message color="teal">
-                <Message.Header>
-                  The edit button
-                </Message.Header>
-                <p>
-                  Hit the edit button <Button circular icon="bars" size='mini' /> in the corner of the comics to edit it's properties.
-                </p>
-              </Message>
               <Segment>
                 <h2>Zoomable</h2>
                 <p>
@@ -74,12 +66,9 @@ class Features extends React.Component {
                   This is a living project. So if you spot an error or something that can be improved, just jump in and <a href='https:
                 </p>
               </Segment>
-              <Segment color='red'>
+              <Segment>
                 <h2>
                   Editable
-                  <Label as='a' color='red' floating>
-                      WIP
-                  </Label>
                 </h2>
                 <p>
                   Want to write your own episode?
