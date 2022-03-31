@@ -13,6 +13,7 @@ export default class Comic extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      components: props.components || Components,
       isEditting: false,
       story: props.story
     };
@@ -27,7 +28,7 @@ export default class Comic extends Component {
     return (
       <React.Fragment>
         <JsxParser
-          components={Components}
+          components={this.state.components}
           jsx={this.state.story}
         />
         <Button circular size="mini" color="pink" icon="edit" className={styles.toggleEdit} onClick={this.toggleEdit} />
