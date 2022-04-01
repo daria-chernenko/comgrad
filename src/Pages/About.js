@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Container } from 'semantic-ui-react'
-import { released, drafts } from '../Issues';
+import { Grid } from 'semantic-ui-react'
 class Episodes extends Component {
   render() {
     return (

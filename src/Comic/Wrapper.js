@@ -1,7 +1,6 @@
 import styles from './Wrapper.module.css';
 import classNames from 'classnames';
-import { Button, Segment, Form, Radio } from 'semantic-ui-react';
-import { Download, Zoom, Theme, Story } from '../Controls';
+import { Button, Segment } from 'semantic-ui-react';
 import React, { Component } from 'react';
 import { Web } from '../Themes';
 import ReactDOM from 'react-dom'
@@ -56,7 +55,7 @@ class Wrapper extends Component {
             </h3>
           </div>
           {React.Children.map(this.props.children, (element, idx) => {
-            if (typeof element.props.children != 'string') {
+            if (typeof element.props.children !== 'string') {
               let ret = React.cloneElement(element, { ref: this.strips[i], index: i });
               i++;
               return ret;

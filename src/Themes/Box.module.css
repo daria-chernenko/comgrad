@@ -1,9 +1,9 @@
 .box {
   background-image: radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0, 0, 0, 0.8) 100%),
-  linear-gradient(top, #555 0%, #555 0.05em, transparent 0.05em, transparent 0.7em, #555 0.7em, #555 0.8em, transparent 0.8em, transparent 1.45em, #555 1.45em, #555 1.5em),
+  linear-gradient(to bottom, #555 0%, #555 0.05em, transparent 0.05em, transparent 0.7em, #555 0.7em, #555 0.8em, transparent 0.8em, transparent 1.45em, #555 1.45em, #555 1.5em),
   linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
   linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%),
-  linear-gradient(left, #555 0.05em, #555 0.05em, transparent 0.05em, transparent 0.7em, #555 0.7em, #555 0.8em, transparent 0.8em, transparent 1.45em, #555 1.45em, #555 1.5em),
+  linear-gradient(to right, #555 0.05em, #555 0.05em, transparent 0.05em, transparent 0.7em, #555 0.7em, #555 0.8em, transparent 0.8em, transparent 1.45em, #555 1.45em, #555 1.5em),
   linear-gradient(45deg, #ddd 0%, #ddd 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),
   linear-gradient(45deg, #eee 0%, #eee 25%, transparent 25%, transparent 75%, #ddd 75%, #ddd 100%);
   background-position: 0 0,

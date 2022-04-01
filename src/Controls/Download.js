@@ -5,7 +5,7 @@ import domtoimage from 'dom-to-image'
 class Download extends Component {
   downloadComics = () => {
     let downloads = [];
-    this.props.components.map((component, index) => {
+    this.props.components.forEach((component, index) => {
       let promise = domtoimage.toJpeg(component, {bgcolor: '#fff'});
       downloads.push(promise);
       promise.then((dataUrl) => {

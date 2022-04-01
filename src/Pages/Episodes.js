@@ -5,13 +5,12 @@ import Comic from '../Comic';
 class Episodes extends Component {
   render() {
     const panes = [];
-    released.map(function(story, index) {
+    released.forEach(function(story, index) {
       panes.push({
         menuItem: index,
         render: () => <Tab.Pane><Comic story={story} key={index} /></Tab.Pane>
       })
     });
-    const TabExampleBasic = () => <Tab panes={panes} />
     return (
       <Container>
         <Header as="h1">All the episodes</Header>
@@ -22,4 +21,4 @@ class Episodes extends Component {
     )
   }
 }
-  export default Episodes
+export default Episodes

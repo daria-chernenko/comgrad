@@ -1,5 +1,5 @@
 import React from 'react'
-import { Message, Button, Label, Select, Segment, Header, Container, Grid, Form, Radio, TextArea } from 'semantic-ui-react'
+import { Label, Segment, Header, Container, Grid } from 'semantic-ui-react'
 import styles from './Features.module.css';
 import Comic from '../Comic';
 import Issue01 from '../Issues/01-it-will-be-fun';
@@ -18,11 +18,6 @@ class Features extends React.Component {
     this.setState({ viewMode: value });
   }
   render () {
-    let languages = [
-      {key: 'en', text: 'English'},
-      {key: 'sp', text: 'Spanish'},
-      {key: 'cz', text: 'Czech'}
-    ];
     return (
       <React.Fragment>
         <Grid.Row className={styles.banner}>

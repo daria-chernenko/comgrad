@@ -1,6 +1,6 @@
 import React from 'react';
-import { Segment, Form, TextArea, Transition } from 'semantic-ui-react';
-import { Download, Zoom, Theme, Story } from '../Controls';
+import { Segment, Form, Transition } from 'semantic-ui-react';
+import { Download, Zoom, Theme } from '../Controls';
 export default function(props) {
   return (
     <Transition visible={props.isVisible} animation='fade up' duration={500}>

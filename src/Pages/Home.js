@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Button, Message, Card, List, Responsive, Container, Grid, Header, Icon } from 'semantic-ui-react'
+import { Message, Card, List, Responsive, Container, Grid, Header, Icon } from 'semantic-ui-react'
 import RandomComics from '../Components/RandomComics'
 import styles from './Home.module.css';
 import { NavLink } from 'react-router-dom'
@@ -146,4 +146,4 @@ class Home extends React.Component {
     )
   }
 }
-  export default Home
+export default Home

@@ -5,7 +5,7 @@ import Lollipop from './Lollipop';
 import HeadBag from './HeadBag';
 import Wrapper from './Wrapper';
 import styles from './index.module.css';
-import { Button, Segment } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import { Story } from '../Controls';
 import JsxParser from 'react-jsx-parser';
 export default class Comic extends Component {
