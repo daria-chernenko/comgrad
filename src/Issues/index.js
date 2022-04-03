@@ -15,6 +15,7 @@ import Issue14 from '../Issues/14-long-days';
 import Issue15 from '../Issues/15-l10n-is-hard';
 import Issue16 from '../Issues/16-survival-strategy';
 import Issue17 from '../Issues/17-predictable-sales';
+import Issue18 from '../Issues/18-after-micromanagement';
 export const released = [
   Issue01,
   Issue02,
@@ -32,5 +33,6 @@ export const released = [
   Issue14,
   Issue15,
   Issue16,
-  Issue17
+  Issue17,
+  Issue18
 ];
