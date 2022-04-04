@@ -2,7 +2,7 @@
   display: inline-block;
   position: relative;
 }
-.toggleEdit {
+.toggleEditStory {
   position: absolute;
   top: -1em;
   left: calc(50% + 2em);

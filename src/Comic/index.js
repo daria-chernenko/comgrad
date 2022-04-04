@@ -14,12 +14,12 @@ export default class Comic extends Component {
     super(props);
     this.state = {
       components: props.components || Components,
-      isEditting: false,
+      isEdittingStory: false,
       story: props.story
     };
   }
-  toggleEdit = () => {
-    this.setState({isEditting: !this.state.isEditting})
+  toggleEditStory = () => {
+    this.setState({isEdittingStory: !this.state.isEdittingStory})
   }
   updateStory = (val) => {
     this.setState({story: val});
@@ -31,8 +31,8 @@ export default class Comic extends Component {
           components={this.state.components}
           jsx={this.state.story}
         />
-        <Button circular size="mini" color="pink" icon="edit" className={styles.toggleEdit} onClick={this.toggleEdit} />
-        <Story isVisible={this.state.isEditting} story={this.state.story} updateStory={this.updateStory} />
+        <Button circular size="mini" color="pink" icon="edit" className={styles.toggleEditStory} onClick={this.toggleEditStory} />
+        <Story isVisible={this.state.isEdittingStory} story={this.state.story} updateStory={this.updateStory} />
       </React.Fragment>
     );
   }
