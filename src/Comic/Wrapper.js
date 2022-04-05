@@ -12,6 +12,7 @@ class Wrapper extends Component {
     this.state = {
       theme: Web,
       isEditting: false,
+      language: 'en',
       zoom: '20px',
     };
     this.titleRef = React.createRef();
@@ -28,6 +29,9 @@ class Wrapper extends Component {
   changeTheme = (val) => {
     this.setState({theme: val});
   }
+  changeLanguage = (val) => {
+    this.setState({language: val});
+  }
   componentDidMount() {
     let components = [];
     components.push(this.titleRef.current);
@@ -43,9 +47,19 @@ class Wrapper extends Component {
     let i = 0;
     return (
       <React.Fragment>
-        <Knobs isVisible={this.state.isEditting} changeZoom={this.changeZoom} changeTheme={this.changeTheme} zoom={this.state.zoom} theme={this.state.theme} title={this.props.title} components={this.state.components} />
+        <Knobs 
+          isVisible={this.state.isEditting} 
+          language={this.state.language}
+          changeLanguage={this.changeLanguage}
+          changeZoom={this.changeZoom} 
+          changeTheme={this.changeTheme} 
+          zoom={this.state.zoom} 
+          theme={this.state.theme} 
+          title={this.props.title} 
+          components={this.state.components} 
+        />
         <Button circular size="mini" icon="wrench" color="teal" className={styles.toggleEdit} onClick={this.toggleEdit}/>
-        <Segment style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)}>
+        <Segment style={{fontSize: this.state.zoom}} className={classNames(styles.comic, this.state.theme.layout)} lang={this.state.language}>
           <div className={this.state.theme.header} ref={this.titleRef}>
             <h3 className={this.state.theme.title}>
               {this.props.icon &&
