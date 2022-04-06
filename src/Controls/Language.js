@@ -6,18 +6,26 @@ export default function(props) {
       <label>Language:</label>
       <Form.Field>
         <Radio
-          label='English'
+          label='English (Ireland)'
           name='language'
-          checked={props.language === 'en'}
-          onChange={() => props.changeLanguage('en')}
+          checked={props.language === 'en-ie'}
+          onChange={() => props.changeLanguage('en-ie')}
         />
       </Form.Field>
       <Form.Field>
         <Radio
-          label='Español'
+          label='German'
           name='language'
-          checked={props.language === 'es'}
-          onChange={() => props.changeLanguage('es')}
+          checked={props.language === 'de'}
+          onChange={() => props.changeLanguage('de')}
+        />
+      </Form.Field>
+      <Form.Field>
+        <Radio
+          label='Arabic'
+          name='language'
+          checked={props.language === 'ar'}
+          onChange={() => props.changeLanguage('ar')}
         />
       </Form.Field>
     </Form.Group>

@@ -12,7 +12,7 @@ class Wrapper extends Component {
     this.state = {
       theme: Web,
       isEditting: false,
-      language: 'en',
+      language: 'en-ie',
       zoom: '20px',
     };
     this.titleRef = React.createRef();
