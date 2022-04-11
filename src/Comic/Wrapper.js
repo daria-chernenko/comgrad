@@ -13,7 +13,7 @@ class Wrapper extends Component {
       theme: Web,
       isEditting: false,
       language: 'en',
-      zoom: '20px',
+      zoom: '10px',
     };
     this.titleRef = React.createRef();
     this.iconRef = React.createRef();
