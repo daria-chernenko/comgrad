@@ -17,6 +17,7 @@ import Issue16 from '../Issues/16-survival-strategy';
 import Issue17 from '../Issues/17-predictable-sales';
 import Issue18 from '../Issues/18-after-micromanagement';
 import Issue19 from '../Issues/19-tests';
+import Issue20 from '../Issues/20-assert-messages';
 export const released = [
   Issue01,
   Issue02,
@@ -36,5 +37,6 @@ export const released = [
   Issue16,
   Issue17,
   Issue18,
-  Issue19
+  Issue19,
+  Issue20
 ];
