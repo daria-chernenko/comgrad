@@ -12,8 +12,7 @@
           "isBaseBlueprint": true,
           "options": [
             "--no-welcome",
-            "--yarn",
-            "--embroider"
+            "--yarn"
           ]
         }
       ]
