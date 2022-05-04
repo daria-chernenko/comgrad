@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.layout {
+  display: grid;
+  grid-gap: 0.3em;
+  grid-auto-flow: row;
+  grid-template-columns: 16em 16em 16em;
+  grid-template-rows: 3em 16em 1em;
+  grid-template-areas:
+    "header header header"
+    "strip strip strip"
+    "footer footer footer"
+}
+.header {
+  grid-area: header;
+  margin-bottom: 0;
+  color: #000;
+}
+.header .title {
+  font-weight: 400;
+  font-family: 'VT323', cursive;
+  text-align: left;
+  font-size: 3em;
+}
+.signature {
+  background-color: #fff;
+  font-weight: 200;
+  font-size: 0.7em;
+  font-family: 'Delius';
+  text-align: right;
+  line-height: 1.5em;
+  grid-area: signature / span 3;
+}
+.signature a {
+  color: #666;
+}
