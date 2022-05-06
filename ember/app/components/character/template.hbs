@@ -1,1 +1,11 @@
-{{yield}}
+<div class="left-character">
+  <span class="character">
+    {{yield}}
+    <span class="face">
+      {{this.emoji}}
+    </span>
+  </span>
+</div>
+<p class="bubble leftBubble">
+  {{@say}}
+</p>

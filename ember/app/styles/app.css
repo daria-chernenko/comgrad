@@ -35,3 +35,104 @@
 .signature a {
   color: #666;
 }
+.box {
+  composes: box from "../Themes/Box.module.css";
+  align-self: stretch;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 15% 45% 40%;
+  grid-template-areas:
+    "title title"
+    "left-bubble right-bubble"
+    "left-character right-character";
+  align-items: stretch;
+  align-content: end;
+  min-height: 16em;
+}
+.sound {
+  z-index: 30;
+  left: 0;
+  top: 1em;
+  padding: .1em .5em;
+  font-family: 'Delius';
+  transform: rotate(-10deg);
+  background-color: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  position: absolute;
+}
+.emotion {
+  font-size: 1.5em;
+  position: absolute;
+  bottom: 3em;
+  left: 2.5em;
+  z-index: 15;
+  filter: drop-shadow(0.4em -0.4em 0.2em rgba(0,0,0,0.4)) drop-shadow(-0.1em 0.1em 0.1em rgba(0,0,0,0.7));
+}
+.bubble {
+  margin: 0 .5em;
+  padding: .5em .5em;
+  font-family: 'Delius';
+  font-size: 0.80em;
+  line-height: 1.2;
+  background-color: rgba(255,255,255,0.9);
+  position: relative;
+  border-width: .3em;
+  border-style: solid;
+  z-index: 20;
+  border-color: #000;
+}
+.bubble:after {
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 2em;
+	width: 0;
+	height: 0;
+	border: 1.5em solid transparent;
+	border-top-color: #000;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -1.5em;
+	margin-bottom: -1.5em;
+}
+.leftBubble {
+  grid-area: left-bubble;
+}
+.rightBubble {
+  grid-area: right-bubble;
+}
+.doubleBubble {
+  grid-row-start: left-bubble;
+  grid-column-start: left-bubble;
+  grid-row-end: right-bubble;
+  grid-column-end: right-bubble;
+}
+.autoBubble {
+  grid-row-start: 2;
+}
+.face {
+  font-size: 6em;
+  line-height: 0.8em;
+  filter: grayscale(100%) drop-shadow(0.07em -0.07em 0.03em rgba(0, 0, 0, 0.4));
+}
+.leftCharacter {
+  grid-area: left-character;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  z-index: 10;
+}
+.rightCharacter {
+  grid-area: right-character;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  z-index: 10;
+}
+.autoCharacter {
+  grid-row-start: 3;
+  align-self: end;
+  justify-self: center;
+  position: relative;
+  z-index: 10;
+}
