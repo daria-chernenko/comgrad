@@ -1,11 +1,18 @@
-<div class="left-character">
+<div class="autoCharacter">
   <span class="character">
     {{yield}}
     <span class="face">
       {{this.emoji}}
     </span>
+    {{#if @emotion}}
+      <span class="emotion">
+        {{@emotion}}
+      </span>
+    {{/if}}
   </span>
 </div>
-<p class="bubble leftBubble">
-  {{@say}}
-</p>
+{{#if @say}}
+  <p class="bubble autoBubble">
+    {{@say}}
+  </p>
+{{/if}}

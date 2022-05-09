@@ -165,3 +165,10 @@
   position: relative;
   z-index: 10;
 }
+.lollipop {
+  position: absolute;
+  right: -.6em;
+  bottom: 0.2em;
+  font-size: 2em;
+  transform: scaleX(-1) rotate(15deg);
+}
