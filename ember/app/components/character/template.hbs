@@ -1,4 +1,9 @@
 <div class="autoCharacter">
+  {{#if @sound}}
+    <p class="sound">
+      {{@sound}}
+    </p>
+  {{/if}}
   <span class="character">
     {{yield}}
     <span class="face">
