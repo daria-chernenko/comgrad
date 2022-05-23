@@ -22,13 +22,13 @@ module.exports = {
   overrides: [
     {
       files: [
-        '.eslintrc.js',
-        '.prettierrc.js',
-        '.template-lintrc.js',
-        'ember-cli-build.js',
-        'testem.js',
-        'blueprints*.js',
-        'lib*.js',
+        './.eslintrc.js',
+        './.prettierrc.js',
+        './.template-lintrc.js',
+        './ember-cli-build.js',
+        './testem.js',
+        './blueprints*.js',
+        './lib*.js',
       ],
       parserOptions: {
         sourceType: 'script',
