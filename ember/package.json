@@ -104,5 +104,9 @@
   "dependencies": {
     "@glimmer/component": "^1.0.4",
     "webpack": "^5.50.0"
+  },
+  "volta": {
+    "node": "16.13.0",
+    "yarn": "1.22.17"
   }
 }
