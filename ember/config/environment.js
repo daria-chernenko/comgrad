@@ -14,6 +14,7 @@ module.exports = function (environment) {
     },
     APP: {
     },
+    googleFonts: ['VT323', 'Delius'],
   };
   if (environment === 'development') {
   }

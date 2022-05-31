@@ -17,12 +17,6 @@
   margin-bottom: 0;
   color: #000;
 }
-.header .title {
-  font-weight: 400;
-  font-family: 'VT323', cursive;
-  text-align: left;
-  font-size: 3em;
-}
 .signature {
   background-color: #fff;
   font-weight: 200;
@@ -96,19 +90,6 @@
   left: 2.5em;
   z-index: 15;
   filter: drop-shadow(0.4em -0.4em 0.2em rgba(0,0,0,0.4)) drop-shadow(-0.1em 0.1em 0.1em rgba(0,0,0,0.7));
-}
-.bubble {
-  margin: 0 .5em;
-  padding: .5em .5em;
-  font-family: 'Delius';
-  font-size: 0.80em;
-  line-height: 1.2;
-  background-color: rgba(255,255,255,0.9);
-  position: relative;
-  border-width: .3em;
-  border-style: solid;
-  z-index: 20;
-  border-color: #000;
 }
 .bubble:after {
   content: '';
