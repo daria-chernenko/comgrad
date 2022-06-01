@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: ['./app*.html', './app*.hbs'],
   darkMode: false, 
   theme: {
@@ -14,5 +15,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
+    require('tailwindcss-triangles'),
   ],
 };

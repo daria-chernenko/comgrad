@@ -105,6 +105,7 @@
   },
   "dependencies": {
     "@glimmer/component": "^1.0.4",
+    "tailwindcss-triangles": "^4.0.0",
     "webpack": "^5.50.0"
   },
   "volta": {

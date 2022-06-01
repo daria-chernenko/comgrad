@@ -92,16 +92,6 @@
   filter: drop-shadow(0.4em -0.4em 0.2em rgba(0,0,0,0.4)) drop-shadow(-0.1em 0.1em 0.1em rgba(0,0,0,0.7));
 }
 .bubble:after {
-  content: '';
-	position: absolute;
-	bottom: 0;
-	left: 2em;
-	width: 0;
-	height: 0;
-	border: 1.5em solid transparent;
-	border-top-color: #000;
-	border-bottom: 0;
-	border-right: 0;
 	margin-left: -1.5em;
 	margin-bottom: -1.5em;
 }
