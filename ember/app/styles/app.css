@@ -1,48 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.layout {
-  display: grid;
-  grid-gap: 0.3em;
-  grid-auto-flow: row;
-  grid-template-columns: 16em 16em 16em;
-  grid-template-rows: 3em 16em 1em;
-  grid-template-areas:
-    "header header header"
-    "strip strip strip"
-    "footer footer footer"
-}
-.header {
-  grid-area: header;
-  margin-bottom: 0;
-  color: #000;
-}
-.signature {
-  background-color: #fff;
-  font-weight: 200;
-  font-size: 0.7em;
-  font-family: 'Delius';
-  text-align: right;
-  line-height: 1.5em;
-  grid-area: signature / span 3;
-}
-.signature a {
-  color: #666;
-}
-.box {
-  composes: box from "../Themes/Box.module.css";
-  align-self: stretch;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 15% 45% 40%;
-  grid-template-areas:
-    "title title"
-    "left-bubble right-bubble"
-    "left-character right-character";
-  align-items: stretch;
-  align-content: end;
-  min-height: 16em;
-}
 .box {
   background-image: radial-gradient(center center, ellipse farthest-corner, transparent 0%, transparent 10%, rgba(0, 0, 0, 0.8) 100%),
   linear-gradient(to bottom, #555 0%, #555 0.05em, transparent 0.05em, transparent 0.7em, #555 0.7em, #555 0.8em, transparent 0.8em, transparent 1.45em, #555 1.45em, #555 1.5em),
