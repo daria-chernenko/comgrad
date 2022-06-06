@@ -24,11 +24,6 @@
                    1.5em 1.5em,
                    1.5em 1.5em,
                    1.5em 1.5em;
-  overflow: hidden;
-  width: 16em;
-  height: 16em;
-  background-color: #fff;
-  border: solid 5px black;
 }
 .sound {
   z-index: 30;
