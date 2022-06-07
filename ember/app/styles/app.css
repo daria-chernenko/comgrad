@@ -36,14 +36,6 @@
   display: inline-block;
   position: absolute;
 }
-.emotion {
-  font-size: 1.5em;
-  position: absolute;
-  bottom: 3em;
-  left: 2.5em;
-  z-index: 15;
-  filter: drop-shadow(0.4em -0.4em 0.2em rgba(0,0,0,0.4)) drop-shadow(-0.1em 0.1em 0.1em rgba(0,0,0,0.7));
-}
 .leftBubble {
   grid-area: left-bubble;
 }
