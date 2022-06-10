@@ -36,21 +36,6 @@
   display: inline-block;
   position: absolute;
 }
-.leftBubble {
-  grid-area: left-bubble;
-}
-.rightBubble {
-  grid-area: right-bubble;
-}
-.doubleBubble {
-  grid-row-start: left-bubble;
-  grid-column-start: left-bubble;
-  grid-row-end: right-bubble;
-  grid-column-end: right-bubble;
-}
-.autoBubble {
-  grid-row-start: 2;
-}
 .face {
   font-size: 6em;
   line-height: 0.8em;
