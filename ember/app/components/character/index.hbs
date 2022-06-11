@@ -1,4 +1,4 @@
-<div class="autoCharacter">
+<div class="row-start-3 self-end justify-self-center relative">
   {{#if @sound}}
     <p class="sound">
       {{@sound}}
@@ -6,7 +6,7 @@
   {{/if}}
   <span class="character">
     {{yield}}
-    <span class="face">
+    <span class="face text-8xl filter grayscale">
       {{this.emoji}}
     </span>
     {{#if @emotion}}
