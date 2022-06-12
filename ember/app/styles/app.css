@@ -36,28 +36,12 @@
   display: inline-block;
   position: absolute;
 }
-.lollipop {
+ .lollipop {
   position: absolute;
   right: -.6em;
   bottom: 0.2em;
   font-size: 2em;
   transform: scaleX(-1) rotate(15deg);
-}
-.headbag {
-  width: 4.7em;
-  height: 3em;
-  border: solid 3px #000;
-  top: 1.8em;
-  left: 0.8em;
-  position: relative;
-  z-index: 10;
-  background-color: rgba(218, 185, 148, 1);
-  border-color: rgba(155, 131, 101, 1);
-  transform: rotate(190deg);
-  border-width: 3px 4px 3px 5px;
-  border-radius: 95% 10% 92% 5%/4% 95% 0% 95%;
-  border-style: solid;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4), inset 0 0 50 rgba(0, 0, 0, 0.2);
 }
 .sticker {
   font-family: 'Delius';
