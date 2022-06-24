@@ -8,7 +8,7 @@ import Issues from '../issues';
 import { tracked } from '@glimmer/tracking';
 interface DemoArgs {}
 export default class Demo extends Component<DemoArgs> {
-  @tracked issueNumber = 0;
+  @tracked issueNumber = 3;
   get scope() {
     return {
       Wrapper,
