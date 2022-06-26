@@ -18,7 +18,9 @@ export default class Demo extends Component<DemoArgs> {
       Issue: Issues[this.issueNumber],
     };
   }
-  myComponent = compileHBS('<Issue /> ', {
-    scope: this.scope,
-  });
+  get myComponent() {
+    return compileHBS('<Issue /> ', {
+      scope: this.scope,
+    });
+  }
 }
