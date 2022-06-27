@@ -2,4 +2,5 @@
   {{t "Issue number"}}:
   <Input @type="number" step="1" @value={{this.issueNumber}} />
 </label>
+<Pagination @onPageChange={{mut this.issueNumber}} @currentPage={{this.issueNumber}} @maxPages={{10}} />
 <this.myComponent.component />
