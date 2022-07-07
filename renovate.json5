@@ -6,12 +6,10 @@
   "automerge": true,
   "masterIssue": true,
   "rangeStrategy": "update-lockfile",
+  "assignees": [
+    "michal.bryxi"
+  ],
   "packageRules": [
-    {
-      "paths": ["ember/package.json"],
-      "rangeStrategy": "pin",
-      "schedule": ["after 9pm on sunday"]
-    },
     {
       "groupName": "Type Definitions",
       "packagePatterns": ["^@types\/*"],
